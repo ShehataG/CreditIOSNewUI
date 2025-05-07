@@ -1,0 +1,847 @@
+/* 
+  Localizable.strings
+ BcareIOSNewUI
+
+  Created by MacBook Pro on 04/04/2023.
+  
+*/
+
+"Lang"="en";
+
+"Language"="Language";
+
+"Ok"="Ok";
+
+"Cancel"="Cancel";
+
+"Agree"="Agree";
+
+"Done"="Done";
+
+"Disagree"="Disagree";
+
+"UpdateVersion"="For best performance, you should have the latest version";
+
+"Update"="Update";
+
+"DeviceJailbroken"="The app can't run within this device as it's jailbroken";
+
+"DeviceVpn"="The app can't run within this device as it's uses vpn";
+
+"Main"="Main";
+ 
+"Products"="Products";
+
+"Services"="Services";
+
+"Wareef"="Wareef";
+
+"WelcomeBoard"="Welcome to Bcare";
+
+"WelcomeBoardDesc"="One place to compare all insurance quotes from different companies for various types of insurance that meet the needs of individuals and businesses";
+
+"Speed"="You insurance is in a minute";
+
+"SpeedDesc"="Your insurance is instant within a minute, clear, and fast to ensure your protection at any time and from anywhere";
+
+"Number"="More than 20 insurance companies";
+
+"NumberDesc"="Compare, insure, and receive your policy from over 20 insurance companies with ease and security";
+
+"Skip"="Skip";
+
+"Next"="Next";
+
+"StartNow"="Start now";
+
+"Vehicle"="Vehicle";
+
+"Travel"="Travel";
+
+"Medical"="Medical";
+
+"Malpractices"="Malpractices";
+
+"CompareInsur"="Compare , Insure Get your insurance";
+
+"OnePlace"="One place to save you the hassle of searching between more than 20 insurance companies!";
+
+"CarWash"="Car\nwash";
+
+"Sweater"="Sweater";
+
+"CarMaintenance"="Car\nmaintenance";
+
+"Mesmar"="Mesmar";
+
+"Service"="Service";
+
+"Mojaz"="Mojaz";
+
+"HelpOnRoad"="Help on\nroad";
+
+"Ezhelha"="Ezhelha";
+
+"Login"="Login";
+
+"LoginOrJoin"="Login or join";
+
+"NationalIqama"="National Id / Iqama";
+
+"DOBIncorrect"="Please choose a date of birth";
+
+"BySigning"="By signing in , you agree to the";
+
+"TermsConditions"="Terms of service";
+
+"PrivacyPolicy"="Privacy policy";
+
+"And"="and";
+
+"Continue"="Continue";
+
+"ChangeMobileNumber"="Change mobile number";
+
+"OR"="OR";
+
+"Higri"="Higri";
+
+"Select"="Select";
+
+"MyAccount"="Account";
+
+"Policies"="Policies";
+
+"MedicalAgreements"="Medical agreements";
+
+"ContactDetails"="Contact details";
+
+"PhoneNumber"="Phone number";
+
+"PhoneNumberX"="Phone number (ex 0XXXXXXXXX)";
+
+"EmailAddress"="Email address";
+
+"Followers"="Followers";
+
+"FollowersManagment"="Followers management";
+
+"ChangeFollowerNumber"="Change follower number";
+
+"VehicleServices"="Vehicle services";
+
+"MedicalServices"="Medical services";
+
+"Sanar"="Sanar";
+
+"Nafes"="Nafes";
+ 
+"WhatsCar"="What is the car that needs the service?";
+
+"TheVehicle"="The vehicle";
+
+"AddNewCarWithPlus"="Add a new car +";
+
+"SelectLocation"="Select your location";
+   
+"YourPolicies"="Your policies";
+
+"VehiclePolicy"="Vehicle policy";
+
+"MedicalPolicy"="Medical policy";
+
+"HealthInsurance"="Health insurance";
+
+"MembershipNumber"="Membership number";
+
+"PolicyNumber"="Policy number";
+
+"PolicyNo"="Policy No";
+
+"EndsWithin"="Ends within";
+
+"PolicyDetails"="Policy details";
+
+"PolicyBenefits"="Policy benefits";
+
+"HealthServiceProviders"="Health service providers";
+
+"PolicyUses"="Policy uses";
+
+"AddDependents"="Add dependents if they have health insurance";
+
+"YourServices"="Your services";
+
+"DiscoverAllServices"="Discover all services";
+
+"Welcome"="Welcome";
+
+"EmailRequired"="Email is required";
+
+"EmailIncorrect"="Email isn't correct";
+
+"PhoneRequired"="Phone number is required";
+
+"PhoneIncorrect"="Phone number isn't correct";
+
+"NinRequired"="National Id / Identity is required";
+
+"NinIncorrect"="National Id / Identity isn't correct";
+
+"PasswordRequired"="Password is required";
+ 
+"PasswordIncorrect"="Password must not be less than 8 digits";
+
+"Register"="Register";
+
+"Password"="Password";
+ 
+"AddAccount"="Add account";
+
+"ByClicking"="By clicking on Register Account, you agree to";
+
+"TermsAndConditions"="Terms & Conditions";
+
+"WhichWe"="Which we and you have read";
+
+"IAcknowledgeThat"="I acknowledge that all data entered is correct and I am responsible for its accuracy";
+
+"MessageSent"="OTP code sent to your mobile number";
+
+"DidntReceive"="Didn’t receive a Code? :";
+
+"Confirm"="Confirm";
+
+"Resend"="Resend";
+
+"Seconds"="s";
+
+"BirthYear"="Birth year";
+
+"BirthMonth"="Birth month";
+
+// Gr Months
+
+"GMonthList1"="January";
+
+"GMonthList2"="February";
+
+"GMonthList3"="March";
+
+"GMonthList4"="April";
+
+"GMonthList5"="May";
+
+"GMonthList6"="June";
+
+"GMonthList7"="July";
+
+"GMonthList8"="August";
+
+"GMonthList9"="September";
+
+"GMonthList10"="October";
+
+"GMonthList11"="November";
+
+"GMonthList12"="December";
+
+// Hi Months
+
+"HMonthList1"="Muharram";
+
+"HMonthList2"="Safar";
+
+"HMonthList3"="Rabie al awwl";
+
+"HMonthList4"="Rabie al thani";
+
+"HMonthList5"="Gamady al awwl";
+
+"HMonthList6"="Gamady al thani";
+
+"HMonthList7"="Ragab";
+
+"HMonthList8"="Shaaban";
+
+"HMonthList9"="Ramadan";
+
+"HMonthList10"="Shawwal";
+
+"HMonthList11"="Duh al qeeda";
+
+"HMonthList12"="Duh al hijjha";
+ 
+"BirthYearRequired"="Birth year is required";
+
+"BirthMonthRequired"="Birth month is requird";
+
+"Logout"="Logout";
+ 
+"ComprehensiveInsurance"="Comprehensive insurance";
+
+"TBLInsurance"="TBL insurance";
+
+"MedicalInsurance"="Medical insurance";
+
+"MalpracticesInsurance"="Malpractices insurance";
+
+"MMInsurance"="Malpractices insurance";
+
+"TravelInsurance"="Travel insurance";
+
+"ComprehensiveInsuranceDes"="Safe driving and complete reassurance with comprehensive insurance that covers all damages for all parties";
+
+"TBLInsuranceDes"="It protects the owner from financial liability towards third parties in the event that his vehicle causes damage to others";
+
+"MedicalInsuranceDes"="Medical coverage for company employees and their family members, with the flexibility to change the category type at any time and manage all documents easily";
+
+"MalpracticesInsuranceDes"="Peace of mind to practice your profession with confidence with comprehensive coverage for compensation claims resulting from medical errors";
+
+"TravelInsuranceDes"="Your protective shield on your travels from the risks you face while traveling, whether they are medical risks, baggage-related risks, flight cancellations, or others";
+
+"WhichInsurance"="What is the best insurance for your vehicle?";
+
+"HereYouWill"="Here you will find the main plans that you can choose from based on your vehicle's needs";
+
+"CoverageAgainst"="Coverage against loss/damage";
+
+"LiabilityAgainst"="Liability against third parties up to 10 million Saudi riyals";
+
+"BuyNow"="Buy now";
+
+"VehicleInsurance"="Vehicle insurance";
+
+"ChangePhoneNumber"="Change phone number";
+
+"BackToLogin"="Back to login";
+
+"YouHaveNoCars"="You have no cars,please add a car";
+
+"NoInternet"="No Internet Connection";
+
+"NoCars"="You have no cars";
+
+"NeedsLocation"="BCare needs your location to provide accurate services";
+
+"LocateMe"="Locate me";
+
+"NeedsNotification"="BCare needs to send you important notifications about policies and discounts";
+
+"ChooseLanguage"="Choose app language";
+
+"ForgotPassword"="Forgot your password?";
+
+"ResetPassword"="Reset Password";
+
+"EnterEmailPhone"="Enter email / phone number";
+
+"ORDashed"="_____ OR _____";
+
+"InsuredNational"="Insured national id / Iqama";
+
+"SendLink"="Send link";
+
+"ForgetFillOption"="You have to fill an option";
+
+"VerificationCode"="Verification code";
+
+"VerifyCodeRequired"="Verify code is required";
+
+"ConfirmPasswordRequired"="Confirm password is required";
+
+"ConfirmPasswordNotEqual"="Confirm password is not same as the password";
+
+"NewPasswordEntry"="New password entry";
+
+"NewPassword"="New password";
+
+"NewPasswordConfirmation"="New password confirmation";
+
+"ChooseEmailOrPhone"="Choose between email or phone";
+
+"Verification"="Verification";
+
+"Verify"="Verify";
+
+"DidntReceiveCode"="Didn’t receive code?";
+
+"ResendCode"="Resend code";
+
+"MedicalTheServices"="Medical services";
+ 
+"PolicyType"="Type";
+
+"MedicalNetwork"="Medical network";
+
+"HosMaximum"="Maximum for out-of-network hospitals Minimum";
+
+"MaximumProviders"="Maximum limit for other service providers";
+
+"MaximumProvidersWithin"="The maximum number of service providers within the network is minimum";
+
+"HighestLimit"="The highest limit";
+
+"Gender"="Gender";
+ 
+"Male"="Male";
+
+"Female"="Female";
+
+"NationalIdentity"="ID No";
+
+"WareefProgram"="Wareef program";
+
+"WareefProgramDesc"="It offers discounts and offers from clinics, health centers, entertainment activities, and others to BeCare clients.";
+
+"Discount"="Discount";
+
+"doneCopying"="Done copying to clipboard";
+
+"ShowWooref"="Show wareef card";
+
+"ShowWoorefwitoutId"="Enter id to get code";
+
+"WareefCard"="Wareef card";
+
+"CustomerNumber"="Customer number";
+
+"ExpiryDate"="Expiry date";
+ 
+"MedicalServiceProviders"="Service providers";
+
+"All"="All";
+
+"Hospitals"="Hospitals";
+
+"ShowList"="Show list";
+ 
+"Tawuniya"="Tawuniya";
+ 
+"HelpRoad"="Help on road";
+
+"CarBreakDown"="Did your car break down?\nWe are always here for you";
+
+"VehiclesNotDesired"="Vehicle breakdowns are always undesirable, but with our roadside assistance service, it will make it easier for you to request and access the service in simple steps";
+
+"RemainingRequests"="Remaining requests";
+ 
+"VehiclesM"="Vehicles";
+
+"SelectedLocation"="Selected location";
+
+"RequestService"="Request service";
+ 
+"CancelRequest"="Cancel request";
+
+"Request#"="Request#";
+
+"ProcessingRequest"="Processing request";
+
+"RequestSent"="Your request sent";
+
+"ServiceProvider"="Service provider";
+
+"RequestReceived"="Request received";
+
+"RequestNumber#"="Request number#";
+
+"ConfirmationDone"="Confirmation is done";
+
+"ServiceProviderVisit"="Service provider visit";
+
+"WillReach"="You will be contacted through the service provider";
+
+"CreateInitialRequest"="Create initial request";
+ 
+"RequestDetails"="Request details";
+
+"RequestStatus"="Request status";
+
+"AboutCancelRequest"="You are about to cancel the request";
+
+"CancelReasonHelp"="To help us better understand your needs, please specify the reason for this cancellation";
+
+"CancelReason1"="The waiting time is very long";
+
+"CancelReason2"="I will make a reservation later";
+
+"CancelReason3"="I no longer need the service";
+
+"CancelReason4"="Other";
+
+"Back"="Back";
+
+"Comperhensive"="Comperhensive";
+
+"ChooseVehicle"="Choose vehicle";
+ 
+"AddNewCar"="Add new car";
+
+"Vin"="Sequence Id";
+
+"Manual"="Manual";
+
+"EnterCarDetails"="Enter card details";
+
+"WhereVin"="Where can i find sequence Id?";
+
+"DownloadCarDetails"="Download car details";
+
+"CanFindVin"="Vin can be found at:";
+
+"CarFindWay1"="Vehicle registration card (form).";
+
+"CarFindWay2"="Absher website or application, log in and search for “Vehicle Management”.";
+
+"CarFindWay3"="Vehicle windshield.";
+
+"VehicleYear"="Vehicle year";
+
+"PlateNumber"="Plate number";
+
+"PlateLetters"="Plate letters";
+
+"SaveCarDetails"="Save car details";
+
+"Search"="Search";
+
+"Choose"="Choose";
+
+"CaptchaCode"="Captcha code";
+
+"CaptchaRequired"="Captcha is requird";
+
+"CaptchaIncorrect"="Captcha isn't correct";
+
+"CaptchaExpired"="Captcha expired";
+ 
+"Help"="Help";
+
+"ChooseTimeDate"="Choose time and date";
+
+"Time"="Time";
+
+"TotalAmount"="Total amount";
+
+"Revision"="Revision";
+
+"BookingDetails"="Booking details";
+
+"BookingDate"="Visit date";
+
+"BookingTime"="Visit time";
+
+"OneVehicle"="Vehicle";
+
+"Location"="Location";
+
+"Edit"="Edit";
+
+"FreePresent"="Free present";
+
+"ServiceDetails"="Service details";
+
+"WashInnerOuter"="Wash(Inner/Outer)";
+
+"TaxesVat"="Vat(15%)";
+
+"PayNow"="Pay now";
+
+"GoodSmell"="Good smell";
+  
+"WeekDay1"="SUN";
+
+"WeekDay2"="MON";
+
+"WeekDay3"="TUE";
+
+"WeekDay4"="WED";
+
+"WeekDay5"="THU";
+
+"WeekDay6"="FRI";
+
+"WeekDay7"="SAT";
+
+"To"="To";
+ 
+"FAQ"="Frequent asked questions";
+
+"CarWashNoSpacer"="Car wash";
+
+"StillNeedsHelp"="Still need help?";
+
+"ExistsAroundClock"="We are here around the clock to help you";
+
+"Chat"="Chat";
+
+"WithExpert"="With expert";
+ 
+"CallUs"="Call us";
+ 
+"CreateBooking"="Create booking";
+
+"CancelBooking"="Cancel booking";
+
+"CarWashFAQTitle1"="What is the service technique?";
+
+"CarWashFAQAnswer1"="Clean the interior of the car with a vacuum, including seats and floor.\nPolishing trims and adding a wastage bag Wash the body of the car from the outside with water and chemicals, polish the windows and tiers.";
+
+"CarWashFAQTitle2"="What are the services provided by Sweater?";
+
+"CarWashFAQAnswer2"="- Interior Cleaning only.\n- External washing only.\n- internal cleaning and external body washing.\n- Additional services: (aromatizing, mats covering).";
+
+"CarWashFAQTitle3"="How long does the service take?";
+
+"CarWashFAQAnswer3"="From 45 minutes to an hour (the time may vary depending on the condition of the vehicle)";
+
+"CarWashFAQTitle4"="If the appointment is canceled, is there a fee?";
+
+"CarWashFAQAnswer4"="If the booking is canceled within one hour or less before the appointment or customer did not answer call after arrival of the biker or late of arrival in site, an amount 100% of transaction amount will be deducted from the customer.";
+
+"CarWashFAQTitle5"="My car has nano protection, does it effect?";
+
+"CarWashFAQAnswer5"="Sweater uses customized towels for Nano and cars with a special protection layer.\n* Please add a comment during booking.";
+
+"CarWashFAQTitle6"="Can I book appointment for more than one car?";
+
+"CarWashFAQAnswer6"="Yes, book an appointment for each car.";
+
+"ChooseTime"="Choose time";
+
+"CancelReason"="Cancel reason";
+
+"CancelReasonRequired"="Cancel reason is requird";
+
+"CancelReasonIncorrect"="Cancel reason should be 10 characters or more";
+
+"AddBooking" = "Add booking";
+
+"BookService"="Book service";
+
+"Appointments"="Appointments";
+
+"InvalidTransaction"="Invalid transaction";
+
+"PaymentCanceled"="Payment canceled";
+
+"CreditDebitCards"="Credit / debit cards";
+
+"Applepay"="Apple pay";
+
+"ChoosePaymentMethod"="Choose payment method";
+
+"BatteryServices"="Battery\nservices";
+
+"SathaServices"="Satha\nservices";
+
+"TireServices"="Tire\nservices";
+
+"AccountBlocked"="This account is blocked";
+
+"AddLocation"="Add location";
+
+"YourAddress"="Your address";
+
+"ConfirmAddress"="Confirm address";
+
+"Change"="Change";
+
+"Minute"="minute";
+
+"TheService"="Service";
+ 
+"NotesToHelper"="Notes to service provider";
+
+"WriteHere"="Write anything here...";
+
+"DiscountCode"="Discount code";
+
+"Apply"="Apply";
+
+"RequestSummary"="Request summary";
+
+"Total"="Total";
+
+"Sum"="Sum";
+
+"InsideCity"="Inside city";
+
+"OutsideCity"="Outside city";
+
+"StartsFrom"="Starts from";
+
+"PriceChanged"="Price is approximate and varies depending on distance and time";
+
+"PriceFixed"="The service value is fixed according to the city of receipt and delivery";
+ 
+"MojazReport"="Mojaz report";
+
+"VinNumber"="Sequence number or VIN";
+
+"VehicleNotFound"="Vehicle not found";
+
+"SequenceExceeds"="The sequence number should be from 5 to 10 numbers";
+
+"GetReport"="Get report";
+ 
+"ReportContains"="Report contains";
+
+"MojazReportContains"="Mojaz report contains the following data as available";
+
+"VehicleInformation"="Vehicle information";
+
+"VehicleRecords"="Vehicle records";
+
+"OdometerReadings"="Odometer readings";
+
+"RepairHistory"="Repair history";
+
+"RecordedAccidents"="Recorded accidents";
+
+"ViewSampleReport"="View sample report";
+
+"MojazPlaceholder"="OR JE4LR33M21JJ7043030487635336";
+
+"SequenceRequired"="Sequence number is required";
+
+"WhereToFindVehicle"="Where can i find vehicle information?";
+
+"VehicleVinNumber"="Vehicle vin number";
+
+"BelowLeftFrontGlass"="Lower left part of the windshield";
+
+"InnerSideDriver"="Inner side of the driver's door";
+
+"ScanVin"="Scan vin";
+
+"VehiclesIstemara"="Vehicle's istemara";
+
+"VinNumberMojaz"="Vin number";
+
+"ScanIstemaraBarcode"="Scan istemara barcode";
+
+"PurchaseDetails"="Purchase details";
+
+"RequestedReports"="Requested reports";
+
+"MadeYear"="Made year";
+
+"VinOnly"="Vin";
+
+"ReportPrice"="Report price";
+
+"ModelYear"="Model year";
+
+"ModelYearٍRequired"="Model year is required";
+
+"SequenceNumber"="Sequence number";
+
+"AddService"="Add service";
+ 
+"CreatedDate"="Created date";
+
+"VehicleMaker"="Vehicle maker";
+
+"VehicleModel"="Vehicle model";
+
+"VehicleM"="Model";
+
+"VehicleMakerRequired"="Vehicle maker is required";
+
+"VehicleModelRequired"="Vehicle model is required";
+
+"VehicleYearRequired"="Vehicle year is required";
+
+"PlateNumberRequired"="Plate number is required";
+
+"PlateLettersRequired"="Plate letters is required";
+
+"PlateNumberIncorrect"="Plate number should be 4 numbers";
+
+"PlateLettersIncorrect"="Plate letters should be 3 letters";
+
+"HealthServices"="Health\nservices";
+
+"InvalidData"="Invalid data";
+
+"PleaseDontClose"="Please wait some time don't press back or close screen";
+
+"PaymentDone"="Payment done successfully";
+
+"ReturnToBookings"="Return to bookings";
+
+"ReturnToHome"="Return to home";
+
+"Code"="Code";
+
+"LogoutSure"="Are you sure you want to logout?";
+
+"ThanksForBcare"="Thanks for choosing BCare";
+
+"RequestCantCacelled"="You can't cancel the request after sent,Confirm request?";
+
+"BookingCode"="Booking code";
+
+"OngoingOrder"="You have an ongoing order";
+
+"ServiceTime"="Service time";
+
+"ConfirmRequest"="Confirm request";
+
+"DeductiblePercentage"="Deductible percentage";
+
+"CompanyName"="Company name";
+
+"ContactUsWhats"="Contact us (Whatsapp)";
+
+"ProblemConnectingSanar"="Problem connecting sanar";
+
+"InsuredId"="Insured Id";
+
+"AgreeToQuery"="I agree to grant the right to inquire";
+
+"AgreeToQueryLong"="I agree to grant BCare the right to inquire from Elm and share the information with the service provider";
+
+"MojazRequests"="Mojaz requests";
+
+"DownloadReport"="Download report";
+
+"RequestNewReport"="Request new report";
+
+"AgreeToServiceProviders"="I agree to the right to inquire from the service providers";
+
+"NoBikersAvailable"="There are no Bikers available for this day";
+
+"SweaterNote"="This service is provided carefully by our partner and is fully under their responsibility. BCare does not bear any responsibility for the service provided, and it is not subject to the supervision and oversight of the insurance authority";
+
+"EzhelhaNote"="The service you have chosen and paid for includes only the cost of the service provided by Ezhalha. Upon the arrival of Fazaa, the amount will be transferred to the buyer via bank transfer or STC PAY, ensuring a smooth and convenient experience";
+
+"VehiclePlate"="Plate No";
+
+"DownloadPolicy"="Download policy";
+
+"RenewPolicy"="Click to renew";
+
+"Remaining"="Remaining";
+
+"Day"="day";
+
+"EnableLocationServices"="Please enable location services";
+
+"LocationNoAccess"="Please permit location access for the app";
+
+"ThereIsNoServiceSweater"="We apologize; the service provider is currently unavailable.Please try again later and thank you for your understanding 💙!";
+
+"Version"="Version";
+
+"PrintPolicies"="Print policies";
+
+"PrintPolicy"="Print policy";
+
+"PrintBills"="Print bills";
+ 
+"PrintBill"="Print bill";
+
+"NoBikersHere"="This locastion has no bikers , please select another one";

@@ -1,0 +1,669 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name OPPWAMobile
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import LocalAuthentication
+@_exported import OPPWAMobile
+import PassKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import ipworks3ds_sdk
+@_inheritsConvenienceInitializers @objc public class OPPThreeDSConfig : ObjectiveC.NSObject {
+  @objc public var challengeUiTypes: OPPWAMobile.OPPThreeDSChallengeUiType
+  @objc public var sdkMaxTimeout: Swift.Int
+  @objc public var clientConfigParams: [Swift.String : Swift.String] {
+    @objc get
+    @objc set
+  }
+  @objc public var appBundleID: Swift.String
+  @objc public var locale: Swift.String?
+  @objc public var deviceParameterBlacklist: [Swift.String]?
+  @objc public var uiCustomization: ipworks3ds_sdk.UiCustomization
+  @objc public var threeDSRequestorAppURL: Swift.String?
+  @objc override dynamic public init()
+  @objc public func getClientConfig() -> Swift.Set<Swift.String>
+  @objc public func getUngroupedConfigParams() -> [Swift.String : Swift.String]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPIOUtil : ObjectiveC.NSObject {
+  @objc public static func nibPath(forResource fileName: Swift.String) -> Swift.String?
+  @objc public static func shortPath(forResource fileName: Swift.String, type: Swift.String) -> Swift.String?
+  @objc public static func path(forResource fileName: Swift.String, type: Swift.String) -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPAffirmPaymentParams : OPPWAMobile.OPPPaymentParams {
+  @objc final public var token: Swift.String?
+  @objc public static func affirmPaymentParamsWith(checkoutId: Swift.String) throws -> OPPWAMobile.OPPAffirmPaymentParams
+  @objc override final public func copy() -> Any
+  @objc override final public func dictionaryForExecutingTransaction() -> [Swift.AnyHashable : Any]
+  @objc override dynamic public init(checkoutID: Swift.String, paymentBrand: Swift.String?) throws
+  @objc deinit
+}
+@objc final public class OPPAffirmConfig : ObjectiveC.NSObject {
+  @objc final public let publicKey: Swift.String
+  @objc final public let isActive: Swift.Bool
+  @objc public init(publicKey: Swift.String, isActive: Swift.Bool)
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc public class OPPThreeDSSchemeConfig : ObjectiveC.NSObject {
+  @objc public var dsRefId: Swift.String {
+    get
+  }
+  @objc public var dsEncryptCert: Swift.String {
+    get
+  }
+  @objc public var dsCaRootCert: Swift.String {
+    get
+  }
+  @objc public init(dsRefId: Swift.String, dsEncryptCert: Swift.String, dsCaRootCert: Swift.String)
+  @objc deinit
+}
+@objc extension UIKit.UILabel {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func configure(title: Swift.String, font: UIKit.UIFont, isHighLighted: Swift.Bool, theme: OPPWAMobile.OPPCheckoutTheme)
+}
+@_inheritsConvenienceInitializers @objc public class OPPAnalyticsData : ObjectiveC.NSObject {
+  @objc public static func getOS() -> Swift.String
+  @objc public static func getRedShieldBlackbox() -> Swift.String?
+  @objc public static func getMSDKVersion() -> Swift.String
+  @objc public static func getDeviceModel() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol OPPLoggerServiceProtocol {
+  @objc func sendLog(messages: [OPPWAMobile.OPPLogMessage], checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode, _ completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+}
+@objc public enum OPPCardBrandInfoCvvMode : Swift.Int {
+  case none
+  case required
+  case optional
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class OPPCardBrandInfo : ObjectiveC.NSObject {
+  @objc final public let validationRegex: Swift.String
+  @objc final public let detectionRegex: Swift.String?
+  @objc final public let pattern: Swift.String
+  @objc public var cvvLength: Swift.Int
+  @objc public var isLuhnCheckRequired: Swift.Bool
+  @objc public var isExpiryDateOptional: Swift.Bool
+  @objc public var cvvMode: OPPWAMobile.OPPCardBrandInfoCvvMode
+  @objc public var isMobilePhoneRequired: Swift.Bool
+  @objc public init?(validationRegex: Swift.String, detectionRegex: Swift.String?, pattern: Swift.String)
+  @objc convenience public init?(json: Swift.Dictionary<Swift.String, Any>)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPCheckoutLocalization : ObjectiveC.NSObject {
+  @objc public var language: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public static let sharedInstance: OPPWAMobile.OPPCheckoutLocalization
+  @objc public func viewControllerTitlePaymentMethodSelection() -> Swift.String
+  @objc public func viewControllerTitlePaymentDetails() -> Swift.String
+  @objc public func viewControllerTitleProcessing() -> Swift.String
+  @objc public func viewControllerTitleAddress() -> Swift.String
+  @objc public func alertTitleCardScanningFailed() -> Swift.String
+  @objc public func labelTotalAmount() -> Swift.String
+  @objc public func labelMBWayPushNotification() -> Swift.String
+  @objc public func labelMBWayAcceptPin() -> Swift.String
+  @objc public func labelTermsAndConditions() -> Swift.String
+  @objc public func labelTermsAndConditionsAgreement() -> Swift.String
+  @objc public func labelSwedish() -> Swift.String
+  @objc public func labelFinnish() -> Swift.String
+  @objc public func labelSTCPaySelectPaymentMethod() -> Swift.String
+  @objc public func labelCardScanHoldHere() -> Swift.String
+  @objc public func labelBlikTermsAndConditions() -> Swift.String
+  @objc public func labelBlikRegulations() -> Swift.String
+  @objc public func labelBlikTncUrl() -> Swift.String
+  @objc public func messagePleaseWait() -> Swift.String
+  @objc public func processingLabelForBlik() -> Swift.String
+  @objc public func deviceAuthReason() -> Swift.String
+  @objc public func buttonTitlePay() -> Swift.String
+  @objc public func buttonTitlePayAmount() -> Swift.String
+  @objc public func buttonTitleRegister() -> Swift.String
+  @objc public func buttonTitleCancel() -> Swift.String
+  @objc public func buttonTitleBack() -> Swift.String
+  @objc public func buttonTitleDone() -> Swift.String
+  @objc public func buttonTitleOK() -> Swift.String
+  @objc public func fieldLabelCardHolderName() -> Swift.String
+  @objc public func fieldLabelCreditCardNumber() -> Swift.String
+  @objc public func fieldLabelExpiryDate() -> Swift.String
+  @objc public func fieldLabelCVV() -> Swift.String
+  @objc public func fieldLabelMobilePhoneNumber() -> Swift.String
+  @objc public func fieldLabelBankAccountHolderName() -> Swift.String
+  @objc public func fieldLabelIBAN() -> Swift.String
+  @objc public func fieldLabelIBANOrAccountNumber() -> Swift.String
+  @objc public func fieldLabelBICOrBankCode() -> Swift.String
+  @objc public func fieldLabelSelectCountry() -> Swift.String
+  @objc public func fieldLabelSelectBank() -> Swift.String
+  @objc public func fieldLabelStorePaymentDetails() -> Swift.String
+  @objc public func fieldLabelChooseCardType() -> Swift.String
+  @objc public func fieldLabelNumberOfInstallments() -> Swift.String
+  @objc public func fieldLabelEmail() -> Swift.String
+  @objc public func fieldLabelQRCode() -> Swift.String
+  @objc public func fieldLabelCountryCode() -> Swift.String
+  @objc public func fieldLabelNationalIdentifier() -> Swift.String
+  @objc public func fieldLabelAccountNumber() -> Swift.String
+  @objc public func fieldLabelRoutingNumber() -> Swift.String
+  @objc public func fieldLabelAccountVerification() -> Swift.String
+  @objc public func fieldLabelDateOfBirth() -> Swift.String
+  @objc public func fieldLabelOTP() -> Swift.String
+  @objc public func fieldPlaceholderCardHolderName() -> Swift.String
+  @objc public func fieldPlaceholderCardNumber() -> Swift.String
+  @objc public func fieldPlaceholderExpiryDate() -> Swift.String
+  @objc public func fieldPlaceholderCVV3Digits() -> Swift.String
+  @objc public func fieldPlaceholderCVV4Digits() -> Swift.String
+  @objc public func fieldPlaceholderBankAccountHolderName() -> Swift.String
+  @objc public func fieldPlaceholderIBAN() -> Swift.String
+  @objc public func fieldPlaceholderIBANOrAccountNumber() -> Swift.String
+  @objc public func fieldPlaceholderBICOrBankCode() -> Swift.String
+  @objc public func fieldPlaceholderMobilePhoneNumber() -> Swift.String
+  @objc public func fieldPlaceholderCountryCode() -> Swift.String
+  @objc public func fieldPlaceholderEmail() -> Swift.String
+  @objc public func fieldPlaceholderNationalIdentifier() -> Swift.String
+  @objc public func fieldPlaceholderAccountNumber() -> Swift.String
+  @objc public func fieldPlaceholderRoutingNumber() -> Swift.String
+  @objc public func fieldPlaceholderAccountVerification() -> Swift.String
+  @objc public func fieldPlaceholderStreet1() -> Swift.String
+  @objc public func fieldPlaceholderStreet2() -> Swift.String
+  @objc public func fieldPlaceholderCity() -> Swift.String
+  @objc public func fieldPlaceholderState() -> Swift.String
+  @objc public func fieldPlaceholderCounty() -> Swift.String
+  @objc public func fieldPlaceholderPostcode() -> Swift.String
+  @objc public func fieldPlaceholderOptional() -> Swift.String
+  @objc public func fieldPlaceholderDateOfBirth() -> Swift.String
+  @objc public func fieldErrorCardHolderNameInvalid() -> Swift.String
+  @objc public func fieldErrorCardNumberInvalid() -> Swift.String
+  @objc public func fieldErrorCardExpiryDateInvalid() -> Swift.String
+  @objc public func fieldErrorCardExpired() -> Swift.String
+  @objc public func fieldErrorCardCVV3DigitsInvalid() -> Swift.String
+  @objc public func fieldErrorCardCVV4DigitsInvalid() -> Swift.String
+  @objc public func fieldErrorBankAccountHolderInvalid() -> Swift.String
+  @objc public func fieldErrorIBANInvalid() -> Swift.String
+  @objc public func fieldErrorIBANOrAccountNumberInvalid() -> Swift.String
+  @objc public func fieldErrorRoutingNumberInvalid() -> Swift.String
+  @objc public func fieldErrorBICOrBankCodeInvalid() -> Swift.String
+  @objc public func fieldErrorEmailInvalid() -> Swift.String
+  @objc public func fieldErrorMobilePhoneInvalid() -> Swift.String
+  @objc public func fieldErrorCountryCodeInvalid() -> Swift.String
+  @objc public func fieldErrorNationalIdentifierInvalid() -> Swift.String
+  @objc public func fieldErrorAccountNumberInvalid() -> Swift.String
+  @objc public func fieldErrorAccountExpiryDateInvalid() -> Swift.String
+  @objc public func fieldErrorAccountExpired() -> Swift.String
+  @objc public func fieldErrorAddressInvalid() -> Swift.String
+  @objc public func fieldErrorDateOfBirthInvalid() -> Swift.String
+  @objc public func fieldErrorBankCodeInvalid() -> Swift.String
+  @objc public func paymentMethodGroupStored() -> Swift.String
+  @objc public func paymentMethodGroupOther() -> Swift.String
+  @objc public func paymentMethodGroupCards() -> Swift.String
+  @objc public func title(forPaymentBrand paymentBrand: Swift.String) -> Swift.String
+  @objc public func accessibilityPayWith() -> Swift.String
+  @objc public func accessibilityCancelCheckout() -> Swift.String
+  @objc public func accessibilityScanCard() -> Swift.String
+  @objc public func accessibilityPayWithStoredPaymentMethod() -> Swift.String
+  @objc public func fieldPlaceholderExpiryDateWeb() -> Swift.String
+  @objc public func fieldPlaceholderCVVWeb() -> Swift.String
+  @objc public func fieldErrorCardExpiryDateInvalidWeb() -> Swift.String
+  @objc public func fieldErrorCardCVVInvalidWeb() -> Swift.String
+  @objc public func localizedString(forDeprecatedKey deprecatedKey: Swift.String, actualKey: Swift.String, defaultValue: Swift.String?) -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPApplePayUtil : ObjectiveC.NSObject {
+  @objc public static func applePayPaymentRequest(for request: PassKit.PKPaymentRequest?, and checkoutInfo: OPPWAMobile.OPPCheckoutInfo?) -> PassKit.PKPaymentRequest?
+  @objc public static func canSubmitApplePayRequest(for request: PassKit.PKPaymentRequest?) -> Swift.Bool
+  @objc public static func getApplePayViewController(for request: PassKit.PKPaymentRequest) -> PassKit.PKPaymentAuthorizationViewController?
+  @objc public static func isRecurringPaymentRequestEnabled(with request: PassKit.PKPaymentRequest?) -> Swift.Bool
+  @available(iOS 11.0, *)
+  @objc public static func convertAuthorization(result: OPPWAMobile.OPPApplePayRequestAuthorizationResult) -> PassKit.PKPaymentAuthorizationResult
+  @available(iOS 11.0, *)
+  @objc public static func convertShippingContact(update: OPPWAMobile.OPPApplePayRequestShippingContactUpdate) -> PassKit.PKPaymentRequestShippingContactUpdate
+  @available(iOS 11.0, *)
+  @objc public static func convertShippingMethod(update: OPPWAMobile.OPPApplePayRequestShippingMethodUpdate) -> PassKit.PKPaymentRequestShippingMethodUpdate
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPDeviceAuthProvider : ObjectiveC.NSObject {
+  @objc public static var isDeviceAuthEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc public static func performDeviceAuthentication(withLocalizedReason localizedReason: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPLibValidator : ObjectiveC.NSObject {
+  @objc public static func isThreeDSFrameworksLoaded() -> Swift.Bool
+  @objc public static func isFraudForceLibLoaded() -> Swift.Bool
+  @objc public static func isKlarnaInlineLibLoaded() -> Swift.Bool
+  @objc public static func isAfterPayLibLoaded() -> Swift.Bool
+  @objc public static func isCashAppPayLibLoaded() -> Swift.Bool
+  @objc public static func isAffirmLibLoaded() -> Swift.Bool
+  @objc public static func validLoadedLibs() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCardValidator : ObjectiveC.NSObject {
+  @objc public static let OPPCardValidatorDefaultNumberRegex: Swift.String
+  @objc public static let OPPCardValidatorDefaultNumberPattern: Swift.String
+  @objc public static let OPPCardValidatorDefaultCVVLength: Swift.Int
+  @objc public static func cvvLength(forPaymentBrand paymentBrand: Swift.String) -> ObjectiveC.NSInteger
+  @objc public static func paymentBrandsDetected(forCardNumber cardNumber: Swift.String, includeUnknown: Swift.Bool) -> [Swift.String]
+  @objc public static func validate(cardNumber: Swift.String, paymentBrand: Swift.String, detectedBrands: [Swift.String]?) -> Swift.Bool
+  @objc public static func patternForCardNumber(withPaymentBrand paymentBrand: Swift.String) -> Swift.String
+  @objc public static func isExpiryDateOptional(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func cvvMode(forPaymentBrand paymentBrand: Swift.String) -> OPPWAMobile.OPPCardBrandInfoCvvMode
+  @objc public static func isMobilePhoneRequired(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func detectionRegex(forPaymentBrand paymentBrand: Swift.String) -> Swift.String?
+  @objc public static func isPassingLuhnCheck(withCardNumber cardNumber: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc extension OPPWAMobile.OPPCashAppPayProcessor {
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_INVALID_AMOUNT: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_INVALID_REDIRECT_URL: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_JWT_DECODE_NULL: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_DECODE_ERROR: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_JWT_DECODE_ERROR: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_HTTP_ERROR: Swift.String
+  @objc public static let FAILED_TO_SIGNING_ORDER_TOKEN_DUE_TO_SIGNIN_ERROR: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED_DUE_TO_NIL_DATA: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED_DUE_TO_DECODE_ERROR: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED_DUE_TO_UNKNOWN_ERROR: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED_DUE_TO_INVALID_DATA: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED_DUE_TO_HTTP_ERROR: Swift.String
+  @objc public static let CASH_APP_VALIDATION_FAILED_DUE_TO_VALIDATION_ERROR: Swift.String
+  @objc public static let CASH_APP_STATE_ERROR: Swift.String
+  @objc public static let CASH_APP_INTEGRATION_ERROR: Swift.String
+  @objc public static let CASH_APP_NETWORK_ERROR: Swift.String
+  @objc public static let CASH_APP_API_ERROR: Swift.String
+  @objc public static let CASH_APP_UNEXPECTED_ERROR: Swift.String
+}
+@objc extension UIKit.UIImageView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func loadImage(forPaymentBrand paymentBrand: Swift.String)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func loadImage(forPaymentBrand paymentBrand: Swift.String, accessibilityId: Swift.String?)
+}
+@objc public protocol NetworkLogger {
+  @objc func logRequest(_ request: Foundation.URLRequest?)
+  @objc func logResponse(_ response: Foundation.URLResponse?)
+}
+@_inheritsConvenienceInitializers @objc public class OPPFileUtil : ObjectiveC.NSObject {
+  @objc public static func read(fromPath path: Swift.String) -> Foundation.Data?
+  @objc public static func write(data: Foundation.Data, to path: Swift.String) -> Swift.Bool
+  @objc public static func createDirectory(withPath path: Swift.String)
+  @objc public static func removeFile(atPath path: Swift.String) -> Swift.Bool
+  @objc public static func fileCreationTime(atPath path: Swift.String) -> Foundation.TimeInterval
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc extension OPPWAMobile.OPPAffirmProcessor {
+  @objc public static let NIL_AFFIRM_CHECKOUT_CONFIG: Swift.String
+  @objc public static let NIL_CHECKOUT_DATA: Swift.String
+  @objc public static let NIL_AFFIRM_CHECKOUT_DATA: Swift.String
+  @objc public static let NIL_AFFIRM_CHECKOUT_VIEW: Swift.String
+  @objc public static let SHOPPER_CANCELED_TRANSACTION: Swift.String
+  @objc public static let CHECKOUT_CANCELED_WITH_REASON: Swift.String
+  @objc public static let AFFIRM_SDK_IS_NOT_LOADED: Swift.String
+  @objc public static let INVALID_UNIT_PRICE: Swift.String
+  @objc public static let INVALID_CHECKOUT_AMOUNT: Swift.String
+  @objc public static let INVALID_DISCOUNT_AMOUNT: Swift.String
+}
+@objc public enum OPPAnalyticsDataIntegrationType : ObjectiveC.NSInteger {
+  case custom
+  case checkoutUI
+  case dropInButton
+  public func getIntegrationTypeString(_ paymentBrand: Swift.String) -> Swift.String
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public typealias RawValue = ObjectiveC.NSInteger
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPCheckoutSharedPaymentDetails : ObjectiveC.NSObject {
+  public typealias CompleteBlock = (OPPWAMobile.OPPTransaction?, (any Swift.Error)?) -> Swift.Void
+  public typealias CancelBlock = () -> Swift.Void
+  public typealias LoadingBlock = (Swift.Bool) -> Swift.Void
+  @objc public var checkoutSettings: OPPWAMobile.OPPCheckoutSettings?
+  @objc public var checkoutID: Swift.String?
+  @objc public var checkoutInfo: OPPWAMobile.OPPCheckoutInfo?
+  @objc public var paymentBrand: Swift.String?
+  @objc public var detectedBrandsPriority: [Swift.String]?
+  @objc public var provider: OPPWAMobile.OPPPaymentProvider?
+  @objc public var brandRules: [OPPWAMobile.OPPBrandInfo]?
+  @objc public var isPaymentSchemeScreenEnabled: Swift.Bool
+  @objc public var isCheckoutPresented: Swift.Bool
+  @objc public var integrationType: OPPWAMobile.OPPAnalyticsDataIntegrationType
+  @objc public var completeBlock: OPPWAMobile.OPPCheckoutSharedPaymentDetails.CompleteBlock?
+  @objc public var canceledBlock: OPPWAMobile.OPPCheckoutSharedPaymentDetails.CancelBlock?
+  @objc public var loadingBlock: OPPWAMobile.OPPCheckoutSharedPaymentDetails.LoadingBlock?
+  @objc public var applePayDelegate: OPPWAMobile.OPPApplePayDelegate {
+    @objc get
+    @objc set
+  }
+  @objc public var configuredPaymentBrands: [Swift.String]? {
+    @objc get
+    @objc set
+  }
+  @objc public static let sharedInstance: OPPWAMobile.OPPCheckoutSharedPaymentDetails
+  @objc public func callCompleteBlock(withTransaction transaction: OPPWAMobile.OPPTransaction?, error: Foundation.NSError?)
+  @objc public func callCanceledBlock()
+  @objc public func callLoadingBlock(InProgress inProgress: Swift.Bool)
+  @objc public func clear()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPWebViewUtils : ObjectiveC.NSObject {
+  @objc public static func isFinalAsyncReached(with redirectString: Swift.String?, shopperResultUrl: Swift.String?) -> Swift.Bool
+  @objc public static func redirectUrlPresent(redirectString: Swift.String?, contain shopperResultUrl: Swift.String?) -> Swift.Bool
+  @objc public static func redirectUrlPresent(redirectString: Swift.String?, conformsTo pattern: Swift.String) -> Swift.Bool
+  @objc public static func colorToString(_ color: UIKit.UIColor) -> Swift.String
+  @objc public static func fileContent(withName filename: Swift.String) throws -> Swift.String
+  @objc public static func boolToString(_ boolValue: Swift.Bool) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class OPPBrandInfo : ObjectiveC.NSObject {
+  @objc final public let brand: Swift.String
+  @objc final public let label: Swift.String
+  @objc final public let renderType: Swift.String
+  @objc public var cardBrandInfo: OPPWAMobile.OPPCardBrandInfo?
+  @objc public var isCustomUiRequired: Swift.Bool
+  @objc public init?(brand: Swift.String, renderType: Swift.String, label: Swift.String)
+  @objc convenience public init?(brand: Swift.String, json: Swift.Dictionary<Swift.String, Any>)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPImageLoader : ObjectiveC.NSObject {
+  public typealias ImageLoaderCompletionBlock = (UIKit.UIImage?) -> Swift.Void
+  @objc public static let shared: OPPWAMobile.OPPImageLoader
+  @objc public func addURLs(_ URLs: [Swift.String : Foundation.URL])
+  @objc public func hasURL(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public func loadLogo(forPaymentBrand paymentBrand: Swift.String, completion: @escaping OPPWAMobile.OPPImageLoader.ImageLoaderCompletionBlock)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPImageCache : ObjectiveC.NSObject {
+  @objc public static let shared: OPPWAMobile.OPPImageCache
+  @objc public var customImages: [Swift.String : UIKit.UIImage]?
+  @objc public func image(forKey key: Swift.String) -> UIKit.UIImage?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class OPPLogger : ObjectiveC.NSObject {
+  @objc public static func sharedInstance(_ loggerService: (any OPPWAMobile.OPPLoggerServiceProtocol)?) -> OPPWAMobile.OPPLogger?
+  @objc final public func updateLogLevel(withString logLevelString: Swift.String?)
+  @objc final public func log(info: Swift.String, properties: Swift.Dictionary<Swift.String, Any>?, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(warning: Swift.String, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(error: Foundation.NSError?, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(debug: Swift.String, properties: Swift.Dictionary<Swift.String, Any>?, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(request: Foundation.NSURLRequest, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(response: Foundation.URLResponse, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logConfigured(paymentBrands: [Swift.String], checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logUnconfigured(paymentBrand: Swift.String, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logCheckoutStarted(withCheckoutID checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logReplacing(oldCheckoutID: Swift.String, with newCheckoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func sendLogs()
+  @objc final public func sendOldLogs()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPUIUtil : ObjectiveC.NSObject {
+  @objc public static func findTopViewController() -> UIKit.UIViewController?
+  @objc public static func interfaceOrientation() -> UIKit.UIInterfaceOrientation
+  @objc public static func isPortraitOrientation() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum NetworkResponseContentType : Swift.Int {
+  case json
+  case image
+  case html
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol NetworkResponseSerializable {
+  @objc var acceptableContentTypes: Swift.Set<Swift.String> { get }
+  @objc var acceptableStatusCodes: Foundation.IndexSet { get }
+  @objc func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.NetworkResponse
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkResponseSerializer : ObjectiveC.NSObject {
+  @objc public static var `default`: any OPPWAMobile.NetworkResponseSerializable {
+    @objc get
+  }
+  @objc public static func serializer(contentType: OPPWAMobile.NetworkResponseContentType) -> any OPPWAMobile.NetworkResponseSerializable
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPUtil : ObjectiveC.NSObject {
+  @objc public static func formattedAmount(amount: Foundation.NSNumber, currencyCode: Swift.String) -> Swift.String
+  @objc public static func formattedNumericDigits(for digits: Swift.String) -> Swift.String?
+  @objc public static func addWhitespaces(to text: Swift.String, pattern: Swift.String) -> Swift.String
+  @objc public static func isNumericDigit(_ digit: Foundation.unichar) -> Swift.Bool
+  @objc public static func isCardNumberFormattingAllowedWith(cardNumber: Swift.String) -> Swift.Bool
+  @objc public static func isDateValid(_ dateString: Swift.String, withFormat dateFormat: Swift.String) -> Swift.Bool
+  @objc public static func cardExpirationMonth(from expirationDate: Swift.String?) -> Swift.String?
+  @objc public static func cardExpirationYear(from expirationDate: Swift.String?) -> Swift.String?
+  @objc public static func date(from dateStr: Swift.String, withFormat dateFormat: Swift.String?) -> Foundation.Date?
+  @objc public static func string(from date: Foundation.Date?, withFormat dateFormat: Swift.String?) -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum OPPFeatureSwitch : Swift.Int {
+  case componentUI
+  case threeDSFallbackDisabled
+  case swiftImplementation
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class OPPFeatureSwitchChecker : ObjectiveC.NSObject {
+  @objc public static let shared: OPPWAMobile.OPPFeatureSwitchChecker
+  @objc final public func isActivated(for featureSwitch: OPPWAMobile.OPPFeatureSwitch) -> Swift.Bool
+  @objc final public func enable(featureSwitch: OPPWAMobile.OPPFeatureSwitch)
+  @objc final public func disable(featureSwitch: OPPWAMobile.OPPFeatureSwitch)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPLogoUtil : ObjectiveC.NSObject {
+  @objc public static func logo(forPaymentBrand paymentBrand: OPPWAMobile.OPPPaymentBrand) -> UIKit.UIImage?
+  @objc public static func logo(forPaymentBrand paymentBrand: OPPWAMobile.OPPPaymentBrand, viewSize: CoreFoundation.CGSize) -> UIKit.UIImage
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension PassKit.PKPaymentRequest {
+  @objc dynamic public func updatePaymentRequest(for mode: OPPWAMobile.OPPProviderMode, tokenId: Swift.String) -> Swift.Bool
+}
+@objc public enum NetworkServiceMethod : Swift.Int {
+  case get
+  case post
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkJSONResponseSerializer : ObjectiveC.NSObject, OPPWAMobile.NetworkResponseSerializable {
+  @objc final public var acceptableContentTypes: Swift.Set<Swift.String> {
+    @objc get
+  }
+  @objc final public var acceptableStatusCodes: Foundation.IndexSet {
+    @objc get
+  }
+  @objc final public func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc final public func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.NetworkResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class OPPCashAppPayBrandConfig : OPPWAMobile.OPPAfterpayConfig {
+  @objc public init?(minimumAmount: Swift.String, maximumAmount: Swift.String, currencyCode: Swift.String, locale: Foundation.Locale, consumerLocale: Foundation.Locale)
+  @objc override dynamic public var paymentBrand: OPPWAMobile.OPPPaymentBrand {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public enum OPPLogLevel : Swift.Int {
+  case off = 0
+  case error = 100
+  case warning = 200
+  case info = 300
+  case debug = 1000
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class OPPLogMessage : ObjectiveC.NSObject, Foundation.NSCoding {
+  @objc final public var timestamp: Foundation.TimeInterval
+  @objc final public let message: Swift.String
+  @objc final public let logLevel: OPPWAMobile.OPPLogLevel
+  @objc convenience public init?(message: Swift.String, logLevel: OPPWAMobile.OPPLogLevel, checkoutID: Swift.String)
+  @objc public static func logMessage(message: Swift.String, logLevel: OPPWAMobile.OPPLogLevel, checkoutID: Swift.String) -> Self?
+  @objc final public func isEmpty() -> Swift.Bool
+  @objc final public func getLogLevel() -> OPPWAMobile.OPPLogLevel
+  @objc final public func getTimeStamp() -> Foundation.TimeInterval
+  @objc final public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkImageResponseSerializer : ObjectiveC.NSObject, OPPWAMobile.NetworkResponseSerializable {
+  @objc final public var acceptableContentTypes: Swift.Set<Swift.String> {
+    @objc get
+  }
+  @objc final public var acceptableStatusCodes: Foundation.IndexSet {
+    @objc get
+  }
+  @objc final public func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc final public func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.NetworkResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPAddressCodes : ObjectiveC.NSObject {
+  @objc public static let kCountryCodeUSA: Swift.String
+  @objc public static let kCountryCodeCanada: Swift.String
+  @objc public static func getCountries() -> [Swift.String]
+  @objc public static func getUsStates() -> [Swift.String]
+  @objc public static func getCaStates() -> [Swift.String]
+  @objc public static func getCountryName(withCode countryCode: Swift.String) -> Swift.String?
+  @objc public static func getCountryCodeWith(name: Swift.String) -> Swift.String?
+  @objc public static func getStateName(withCode stateCode: Swift.String, countryCode: Swift.String) -> Swift.String?
+  @objc public static func getStateCode(withName state: Swift.String, countryCode: Swift.String) -> Swift.String?
+  @objc public static func isCountryCodeIsValid(_ countryCode: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias NetworkHeaders = [Swift.String : Swift.String]
+public typealias NetworkParameters = [Swift.String : Any]
+@objc final public class NetworkManager : ObjectiveC.NSObject {
+  @objc public init(logger: (any OPPWAMobile.NetworkLogger)? = nil, requestSerializer: any OPPWAMobile.NetworkRequestSerializable = NetworkRequestSerializer.default, responseSerializer: any OPPWAMobile.NetworkResponseSerializable = NetworkResponseSerializer.default, networkExecutor: any OPPWAMobile.NetworkExecutable = NetworkExecutor())
+  @objc final public func execute(api: Swift.String, baseUrl: Foundation.URL? = nil, method: OPPWAMobile.NetworkServiceMethod = .get, parameters: OPPWAMobile.NetworkParameters = [:], headers: OPPWAMobile.NetworkHeaders = [:], completion: @escaping (Any?, (any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkJSONRequestSerializer : ObjectiveC.NSObject, OPPWAMobile.NetworkRequestSerializable {
+  @objc final public var contentType: OPPWAMobile.NetworkRequestContentType {
+    @objc get
+  }
+  @objc final public func getUrlRequest(api: Swift.String, baseUrl: Foundation.URL?, method: OPPWAMobile.NetworkServiceMethod, parameters: OPPWAMobile.NetworkParameters, headers: OPPWAMobile.NetworkHeaders) throws -> Foundation.URLRequest
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension OPPWAMobile.OPPLogger {
+  @objc final public func lgf_integrationTypeString() -> Swift.String
+  @objc final public func lgf_checkoutSettingsDictionary(withSettings settings: OPPWAMobile.OPPCheckoutSettings) -> Swift.Dictionary<Swift.String, Any>
+}
+@_hasMissingDesignatedInitializers @objc public class NetworkResponse : ObjectiveC.NSObject {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkHTMLResponseSerializer : ObjectiveC.NSObject, OPPWAMobile.NetworkResponseSerializable {
+  @objc final public var acceptableContentTypes: Swift.Set<Swift.String> {
+    @objc get
+  }
+  @objc final public var acceptableStatusCodes: Foundation.IndexSet {
+    @objc get
+  }
+  @objc final public func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc final public func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.NetworkResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol NetworkExecutable {
+  @objc func execute(request: Foundation.URLRequest, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkExecutor : ObjectiveC.NSObject, OPPWAMobile.NetworkExecutable {
+  @objc final public func execute(request: Foundation.URLRequest, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum NetworkRequestContentType : Swift.Int {
+  case json
+  case url
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol NetworkRequestSerializable {
+  @objc var contentType: OPPWAMobile.NetworkRequestContentType { get }
+  @objc func getUrlRequest(api: Swift.String, baseUrl: Foundation.URL?, method: OPPWAMobile.NetworkServiceMethod, parameters: OPPWAMobile.NetworkParameters, headers: OPPWAMobile.NetworkHeaders) throws -> Foundation.URLRequest
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkRequestSerializer : ObjectiveC.NSObject {
+  @objc public static var `default`: any OPPWAMobile.NetworkRequestSerializable {
+    @objc get
+  }
+  @objc public static func serializer(contentType: OPPWAMobile.NetworkRequestContentType) -> any OPPWAMobile.NetworkRequestSerializable
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPLoggerService : ObjectiveC.NSObject, OPPWAMobile.OPPLoggerServiceProtocol {
+  @objc override dynamic public init()
+  @objc final public func sendLog(messages: [OPPWAMobile.OPPLogMessage], checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode, _ completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPBrandsValidator : ObjectiveC.NSObject {
+  @objc public static func isCardBrand(_ paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func getLabel(forPaymentBrand paymentBrand: Swift.String) -> Swift.String
+  @objc public static func hasCustomUi(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func getBrandsWithMissingUi() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NetworkURLRequestSerializer : ObjectiveC.NSObject, OPPWAMobile.NetworkRequestSerializable {
+  @objc final public var contentType: OPPWAMobile.NetworkRequestContentType {
+    @objc get
+  }
+  @objc final public func getUrlRequest(api: Swift.String, baseUrl: Foundation.URL?, method: OPPWAMobile.NetworkServiceMethod, parameters: OPPWAMobile.NetworkParameters, headers: OPPWAMobile.NetworkHeaders) throws -> Foundation.URLRequest
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardBrandInfoCvvMode : Swift.Equatable {}
+extension OPPWAMobile.OPPCardBrandInfoCvvMode : Swift.Hashable {}
+extension OPPWAMobile.OPPCardBrandInfoCvvMode : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPAnalyticsDataIntegrationType : Swift.Equatable {}
+extension OPPWAMobile.OPPAnalyticsDataIntegrationType : Swift.Hashable {}
+extension OPPWAMobile.OPPAnalyticsDataIntegrationType : Swift.RawRepresentable {}
+extension OPPWAMobile.NetworkResponseContentType : Swift.Equatable {}
+extension OPPWAMobile.NetworkResponseContentType : Swift.Hashable {}
+extension OPPWAMobile.NetworkResponseContentType : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPFeatureSwitch : Swift.Equatable {}
+extension OPPWAMobile.OPPFeatureSwitch : Swift.Hashable {}
+extension OPPWAMobile.OPPFeatureSwitch : Swift.RawRepresentable {}
+extension OPPWAMobile.NetworkServiceMethod : Swift.Equatable {}
+extension OPPWAMobile.NetworkServiceMethod : Swift.Hashable {}
+extension OPPWAMobile.NetworkServiceMethod : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPLogLevel : Swift.Equatable {}
+extension OPPWAMobile.OPPLogLevel : Swift.Hashable {}
+extension OPPWAMobile.OPPLogLevel : Swift.RawRepresentable {}
+extension OPPWAMobile.NetworkRequestContentType : Swift.Equatable {}
+extension OPPWAMobile.NetworkRequestContentType : Swift.Hashable {}
+extension OPPWAMobile.NetworkRequestContentType : Swift.RawRepresentable {}

@@ -1,0 +1,92 @@
+[
+    {
+        "header": "Vehicle insurance",
+        "title": "Have a safe trip with Bcare",
+        "subtitle": "Choose the Best Insurance for Your Vehicle",
+        "grid": [
+            {
+                "title": "Comprehensive insurance",
+                "subtitle": "Covers damages to the insured vehicle in the event of an accident, regardless of who is at fault"
+            },
+            {
+                "title": "Third-Party insurance",
+                "subtitle": "Protects the owner from financial liability to a third party in case their vehicle causes damage to others"
+            },
+            {
+                "title": "Premium insurance",
+                "subtitle": "Offers comprehensive coverage for the vehicle against various risks"
+            }
+        ],
+        "list": [
+            "Within 1 Minute, instant comparisons of insurance quotes from all insurance companies",
+            "Multiple types of insurance: TPL, Mumayaze, Comprehensive insurance and various deductible amounts",
+            "Guaranteed best price that suits your needs",
+            "Renewal reminders and scheduling start dates for your insurance",
+            "Fast integration of your policy with the traffic system/Najm",
+            "Promotion programs for some government, semi-government, and private sectors",
+            "Flexibility in choosing additional benefits",
+            "One place to manage all your policies"
+        ]
+    },
+    {
+        "header": "Medical insurance",
+        "title": "Get Medical Insurance for Your Employees with BCare and feel safe",
+        "subtitle": "Medical coverage for employees and their family members, with the flexibility to change coverage types at any time and manage all documents easily",
+        "grid": [
+            {
+                "title": "Medical insurance",
+                "subtitle": "Medical coverage for employees and their family members, with the flexibility to change coverage types at any time and manage all documents easily"
+            }
+        ],
+        "list": [
+            "Numerous advantages and providers",
+            "Ten Insurance classes that cover Saudi Arabia’s various medical",
+            "Quick Connection with CCHI",
+            "Easily Online Addition/Removal of Members",
+            "We’re Here for You in contracted hospitals",
+            "Flexibility to modify the class at any moment in accordance with corporate guidelines",
+            "One Place to manage all your documents",
+            "With You Every Step to follow up on claims and medical approvals (VIP category)"
+        ]
+    },
+    {
+        "header": "Travel insurance",
+        "title": "Travel insured with Peace of Mind with Be Care",
+        "subtitle": "Compensation for Insured Individuals for Unexpected Events Such As: loss of luggage and valuable items, medical expenses and emergencies, trip cancellations or delays for single and multiple trips",
+        "grid": [
+            {
+                "title": "Travel insurance",
+                "subtitle": "Your protective shield on your travels from the risks you face while traveling, whether they are medical risks, baggage-related risks, or flight cancellations"
+            }
+        ],
+        "list": [
+            "Coverage for All Countries Worldwide, coverage excluding the USA and Canada, and coverage Schengen Countries",
+            "Insurance for one trip or multiple trips at the same time",
+            "Easily add one or more companions to the same policy",
+            "Multiple types of insurance with benefits that suit your needs",
+            "Guarantee your rights against all travel risks",
+            "Coverage for medical expenses and emergency situations"
+        ]
+    },
+    {
+        "header": "Medical Malpractices insurance",
+        "title": "Practice Your Profession with Confidence",
+        "subtitle": "Protection for doctors and health care workers against financial and legal risks in the event of medical malpractice",
+        "grid": [
+            {
+                "title": "Medical Malpractices insurance",
+                "subtitle": "Peace of mind to practice your profession with confidence with comprehensive coverage for compensation claims resulting from medical errors"
+            }
+        ],
+        "list": [
+            "Coverage for All medical Specialties",
+            "Coverage duration of up to five years based on your needs",
+            "Instant comparison of insurance quotes from various companies",
+            "Control over annual coverage limits and claims per incident",
+            "Diverse deductible options",
+            "Coverage for medical and legal costs in the event of your involvement in a medical emergency",
+            "Option to extend the reporting period for claims and retroactive insurance from one to two years",
+            "Print your policy at any time"
+        ]
+    }
+]

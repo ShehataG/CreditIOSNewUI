@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.bcare.app</string>
+			</array>
+		</dict>
+	</array>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>fontawesome-webfont.ttf</string>
+		<string>fontawesome-solid.ttf</string>
+		<string>Cairo-Regular.ttf</string>
+		<string>Cairo-Bold.ttf</string>
+		<string>Cairo-Light.ttf</string>
+		<string>Cairo-SemiBold.ttf</string>
+		<string>Cairo-ExtraLight.ttf</string>
+		<string>ReadexPro-Regular.ttf</string>
+		<string>ReadexPro-Bold.ttf</string>
+		<string>ReadexPro-Light.ttf</string>
+		<string>ReadexPro-SemiBold.ttf</string>
+		<string>ReadexPro-ExtraLight.ttf</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>
