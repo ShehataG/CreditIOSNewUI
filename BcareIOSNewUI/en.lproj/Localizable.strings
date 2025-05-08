@@ -54,17 +54,17 @@
 
 "StartNow"="Start now";
 
-"Vehicle"="Vehicle";
+"Vehicle"="Personal\nfinance";
 
-"Travel"="Travel";
+"Travel"="Lease\nfinance";
 
-"Medical"="Medical";
+"Medical"="Real estate\nfinance";
 
-"Malpractices"="Malpractices";
+"Malpractices"="Credit card\nfinance";
 
-"CompareInsur"="Compare , Insure Get your insurance";
+"CompareInsur"="Fast, easy, safe";
 
-"OnePlace"="One place to save you the hassle of searching between more than 20 insurance companies!";
+"OnePlace"="Your financial matters are easier with us";
 
 "CarWash"="Car\nwash";
 
@@ -845,3 +845,8 @@
 "PrintBill"="Print bill";
 
 "NoBikersHere"="This locastion has no bikers , please select another one";
+
+"Calculator"="Calculator";
+
+"ApplyNow"="Apply now";
+

@@ -8,9 +8,11 @@
 import Foundation
 import SwiftUI
 
-let appBlueColor = Color(hex:"#136495")!
+let appBlueColor = Color(hex:"#4F3366")!
+let appGreenColor = Color(hex:"#00B46D")!
 let appOrangeColor = Color(hex:"#FAA62D")!
 let appOrangeDarkColor = Color(hex:"#A4753A")!
+
 extension Color {
     static let lightGray = Color(hex:"#9295A3")!
     static let lightGrayMid = Color(hex:"#D9D9D9")!

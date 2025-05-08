@@ -17,8 +17,6 @@ class ViewFactory {
                 ContentView()
             case .loginPage:
                 LoginView()
-            case .profilePage:
-                ProfileView()
             case .registerPage:
                 RegisterView()
             case .boardingPage:

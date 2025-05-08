@@ -10,10 +10,20 @@ import SwiftUI
 import SwiftUIPager
 import SanarKit
 import SiriusRating
+import AxisTabView
 
 struct HomeView: View {
     @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject var coordinator: Coordinator
+    
+    @Binding var selection: Int
+    @Binding var constant: ATConstant
+    @Binding var radius: CGFloat
+    @Binding var concaveDepth: CGFloat
+    @Binding var color: Color
+    let tag: Int
+    let systemName: String
+    let safeArea: EdgeInsets
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -52,10 +62,16 @@ struct HomeView: View {
                     .padding(.horizontal,10)
                 }
                 .padding(.top,10)
+                .padding(.bottom,100)
                 .modifier(RoundedBackgroundModifer(color: Color.lightGrayCommon))
             }
             //.scrollIndicators(.never)
         }
+        .tabItem(tag: tag, normal: {
+            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Main")
+        }, select: {
+            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Main")
+        })
         .background(Color.lightGrayCommon)
         .onFirstAppear {
             if let userInfo = sanarUserInfo {

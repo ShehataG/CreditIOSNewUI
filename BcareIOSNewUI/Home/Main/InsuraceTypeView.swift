@@ -12,7 +12,7 @@ struct InsuraceTypeView: View {
     var text:String
     let icon:String
     let lines:Int
-    init(text: String, icon: String, lines:Int = 1) {
+    init(text: String, icon: String, lines:Int = 2) {
         self.text = text
         self.icon = icon
         self.lines = lines

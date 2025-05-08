@@ -9,8 +9,7 @@ import Foundation
 
 enum Destination {
     case homePage
-    case loginPage
-    case profilePage
+    case loginPage 
     case registerPage
     case boardingPage
     case permissionsPage

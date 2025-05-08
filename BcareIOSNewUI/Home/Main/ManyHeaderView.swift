@@ -14,25 +14,21 @@ struct ManyHeaderView: View {
         HStack {
             VStack(alignment: .leading,spacing:10) {
                 Text(verbatim:"CompareInsur".localized)
-                    .font(Fonts.mediumRegular())
+                    .font(Fonts.veryLargeBold())
                     .foregroundColor(Color.white)
                     .padding(.horizontal,10)
                 Text(verbatim:"OnePlace".localized)
-                    .font(Fonts.verySmallLight())
+                    .font(Fonts.smallLight())
                     .foregroundColor(Color.white.opacity(0.7))
-                    .frame(width: screenWidth * 0.6)
-                    .padding(.horizontal,15)
+//                    .frame(width: screenWidth * 0.6)
+                    .padding(.horizontal,20)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: true, vertical: false)
             }
-            .frame(width: screenWidth * 0.6)
+//            .frame(width: screenWidth * 0.6)
             Spacer()
-            Image("many")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 90,height: 90)
         }
         .padding(.horizontal,20)
-        .padding(.top,10)
+        .padding(.vertical,20)
     }
 }
