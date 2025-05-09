@@ -29,26 +29,28 @@ struct ContentView: View {
                     ProfileView()
                         .tag(4)
                 }
-                HStack(spacing: 0) {
-                    // MARK: - Tab Button
-                    TabItemView(selection: $selectedIndex, tag: 0, systemName: "home", title: "Main")
-                    TabItemView(selection: $selectedIndex, tag: 1, systemName: "calculator", title: "Calculator")
-                        .offset(x: -10)
-                    TabItemView(selection: $selectedIndex, tag: 2, systemName: "plus.circle.fill", title: "Main")
-                        .offset(y: -30)
-                    TabItemView(selection: $selectedIndex, tag: 3, systemName: "wareef", title: "Wareef")
-                        .offset(x: 10)
-                    TabItemView(selection: $selectedIndex, tag: 4, systemName: "user", title: "MyAccount")
-                }
-                .background(
-                    Color.white
-                        .clipShape(CustomCurveShape())
-                        .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
-                        .ignoresSafeArea(.container, edges: .bottom)
-                )
+                .overlay (
+                    HStack(spacing: 0) {
+                        // MARK: - Tab Button
+                        TabItemView(selection: $selectedIndex, tag: 0, systemName: "home", title: "Main")
+                        TabItemView(selection: $selectedIndex, tag: 1, systemName: "calculator", title: "Calculator")
+                            .offset(x: -10)
+                        TabItemView(selection: $selectedIndex, tag: 2, systemName: "plus.circle.fill", title: "Main")
+                            .offset(y: -30)
+                        TabItemView(selection: $selectedIndex, tag: 3, systemName: "wareef", title: "Wareef")
+                            .offset(x: 10)
+                        TabItemView(selection: $selectedIndex, tag: 4, systemName: "user", title: "MyAccount")
+                    }
+                    .background(
+                        Color.white
+                            .clipShape(CustomCurveShape())
+                            .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
+                            .ignoresSafeArea(.container, edges: .bottom)
+                    )
+                , alignment: .bottom )
             }
         }
-        .background(Color.white)
+        .background(Color.clear)
         .navigationBarBackButtonHidden()
         .onOpenURL(perform:handleURL)
         .environmentObject(homeVM)
