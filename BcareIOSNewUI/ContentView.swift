@@ -9,69 +9,44 @@ import SwiftUI
 import AppTrackingTransparency
 import AdSupport
 import AdjustSdk
-import AxisTabView
+
 
 struct ContentView: View {
     @EnvironmentObject var coordinator: Coordinator
     @StateObject var homeVM = HomeVM()
     @State var selectedIndex = 0
-    @State private var selection: Int = 0
-    @State private var constant = ATConstant(axisMode: .bottom, screen: .init(activeSafeArea: false), tab: .init())
-    @State private var radius: CGFloat = 70
-    @State private var concaveDepth: CGFloat = 0.85
-    @State private var color: Color = .white
-    
+
     var body: some View {
         VStack(spacing:0) {
-//            VStack(spacing:0) {
-//                TabView(selection: $selectedIndex) {
-//                    HomeView()
-//                        .tag(0)
-//                    ProductsView()
-//                        .tag(1)
-//                    ServicesView()
-//                        .tag(2)
-//                    WareefView()
-//                        .tag(3)
-//                    if UserManager.isLoggedIn() {
-//                        ProfileView()
-//                            .tag(4)
-//                    }
-//                }
-//                HStack {
-//                    TabItemView(text: "Main", icon: "home", tag: 0, selectedIndex: $selectedIndex)
-//                        .frame(maxWidth: .infinity)
-//                    TabItemView(text: "Products", icon: "products", tag: 1, selectedIndex: $selectedIndex)
-//                        .frame(maxWidth: .infinity)
-//                    TabItemView(text: "Services", icon: "services", tag: 2, selectedIndex: $selectedIndex)
-//                        .frame(maxWidth: .infinity)
-//                    TabItemView(text: "Wareef", icon: "wareef", tag: 3, selectedIndex: $selectedIndex)
-//                        .frame(maxWidth: .infinity)
-//                    if UserManager.isLoggedIn() {
-//                        TabItemView(text: "MyAccount", icon: "user", tag: 4, selectedIndex: $selectedIndex)
-//                            .frame(maxWidth: .infinity)
-//                    }
-//                }
-//            }
-            GeometryReader { proxy in
-                AxisTabView(selection: $selection, constant: constant) { state in
-                    CustomCenterStyle(state, color: color, radius: radius, depth: concaveDepth)
-                } content: {
-                    HomeView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color, tag: 0, systemName: "home", safeArea: proxy.safeAreaInsets)
-                    ProductsView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color, tag: 1, systemName: "calculator", safeArea: proxy.safeAreaInsets)
-                    ControlView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color, tag: 2, systemName: "plus.circle.fill", safeArea: proxy.safeAreaInsets)
-                    WareefView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color, tag: 3, systemName: "wareef", safeArea: proxy.safeAreaInsets)
-                    ProfileView(selection: $selection, constant: $constant, radius: $radius, concaveDepth: $concaveDepth, color: $color, tag: 4, systemName: "user", safeArea: proxy.safeAreaInsets)
-                } onTapReceive: { selectionTap in
-                    /// Imperative syntax
-                    print("---------------------")
-                    print("Selection : ", selectionTap)
-                    print("Already selected : ", self.selection == selectionTap)
+            VStack(spacing:0) {
+                TabView(selection: $selectedIndex) {
+                    HomeView()
+                        .tag(0)
+                    ProductsView()
+                        .tag(1)
+                    WareefView()
+                        .tag(3)
+                    ProfileView()
+                        .tag(4)
                 }
+                HStack(spacing: 0) {
+                    // MARK: - Tab Button
+                    TabItemView(selection: $selectedIndex, tag: 0, systemName: "home", title: "Main")
+                    TabItemView(selection: $selectedIndex, tag: 1, systemName: "calculator", title: "Calculator")
+                        .offset(x: -10)
+                    TabItemView(selection: $selectedIndex, tag: 2, systemName: "plus.circle.fill", title: "Main")
+                        .offset(y: -30)
+                    TabItemView(selection: $selectedIndex, tag: 3, systemName: "wareef", title: "Wareef")
+                        .offset(x: 10)
+                    TabItemView(selection: $selectedIndex, tag: 4, systemName: "user", title: "MyAccount")
+                }
+                .background(
+                    Color.white
+                        .clipShape(CustomCurveShape())
+                        .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
+                        .ignoresSafeArea(.container, edges: .bottom)
+                )
             }
-            .animation(.easeInOut, value: constant)
-            .animation(.easeInOut, value: radius)
-            .animation(.easeInOut, value: concaveDepth)
         }
         .background(Color.white)
         .navigationBarBackButtonHidden()
@@ -103,5 +78,39 @@ struct ContentView: View {
         Task {
             let _ = await ATTrackingManager.requestTrackingAuthorization()
         }
+    }
+}
+
+
+struct CustomCurveShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        return Path { path in
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+            // MARK: = CURVE CENTER
+            let mid = rect.width / 2
+            path.move(to: CGPoint(x: mid - 70, y:0))
+            let to1 = CGPoint(x: mid, y: 45)
+            let control1 = CGPoint(x: mid - 35, y: 0)
+            let control2 = CGPoint(x: mid - 35, y: 45)
+            path.addCurve(to: to1, control1: control1, control2: control2)
+            let to2 = CGPoint(x: mid + 70, y: 0)
+            let control3 = CGPoint(x: mid + 35, y: 45)
+            let control4 = CGPoint(x: mid + 35, y: 0)
+            path.addCurve(to: to2, control1: control3, control2: control4)
+        }
+    }
+}
+
+enum Tab: String {
+    case home = "house"
+    case search = "magnifyingglass"
+    case message = "message"
+    case person = "person"
+    
+    var title: String {
+        return rawValue.capitalized
     }
 }

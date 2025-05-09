@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 import PassKit
-import AxisTabView
 
 struct WareefView: View {
     @EnvironmentObject var coordinator: Coordinator
@@ -25,16 +24,7 @@ struct WareefView: View {
     let images:[Int:String] = [4:"health",5:"carserv",6:"rashqa",7:"shop",8:"hotel",9:"education",10:"resturant",11:"family"]
     let imgWid:CGFloat = isIpad ? 40 : 30
     let itemWidth = (screenWidth * 0.7 - 10) * 0.5
-    
-    @Binding var selection: Int
-    @Binding var constant: ATConstant
-    @Binding var radius: CGFloat
-    @Binding var concaveDepth: CGFloat
-    @Binding var color: Color
-    let tag: Int
-    let systemName: String
-    let safeArea: EdgeInsets
-    
+     
     var body: some View {
         ZStack(alignment: .top) {
             BackPlaceholderView(factor: UserManager.isLoggedIn() ? 0.5 : 0.3)
@@ -196,11 +186,11 @@ struct WareefView: View {
              WareefDiscountView(item: wareefVM.wareefCache[id!]![wareefVM.subIndex!],showWareefCard:wareefVM.showWareefCard)
                  .modifier(PresentationBackgroundModifier())
         }
-         .tabItem(tag: tag, normal: {
-             TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Wareef")
-         }, select: {
-             TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Wareef")
-         })
+//         .tabItem(tag: tag, normal: {
+//             TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Wareef")
+//         }, select: {
+//             TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Wareef")
+//         })
         .background(Color.lightGrayCommon)
         .sheet(isPresented: $appleCardVM.showPk){
            AddPassView(pass: $appleCardVM.pass)

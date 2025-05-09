@@ -8,38 +8,55 @@
 import Foundation
 import SwiftUI
 
+
 struct TabItemView: View {
-    var text:String
-    let icon:String
-    let tag:Int
-    @Binding var selectedIndex:Int
+    @Binding var selection: Int
+    let tag: Int
+    let systemName: String
+    let title:String
+    @State private var y: CGFloat = 0
     let imgWidth:CGFloat = isIpad ? 35 : 25
+    
     var body: some View {
-        VStack(spacing:0) {
-            if selectedIndex == tag {
-                Image(icon)
-                    .resizable()
-                    .renderingMode(.template)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: imgWidth, height: imgWidth)
-                    .foregroundColor(appBlueColor)
-                ColoredText(text:text.localized)
-                    .font(Fonts.tooSmallRegular())
-                    .padding(.top,3)
+        VStack(alignment: .center,spacing: 0) {
+            if systemName == "plus.circle.fill" {
+                Text(verbatim: "ApplyNow".localized)
+                    .font(Fonts.tooSmallBold())
+                    .frame(width: 65, height: 65)
+                    .foregroundStyle(Color.white)
+                    .background(appGreenColor)
+                    .clipShape(Circle())
+                    .background(Circle().stroke(Color.white,lineWidth:4))
             }
             else {
-                Image(icon)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: imgWidth, height: imgWidth)
-                GrayText(text:text.localized)
-                    .font(Fonts.tooSmallRegular())
-                    .padding(.top,3)
+                if selection == tag {
+                    Image(systemName)
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(appBlueColor)
+                        .frame(width:imgWidth, height: imgWidth)
+                    Text(verbatim: title.localized)
+                        .foregroundStyle(appBlueColor)
+                        .font(Fonts.tooSmallRegular())
+                }
+                else {
+                    Image(systemName)
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(Color.lightGray)
+                        .frame(width:imgWidth, height: imgWidth)
+                    Text(verbatim: title.localized)
+                        .foregroundStyle(Color.lightGray)
+                        .font(Fonts.tooSmallRegular())
+                }
             }
         }
-        .padding(.vertical,10)
+        .frame(maxWidth: .infinity)
         .onTapGesture {
-            selectedIndex = tag
+            selection = tag
         }
     }
 }
+ 

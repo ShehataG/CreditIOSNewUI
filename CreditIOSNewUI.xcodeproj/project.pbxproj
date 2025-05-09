@@ -486,8 +486,6 @@
 		DEE6933F2C3BB27000A74C76 /* CarLocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6933E2C3BB27000A74C76 /* CarLocationItem.swift */; };
 		DEE693412C3BD07D00A74C76 /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE693402C3BD07D00A74C76 /* MainCardView.swift */; };
 		DEE693452C3BED9B00A74C76 /* PolicyVehiclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE693442C3BED9B00A74C76 /* PolicyVehiclesView.swift */; };
-		DEE909262DCC7A8000D6DA50 /* AxisTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE909252DCC7A8000D6DA50 /* AxisTabView.swift */; };
-		DEE909292DCC7BC200D6DA50 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = DEE909282DCC7BC200D6DA50 /* AxisTabView */; };
 		DEE9A0452D1163A80051564D /* PolicyVehiclesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9A0442D1163A80051564D /* PolicyVehiclesVM.swift */; };
 		DEEEEFD32D5B6CBE005EBFCE /* CancelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEEFD22D5B6CBE005EBFCE /* CancelTextView.swift */; };
 		DEEF4A872D1039C000297A9F /* AllPoliciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEF4A862D1039C000297A9F /* AllPoliciesView.swift */; };
@@ -1003,7 +1001,6 @@
 		DEE6933E2C3BB27000A74C76 /* CarLocationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarLocationItem.swift; sourceTree = "<group>"; };
 		DEE693402C3BD07D00A74C76 /* MainCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
 		DEE693442C3BED9B00A74C76 /* PolicyVehiclesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolicyVehiclesView.swift; sourceTree = "<group>"; };
-		DEE909252DCC7A8000D6DA50 /* AxisTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisTabView.swift; sourceTree = "<group>"; };
 		DEE9A0442D1163A80051564D /* PolicyVehiclesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyVehiclesVM.swift; sourceTree = "<group>"; };
 		DEEEEFD22D5B6CBE005EBFCE /* CancelTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTextView.swift; sourceTree = "<group>"; };
 		DEEF4A862D1039C000297A9F /* AllPoliciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPoliciesView.swift; sourceTree = "<group>"; };
@@ -1038,7 +1035,6 @@
 				DEAA59092D7040C000171C47 /* AdjustWebBridge in Frameworks */,
 				DE98DD362DA7C55A0001B332 /* AppTrackingTransparency.framework in Frameworks */,
 				DEAA590C2D70411000171C47 /* GoogleMaps in Frameworks */,
-				DEE909292DCC7BC200D6DA50 /* AxisTabView in Frameworks */,
 				DEAA590F2D7042AA00171C47 /* FirebaseAnalytics in Frameworks */,
 				DEAA58EA2D70389D00171C47 /* SSSwiftUIGIFView in Frameworks */,
 				DEAA59132D7042AA00171C47 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -2212,7 +2208,6 @@
 				DEFFBCC42BFCBAC700832573 /* AdsItem.swift */,
 				524FBFE32C06227D006D60BC /* AccessTokenItem.swift */,
 				DE9B43172D6DC4B400885279 /* RiyalView.swift */,
-				DEE909252DCC7A8000D6DA50 /* AxisTabView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -2324,7 +2319,6 @@
 				DE8C72CD2D72561D00404589 /* NavigationStackBackport */,
 				DE10BE482D75B576007BC550 /* IQKeyboardManagerSwift */,
 				DE0A6CD92D79A4BD00733619 /* SiriusRating */,
-				DEE909282DCC7BC200D6DA50 /* AxisTabView */,
 			);
 			productName = BcareIOSNewUI;
 			productReference = DE05A9D72BFB236A00EDE60D /* CreditIOSNewUI.app */;
@@ -2413,7 +2407,6 @@
 				DE8C72CC2D72561D00404589 /* XCRemoteSwiftPackageReference "navigation-stack-backport" */,
 				DE10BE472D75B576007BC550 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				DE0A6CD82D79A4BD00733619 /* XCRemoteSwiftPackageReference "SiriusRating-iOS" */,
-				DEE909272DCC7BC200D6DA50 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 			);
 			productRefGroup = DE05A9D82BFB236A00EDE60D /* Products */;
 			projectDirPath = "";
@@ -2883,7 +2876,6 @@
 				DE617B612D081AE000D58B3D /* SVGImage.swift in Sources */,
 				DE31E8C42CD356E700FD066E /* ScannerViewController.swift in Sources */,
 				DE2FCBE12D525D7E0071298E /* ServicesStatusVM.swift in Sources */,
-				DEE909262DCC7A8000D6DA50 /* AxisTabView.swift in Sources */,
 				DE31E8C52CD356E700FD066E /* CodeScanner.swift in Sources */,
 				DE31E8C62CD356E700FD066E /* AVCaptureDeviceCamera.swift in Sources */,
 				DEF09B282C04969800FA00A3 /* TermsPrivacyView.swift in Sources */,
@@ -3431,14 +3423,6 @@
 				minimumVersion = 11.10.0;
 			};
 		};
-		DEE909272DCC7BC200D6DA50 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jasudev/AxisTabView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -3541,11 +3525,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEAA590D2D7042AA00171C47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
-		};
-		DEE909282DCC7BC200D6DA50 /* AxisTabView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEE909272DCC7BC200D6DA50 /* XCRemoteSwiftPackageReference "AxisTabView" */;
-			productName = AxisTabView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

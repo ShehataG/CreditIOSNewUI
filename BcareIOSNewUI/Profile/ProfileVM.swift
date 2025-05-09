@@ -54,10 +54,10 @@ final class ProfileVM : MainObservable {
     
     override init() {
         super.init()
-        Task { @MainActor in
-            counterBase = 90 
-            await initDev()
-        }
+//        Task { @MainActor in
+//            counterBase = 90 
+//            await initDev()
+//        }
     }
     func initDev() async { 
         image = "profile"

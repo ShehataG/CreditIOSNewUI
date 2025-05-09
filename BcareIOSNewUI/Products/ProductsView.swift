@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import AxisTabView
+
 
 struct ProductsView: View {
     @EnvironmentObject var coordinator: Coordinator
@@ -24,16 +24,7 @@ struct ProductsView: View {
         ProductsItem(backImage: "medicalinsurance",title: "MedicalInsurance".localized),
         ProductsItem(backImage: "travelinsurance",title: "TravelInsurance".localized),
         ProductsItem(backImage: "malprainsurance",title: "MalpracticesInsurance".localized)
-    ]
-    
-    @Binding var selection: Int
-    @Binding var constant: ATConstant
-    @Binding var radius: CGFloat
-    @Binding var concaveDepth: CGFloat
-    @Binding var color: Color
-    let tag: Int
-    let systemName: String
-    let safeArea: EdgeInsets
+    ] 
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -59,11 +50,11 @@ struct ProductsView: View {
             }
             //.scrollIndicators(.never)
         }
-        .tabItem(tag: tag, normal: {
-            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Calculator")
-        }, select: {
-            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Calculator")
-        })
+//        .tabItem(tag: tag, normal: {
+//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Calculator")
+//        }, select: {
+//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Calculator")
+//        })
         .background(Color.lightGrayCommon)
     }
 }

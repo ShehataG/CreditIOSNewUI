@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
-import AxisTabView
+
 
 struct ProfileView: View {
     @EnvironmentObject var coordinator: Coordinator
@@ -17,16 +17,6 @@ struct ProfileView: View {
 //    @StateObject var homeVM = HomeVM()
     @State var showPolicyPicker = false
 
-    
-    @Binding var selection: Int
-    @Binding var constant: ATConstant
-    @Binding var radius: CGFloat
-    @Binding var concaveDepth: CGFloat
-    @Binding var color: Color
-    let tag: Int
-    let systemName: String
-    let safeArea: EdgeInsets
-    
     var body: some View {
         ZStack(alignment: .top) {
             BackPlaceholderView(factor: 0.5)
@@ -153,11 +143,11 @@ struct ProfileView: View {
                 profileVM.isEditingEmail = false
             }
         })
-        .tabItem(tag: tag, normal: {
-            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "MyAccount")
-        }, select: {
-            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "MyAccount")
-        })
+//        .tabItem(tag: tag, normal: {
+//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "MyAccount")
+//        }, select: {
+//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "MyAccount")
+//        })
         .background(Color.lightGrayMore)
         .navigationBarBackButtonHidden()
         .fullScreenCover(isPresented: $profileVM.showOTP,onDismiss: {
