@@ -20,8 +20,9 @@ struct ForgetPasswordView: View {
            BackPlaceholderView(factor: 0.3)
             ScrollView(showsIndicators: false) {
                 BackButton()
-                HeaderView(text: "ResetPassword") 
+                CreditMainLogo()
                 VStack(spacing:0) {
+                    HeaderView(text: "ResetPassword")
                     if forgetPasswordVM.showOptionView {
                         HStack {
                             Text(verbatim: "ChooseEmailOrPhone".localized)

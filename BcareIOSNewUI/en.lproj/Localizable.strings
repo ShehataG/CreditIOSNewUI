@@ -196,7 +196,11 @@
 
 "Password"="Password";
  
+"ConfirmPassword"="Confirm password";
+
 "AddAccount"="Add account";
+
+"AddAccountOnly"="Register";
 
 "ByClicking"="By clicking on Register Account, you agree to";
 
@@ -850,3 +854,4 @@
 
 "ApplyNow"="Apply now";
 
+"ConfirmNafaz"="Make sure the Nafaz application is installed and activated on your device";

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "vehicleinsurance.png",
+      "filename" : "Image (4).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "vehicleinsurance@2x.png",
+      "filename" : "Image (5).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "vehicleinsurance@3x.png",
+      "filename" : "Image (6).png",
       "idiom" : "universal",
       "scale" : "3x"
     }

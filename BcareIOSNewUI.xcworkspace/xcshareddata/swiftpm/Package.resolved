@@ -1,5 +1,5 @@
 {
-  "originHash" : "2571e3a92ca2144640049a9f6f819e0d670ef904c7fe27f2f7903995536e1c5b",
+  "originHash" : "5e49c3b1d6b9481945e298956a07334929bdff4460c8574dcacbe5eee08ef19d",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -26,15 +26,6 @@
       "state" : {
         "revision" : "61b85103a1aeed8218f17c794687781505fbbef5",
         "version" : "11.2.0"
-      }
-    },
-    {
-      "identity" : "axistabview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jasudev/AxisTabView.git",
-      "state" : {
-        "revision" : "5677e874634a2ccf890a1a5ed9258b4d5d9a3d7a",
-        "version" : "0.5.1"
       }
     },
     {

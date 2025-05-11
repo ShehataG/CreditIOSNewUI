@@ -105,14 +105,3 @@ struct CustomCurveShape: Shape {
         }
     }
 }
-
-enum Tab: String {
-    case home = "house"
-    case search = "magnifyingglass"
-    case message = "message"
-    case person = "person"
-    
-    var title: String {
-        return rawValue.capitalized
-    }
-}

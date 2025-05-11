@@ -18,8 +18,9 @@ struct ResetPasswordView: View {
             BackPlaceholderView(factor: 0.3)
             ScrollView(showsIndicators: false) {
                 BackButton()
-                HeaderView(text: "NewPasswordEntry") 
+                CreditMainLogo()
                 VStack(spacing:0) {
+                    HeaderView(text: "NewPasswordEntry")
                     if resetPasswordVM.generalError {
                         ErrorLocalizedView(text:resetPasswordVM.generalErrorText)
                             .padding(.vertical,10)

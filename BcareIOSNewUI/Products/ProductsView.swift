@@ -20,11 +20,11 @@ struct ProductsView: View {
     let imgWid:CGFloat = isIpad ? 40 : 30
     let itemWidth = (screenWidth * 0.7 - 21) * 0.5
     let productsItems = [
-        ProductsItem(backImage: "vehicleinsurance", title: "VehicleInsurance".localized),
-        ProductsItem(backImage: "medicalinsurance",title: "MedicalInsurance".localized),
-        ProductsItem(backImage: "travelinsurance",title: "TravelInsurance".localized),
-        ProductsItem(backImage: "malprainsurance",title: "MalpracticesInsurance".localized)
-    ] 
+        ProductsItem(backImage: "vehicleinsurance", title: "Vehicle".localized),
+        ProductsItem(backImage: "medicalinsurance",title: "Medical".localized),
+        ProductsItem(backImage: "travelinsurance",title: "Travel".localized),
+        ProductsItem(backImage: "malprainsurance",title: "Malpractices".localized)
+    ]
     
     var body: some View {
         ZStack(alignment: .top) {

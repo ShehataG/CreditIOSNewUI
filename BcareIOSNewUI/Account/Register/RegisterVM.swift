@@ -18,6 +18,7 @@ final class RegisterVM : MainObservable {
     @Published var phone = ""
     @Published var nationalId = ""
     @Published var password = ""
+    @Published var confirmPassword = ""
     @Published var birthYear = ""
     @Published var birthMonth = ""
     
@@ -25,6 +26,7 @@ final class RegisterVM : MainObservable {
     @Published var phoneErrorText:String?
     @Published var ninErrorText:String?
     @Published var passErrorText:String?
+    @Published var confirmPassErrorText:String?
     @Published var facePassSuccess = false
     @Published var facePassError = ""
     @Published var submitLoading = false

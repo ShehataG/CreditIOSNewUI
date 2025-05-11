@@ -11,9 +11,8 @@ import SwiftUI
 struct HeaderView: View {
     let text:String
     var body: some View {
-        Text(verbatim:text.localized)
-            .font(Fonts.mediumRegular())
-            .foregroundColor(Color.white)
+        ColoredText(text:text.localized)
+            .font(Fonts.mediumBold())
             .padding(.top,5)
             .padding(.bottom,35)
     }

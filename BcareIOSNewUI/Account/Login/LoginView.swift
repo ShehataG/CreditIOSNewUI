@@ -24,7 +24,7 @@ struct LoginView: View {
             BackPlaceholderView(factor: 0.3)
             ScrollView(showsIndicators: false) {
                 BackButton()
-                HeaderView(text: "LoginOrJoin")
+                CreditMainLogo()
                 VStack(spacing:0) {
                     //                    HStack {
                     //                        LoginOptionBu(item: "NationalIqama", width: 0.4, vPadding: 15,selected: loginVM.nationalIdSelected)
@@ -42,6 +42,7 @@ struct LoginView: View {
                     //                    .padding(5)
                     //                    .background(Color.white)
                     //                    .cornerRadius(5)
+                    HeaderView(text: "Login")
                     if loginVM.nationalIdSelected {
                         TextInputView(placeholder: "NationalIqama", value: $loginVM.nationalId, errorMessage: loginVM.ninErrorText, type: .nationalId, keyboardType: .numberPad, topPadding: 0)
                             .modifier(LimitModifer(pin: $loginVM.nationalId, limit: 10))
@@ -130,7 +131,7 @@ struct LoginView: View {
                     //                        .onTapGesture {
                     //                            coordinator.push(Destination.forgetPasswordPage)
                     //                        }
-                    ColoredText(text:"Register".localized)
+                    ColoredText(text:"LoginOrJoin".localized)
                         .font(Fonts.mediumLight())
                         .padding(.vertical,15)
                         .onTapGesture {

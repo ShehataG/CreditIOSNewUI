@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "medicalinsurance.png",
+      "filename" : "Image (7).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "medicalinsurance@2x.png",
+      "filename" : "Image (8).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "medicalinsurance@3x.png",
+      "filename" : "Image (9).png",
       "idiom" : "universal",
       "scale" : "3x"
     }

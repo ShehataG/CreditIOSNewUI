@@ -262,6 +262,8 @@
 		DE3EF3C22CA020D400ACEBF4 /* RoundedLoaderHBu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EF3C12CA020D400ACEBF4 /* RoundedLoaderHBu.swift */; };
 		DE4327372C15846A00467AAF /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4327362C15846A00467AAF /* RadioView.swift */; };
 		DE43273A2C1598E000467AAF /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4327392C1598E000467AAF /* BackButton.swift */; };
+		DE47948D2DD0AD5800D635BB /* CreditMainLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47948C2DD0AD5800D635BB /* CreditMainLogo.swift */; };
+		DE47948F2DD0C59400D635BB /* NafazView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47948E2DD0C59400D635BB /* NafazView.swift */; };
 		DE497E372C3A921900CC75A6 /* RequestProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497E362C3A921900CC75A6 /* RequestProgressView.swift */; };
 		DE497E392C3AAE3A00CC75A6 /* RequestCancelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497E382C3AAE3A00CC75A6 /* RequestCancelList.swift */; };
 		DE4C15792D5DE5DA00F52DCD /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C15782D5DE5D600F52DCD /* FaceDetector.swift */; };
@@ -793,6 +795,8 @@
 		DE3EF3C12CA020D400ACEBF4 /* RoundedLoaderHBu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLoaderHBu.swift; sourceTree = "<group>"; };
 		DE4327362C15846A00467AAF /* RadioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		DE4327392C1598E000467AAF /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		DE47948C2DD0AD5800D635BB /* CreditMainLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditMainLogo.swift; sourceTree = "<group>"; };
+		DE47948E2DD0C59400D635BB /* NafazView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NafazView.swift; sourceTree = "<group>"; };
 		DE497E362C3A921900CC75A6 /* RequestProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProgressView.swift; sourceTree = "<group>"; };
 		DE497E382C3AAE3A00CC75A6 /* RequestCancelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCancelList.swift; sourceTree = "<group>"; };
 		DE4C15782D5DE5D600F52DCD /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
@@ -2199,6 +2203,8 @@
 				DE101E932CCA5BFD00404E13 /* StatusCodeVM.swift */,
 				DE51DACB2BFCAE0400563A24 /* AdsView.swift */,
 				DED3C0F32C15BA7D0017A46D /* RoundedImage.swift */,
+				DE47948C2DD0AD5800D635BB /* CreditMainLogo.swift */,
+				DE47948E2DD0C59400D635BB /* NafazView.swift */,
 				DE05AA362BFB5AE200EDE60D /* TabItemView.swift */,
 				DE791E892D466EA200D45DF9 /* NotificationKeys.swift */,
 				DEAA71792BFC70F300F26910 /* InsuraceTypeView.swift */,
@@ -2755,6 +2761,7 @@
 				DE62C0CB2CAD42E3001CD1E0 /* PaymentStatusItem.swift in Sources */,
 				DEF73C172C0364170046938E /* VersionItem.swift in Sources */,
 				DE1A72952D40D09F007439C0 /* RequestsListVM.swift in Sources */,
+				DE47948D2DD0AD5800D635BB /* CreditMainLogo.swift in Sources */,
 				DECCE3E12C368B8700FA7C71 /* LocationAccessor.swift in Sources */,
 				DE2FCBE32D527BE50071298E /* VehMedGeneralView.swift in Sources */,
 				DEDC17022C118632003FA90C /* ForgetPasswordView.swift in Sources */,
@@ -2908,6 +2915,7 @@
 				DE775E602C05D9E3002FC79E /* TextInputView.swift in Sources */,
 				DECF69AD2CB7C0CF00E313CF /* BookingDetailsVM.swift in Sources */,
 				DE9B43182D6DC4B400885279 /* RiyalView.swift in Sources */,
+				DE47948F2DD0C59400D635BB /* NafazView.swift in Sources */,
 				DE74065B2C3D3ECE009BF7A6 /* VehiclePicker.swift in Sources */,
 				DE05AA162BFB2C0D00EDE60D /* FontsExtensions.swift in Sources */,
 				DE8F21132CC0E021007F7685 /* InsuranceStore.swift in Sources */,

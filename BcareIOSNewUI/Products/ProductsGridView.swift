@@ -17,6 +17,10 @@ struct ProductsGridView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: itemWidth, height: itemWidth)
+            VStack {
+            }
+            .frame(width: itemWidth, height: itemWidth)
+            .background(Color.black.opacity(0.1))
             HStack {
                 VStack(alignment:.leading,spacing:0) {
                     Text(verbatim: item.title)

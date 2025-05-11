@@ -22,8 +22,10 @@ struct RegisterView: View {
             BackPlaceholderView(factor: 0.3)
             ScrollView(showsIndicators: false) {
                 BackButton()
-                HeaderView(text: "Register") 
+                CreditMainLogo()
                 VStack(spacing:0) {
+                    HeaderView(text: "Register")
+                    NafazView()
                     TextInputView(placeholder: "EmailAddress", value: $registerVM.email, errorMessage: registerVM.emailErrorText, type: .email, keyboardType: .emailAddress, topPadding: 0)
                         .disabled(registerVM.disableAll)
                     TextInputView(placeholder: "NationalIqama", value: $registerVM.nationalId, errorMessage: registerVM.ninErrorText, type: .nationalId, keyboardType: .numberPad, topPadding: 20)
@@ -34,6 +36,11 @@ struct RegisterView: View {
                         .disabled(registerVM.disableAll)
                     SecureInputView(placeholder: "Password", value: $registerVM.password, errorMessage: registerVM.passErrorText, type: .password, keyboardType: .default, topPadding: 20)
                         .disabled(registerVM.disableAll)
+                    SecureInputView(placeholder: "Password", value: $registerVM.password, errorMessage: registerVM.passErrorText, type: .password, keyboardType: .default, topPadding: 20)
+                        .disabled(registerVM.disableAll)
+                    SecureInputView(placeholder: "ConfirmPassword", value: $registerVM.confirmPassword, errorMessage: registerVM.confirmPassErrorText, type: .password, keyboardType: .default, topPadding: 20)
+                        .disabled(registerVM.disableAll)
+                    
                     if registerVM.showBirthYearMonth {
                         HStack {
                             BirthYInputView(placeholder: "BirthYear", isOn: $isOn, value: $registerVM.birthYear, showYearPicker: $showYearPicker, errorMessage: registerVM.birthYearErrorText, type: .birthYear,topPadding: 20)
@@ -44,7 +51,7 @@ struct RegisterView: View {
                         .focused($captchaIsFocused)
                     TermsPrivacyText(width: screenWidth - 40)
                     .padding(.vertical,15)
-                    RoundedLoaderBu(item: "AddAccount", textColor: .white, backEnableColor: appBlueColor,backDisableColor:appOrangeDarkColor , width: 0.8,vPadding: 15,showLoader:registerVM.submitLoading)
+                    RoundedLoaderBu(item: "AddAccountOnly", textColor: .white, backEnableColor: appBlueColor,backDisableColor:appOrangeDarkColor , width: 0.8,vPadding: 15,showLoader:registerVM.submitLoading)
                         .onTapGesture {
                             registerVM.beginRegister()
                         }
