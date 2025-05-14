@@ -36,17 +36,17 @@
 
 "Wareef"="Wareef";
 
-"WelcomeBoard"="Welcome to Bcare";
+"WelcomeBoard"="A variety of products to meet your needs";
 
-"WelcomeBoardDesc"="One place to compare all insurance quotes from different companies for various types of insurance that meet the needs of individuals and businesses";
+"WelcomeBoardDesc"="Various financing products from multiple companies to suit all your financing needs";
 
-"Speed"="You insurance is in a minute";
+"Speed"="Competitive offers on a single page";
 
-"SpeedDesc"="Your insurance is instant within a minute, clear, and fast to ensure your protection at any time and from anywhere";
+"SpeedDesc"="Compare the best financing options and choose the offer that suits you ,  all from a single page";
 
-"Number"="More than 20 insurance companies";
+"Number"="Instant financing within 24 hours";
 
-"NumberDesc"="Compare, insure, and receive your policy from over 20 insurance companies with ease and security";
+"NumberDesc"="Submit your application in simple steps and get your financing easily within 24 hours without delay";
 
 "Skip"="Skip";
 
@@ -855,3 +855,17 @@
 "ApplyNow"="Apply now";
 
 "ConfirmNafaz"="Make sure the Nafaz application is installed and activated on your device";
+
+"ShowAll"="Show all";
+
+"RequestN"="Request number";
+
+"Rejected"="Rejected";
+
+"RejectionReason"="Rejection reason";
+
+"RequestsStatus"="Requests status";
+
+"YourInsurance"="Your insurance";
+
+"InProgress"="In progress";

@@ -109,12 +109,22 @@ extension WebViewContainer {
             webViewModel.isLoading = false
         }
          
-        func webView(
-            _ webView: WKWebView,
-            decidePolicyFor navigationAction: WKNavigationAction
-        ) async -> WKNavigationActionPolicy {
-            return WKNavigationActionPolicy.allow
-        }
+//        func webView(
+//            _ webView: WKWebView,
+//            decidePolicyFor navigationAction: WKNavigationAction
+//        ) async -> WKNavigationActionPolicy {
+//            if let urlStr = navigationAction.request.url?.absoluteString {
+//                print("Tracked" , urlStr)
+//            }
+//            return WKNavigationActionPolicy.allow
+//        }
+        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+                    if let urlStr = navigationAction.request.url?.absoluteString {
+                        print("Tracked" , urlStr)
+                    }
+                   decisionHandler(.allow)
+              }
         
         func webView(
             _ webView: WKWebView,
@@ -148,7 +158,7 @@ extension WebViewContainer {
         
         @available(iOS 14.5, *)
         func webView(_ webView: WKWebView, navigationResponse: WKNavigationResponse, didBecome download: WKDownload) {
-            print(" navigationresponse didbecome download ")
+            print("navigationresponse didbecome download")
             download.delegate = self
         }
          

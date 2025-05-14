@@ -129,6 +129,20 @@ final class RegisterVM : MainObservable {
             }
         }
         
+        let trimmedCofirmPassword = confirmPassword.trimmed().replacedArabicDigitsWithEnglish
+        if trimmedCofirmPassword == "" {
+            confirmPassErrorText = "ConfirmPasswordRequired".localized
+        }
+        else {
+            if trimmedPassword == trimmedCofirmPassword {
+                confirmPassErrorText = nil
+            }
+            else {
+                confirmPassErrorText = "ConfirmPasswordNotEqual".localized
+            }
+        }
+          
+        
         var trimmedBYear = ""
         var trimmedBMonth = ""
         

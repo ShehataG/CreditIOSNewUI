@@ -24,3 +24,10 @@ struct GrayText: View {
     }
 }
  
+struct ColoredGreenText: View {
+    let text:String
+    public var body: some View {
+        Text(verbatim: text)
+            .foregroundColor(appGreenColor)
+    }
+}

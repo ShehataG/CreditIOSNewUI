@@ -34,7 +34,7 @@ struct BcareIOSNewUIApp: App {
 //    @State var statusError = ""
     
     init() {
-        //splashPagesShowed = false
+//        splashPagesShowed = false
         AppDelegate.shared = self.appDelegate
     }
     var body: some Scene {

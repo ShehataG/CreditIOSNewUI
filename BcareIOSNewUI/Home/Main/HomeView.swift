@@ -48,7 +48,9 @@ struct HomeView: View {
                         .frame(width: screenWidth * 0.9)
                         .padding(.top,10)
                         AdsView()
-                        VehMedGeneralView()
+                        //VehMedGeneralView()
+                        HomeProgressCell(item: InsuranceProgressItem(title: "YourInsurance".localized, type: .personal, progress: 0.25, status: "InProgress".localized))
+                        HomeStatusCell(item: InsuranceStatusItem(title: "RequestsStatus".localized, type: .rent, number: 64782191, status: "Rejected".localized, reason: "RejectionReason".localized))
                     }
                     .padding(.horizontal,10)
                 }
@@ -57,11 +59,6 @@ struct HomeView: View {
             }
             //.scrollIndicators(.never)
         }
-//        .tabItem(tag: tag, normal: {
-//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Main")
-//        }, select: {
-//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Main")
-//        })
         .background(Color.lightGrayCommon)
         .onFirstAppear {
             if let userInfo = sanarUserInfo {

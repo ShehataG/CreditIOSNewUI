@@ -35,7 +35,7 @@ struct SplashPagesView: View {
                     ForEach(Array(0..<3),id:\.self) { row in
                         if row == selection {
                             Circle()
-                                .fill(appBlueColor)
+                                .fill(appGreenColor)
                                 .frame(width:dotSelectedSize,height:dotSelectedSize)
                         }
                         else {

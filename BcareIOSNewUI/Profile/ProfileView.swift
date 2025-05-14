@@ -142,12 +142,7 @@ struct ProfileView: View {
             if newValue {
                 profileVM.isEditingEmail = false
             }
-        })
-//        .tabItem(tag: tag, normal: {
-//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "MyAccount")
-//        }, select: {
-//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "MyAccount")
-//        })
+        }) 
         .background(Color.lightGrayMore)
         .navigationBarBackButtonHidden()
         .fullScreenCover(isPresented: $profileVM.showOTP,onDismiss: {

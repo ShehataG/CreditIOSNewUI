@@ -36,11 +36,8 @@ struct RegisterView: View {
                         .disabled(registerVM.disableAll)
                     SecureInputView(placeholder: "Password", value: $registerVM.password, errorMessage: registerVM.passErrorText, type: .password, keyboardType: .default, topPadding: 20)
                         .disabled(registerVM.disableAll)
-                    SecureInputView(placeholder: "Password", value: $registerVM.password, errorMessage: registerVM.passErrorText, type: .password, keyboardType: .default, topPadding: 20)
-                        .disabled(registerVM.disableAll)
                     SecureInputView(placeholder: "ConfirmPassword", value: $registerVM.confirmPassword, errorMessage: registerVM.confirmPassErrorText, type: .password, keyboardType: .default, topPadding: 20)
                         .disabled(registerVM.disableAll)
-                    
                     if registerVM.showBirthYearMonth {
                         HStack {
                             BirthYInputView(placeholder: "BirthYear", isOn: $isOn, value: $registerVM.birthYear, showYearPicker: $showYearPicker, errorMessage: registerVM.birthYearErrorText, type: .birthYear,topPadding: 20)

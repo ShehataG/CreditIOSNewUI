@@ -46,16 +46,17 @@ struct LoginView: View {
                     if loginVM.nationalIdSelected {
                         TextInputView(placeholder: "NationalIqama", value: $loginVM.nationalId, errorMessage: loginVM.ninErrorText, type: .nationalId, keyboardType: .numberPad, topPadding: 0)
                             .modifier(LimitModifer(pin: $loginVM.nationalId, limit: 10))
-                        if loginVM.showBirthYearMonthNational {
-                            HStack {
-                                BirthYInputView(placeholder: "BirthYear", isOn: $isOn, value: $loginVM.birthYear, showYearPicker: $showYearPicker, errorMessage: loginVM.birthYearErrorText, type: .birthYear,topPadding: 20)
-                                BirthMInputView(placeholder: "BirthMonth", value: $loginVM.birthMonth, showMonthPicker: $showMonthPicker, errorMessage: loginVM.birthMonthErrorText, type: .birthMonth,topPadding: 20)
-                            }
-                        }
-                        if loginVM.showPhone {
-                            TextInputView(placeholder: "PhoneNumberX", value: $loginVM.phone, errorMessage: loginVM.phoneErrorText, type: .phone, keyboardType: .numberPad, topPadding: 20)
-                                .modifier(LimitModifer(pin: $loginVM.phone, limit: 10))
-                        }
+                        SecureInputView(placeholder: "Password", value: $loginVM.password, errorMessage: loginVM.passErrorText, type: .password, keyboardType: .default, topPadding: 20)
+//                        if loginVM.showBirthYearMonthNational {
+//                            HStack {
+//                                BirthYInputView(placeholder: "BirthYear", isOn: $isOn, value: $loginVM.birthYear, showYearPicker: $showYearPicker, errorMessage: loginVM.birthYearErrorText, type: .birthYear,topPadding: 20)
+//                                BirthMInputView(placeholder: "BirthMonth", value: $loginVM.birthMonth, showMonthPicker: $showMonthPicker, errorMessage: loginVM.birthMonthErrorText, type: .birthMonth,topPadding: 20)
+//                            }
+//                        }
+//                        if loginVM.showPhone {
+//                            TextInputView(placeholder: "PhoneNumberX", value: $loginVM.phone, errorMessage: loginVM.phoneErrorText, type: .phone, keyboardType: .numberPad, topPadding: 20)
+//                                .modifier(LimitModifer(pin: $loginVM.phone, limit: 10))
+//                        }
                     }
                     else {
                         TextInputView(placeholder: "EmailAddress", value: $loginVM.email, errorMessage: loginVM.emailErrorText, type: .email, keyboardType: .emailAddress, topPadding: 0)

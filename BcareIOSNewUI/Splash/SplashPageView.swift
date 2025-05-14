@@ -22,9 +22,28 @@ struct SplashPageView: View {
             }
             .frame(height: screenHeight * 0.65 / 2)
             VStack {
-                ColoredText(text: item.title)
-                    .font(Fonts.largeLight())
+                if isAr {
+                    let all = item.title.components(separatedBy: " ")
+                    let first = all.first!
+                    let second = all[1]
+                    let third = all[2...].joined(separator: " ")
+                    HStack(spacing: 0) {
+                        ColoredText(text: first)
+                            .font(Fonts.largeLight())
+                            .padding(.horizontal ,3)
+                        ColoredGreenText(text: second)
+                            .font(Fonts.largeBold())
+                        ColoredText(text: third)
+                            .font(Fonts.largeLight())
+                            .padding(.horizontal ,3)
+                    }
                     .padding(.top ,50)
+                }
+                else {
+                    ColoredText(text: item.title)
+                        .font(Fonts.largeLight())
+                        .padding(.top ,50)
+                }
                 GrayText(text:item.desc)
                     .font(Fonts.verySmallLight())
                     .padding(.top ,5)

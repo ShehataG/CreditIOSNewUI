@@ -185,12 +185,7 @@ struct WareefView: View {
          }) {
              WareefDiscountView(item: wareefVM.wareefCache[id!]![wareefVM.subIndex!],showWareefCard:wareefVM.showWareefCard)
                  .modifier(PresentationBackgroundModifier())
-        }
-//         .tabItem(tag: tag, normal: {
-//             TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Wareef")
-//         }, select: {
-//             TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Wareef")
-//         })
+        } 
         .background(Color.lightGrayCommon)
         .sheet(isPresented: $appleCardVM.showPk){
            AddPassView(pass: $appleCardVM.pass)

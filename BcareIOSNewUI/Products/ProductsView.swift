@@ -50,11 +50,6 @@ struct ProductsView: View {
             }
             //.scrollIndicators(.never)
         }
-//        .tabItem(tag: tag, normal: {
-//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: false, systemName: systemName, title: "Calculator")
-//        }, select: {
-//            TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, systemName: systemName, title: "Calculator")
-//        })
         .background(Color.lightGrayCommon)
     }
 }

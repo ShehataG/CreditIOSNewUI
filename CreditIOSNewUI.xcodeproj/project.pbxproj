@@ -232,6 +232,9 @@
 		DE1C50652C0DCAB700EE47EA /* MainObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C50642C0DCAB700EE47EA /* MainObservable.swift */; };
 		DE1D443F2C5A5D5E000E5A2D /* BirthMInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D443E2C5A5D5E000E5A2D /* BirthMInputView.swift */; };
 		DE2373C82C074F5900F24B5A /* LoginResendOTPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2373C72C074F5900F24B5A /* LoginResendOTPItem.swift */; };
+		DE23B9992DD1C34500393605 /* HomeStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE23B9982DD1C34500393605 /* HomeStatusCell.swift */; };
+		DE23B99B2DD1D43100393605 /* HomeProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE23B99A2DD1D43100393605 /* HomeProgressCell.swift */; };
+		DE23B99D2DD1D93B00393605 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE23B99C2DD1D93B00393605 /* ProgressCircleView.swift */; };
 		DE2663B72C0C3DCF00C9817D /* LocationGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2663B62C0C3DCF00C9817D /* LocationGeo.swift */; };
 		DE2663B92C0C51B500C9817D /* GoogleGeocodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2663B82C0C51B500C9817D /* GoogleGeocodeItem.swift */; };
 		DE2663BB2C0C592700C9817D /* VehicleByNinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2663BA2C0C592700C9817D /* VehicleByNinItem.swift */; };
@@ -766,6 +769,9 @@
 		DE1C50642C0DCAB700EE47EA /* MainObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainObservable.swift; sourceTree = "<group>"; };
 		DE1D443E2C5A5D5E000E5A2D /* BirthMInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthMInputView.swift; sourceTree = "<group>"; };
 		DE2373C72C074F5900F24B5A /* LoginResendOTPItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResendOTPItem.swift; sourceTree = "<group>"; };
+		DE23B9982DD1C34500393605 /* HomeStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatusCell.swift; sourceTree = "<group>"; };
+		DE23B99A2DD1D43100393605 /* HomeProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProgressCell.swift; sourceTree = "<group>"; };
+		DE23B99C2DD1D93B00393605 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		DE2663B62C0C3DCF00C9817D /* LocationGeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationGeo.swift; sourceTree = "<group>"; };
 		DE2663B82C0C51B500C9817D /* GoogleGeocodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeItem.swift; sourceTree = "<group>"; };
 		DE2663BA2C0C592700C9817D /* VehicleByNinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleByNinItem.swift; sourceTree = "<group>"; };
@@ -2196,6 +2202,9 @@
 				DE595C5A2CE5EF3A00B80925 /* SharedHeaderView.swift */,
 				DE595C5E2CE5F52400B80925 /* ManyHeaderView.swift */,
 				DE595C5C2CE5F4F300B80925 /* TopHeaderView.swift */,
+				DE23B99A2DD1D43100393605 /* HomeProgressCell.swift */,
+				DE23B9982DD1C34500393605 /* HomeStatusCell.swift */,
+				DE23B99C2DD1D93B00393605 /* ProgressCircleView.swift */,
 				DE2FCBE22D527BE50071298E /* VehMedGeneralView.swift */,
 				DE1822642CDB3B27004E7F1C /* VehiclesGeneralView.swift */,
 				DE1822662CDB3DEC004E7F1C /* MedicalGeneralView.swift */,
@@ -2657,6 +2666,7 @@
 				DE05AA202BFB3F2900EDE60D /* StringExtensions.swift in Sources */,
 				DEE638CB2BFF2B93005845FD /* ProfileCountView.swift in Sources */,
 				DE39AA2A2C9C42AA00A8C558 /* ServiceHelpBu.swift in Sources */,
+				DE23B9992DD1C34500393605 /* HomeStatusCell.swift in Sources */,
 				DE028B962C351B58009F1B06 /* ProductsItem.swift in Sources */,
 				DE75F0162BFF564800C6842B /* ProfileFollowersView.swift in Sources */,
 				DE2E6A532CD777B10061E62A /* AllOrdersVM.swift in Sources */,
@@ -2799,6 +2809,7 @@
 				DE2709102C5BB41800206CD3 /* DateExtensions.swift in Sources */,
 				DE8F211C2CC126AE007F7685 /* CheckoutList.swift in Sources */,
 				DEDF4BDF2D82BB2400159FF2 /* CreateGl.swift in Sources */,
+				DE23B99D2DD1D93B00393605 /* ProgressCircleView.swift in Sources */,
 				DE8098452D05C380006BC896 /* MoyasarCCView.swift in Sources */,
 				DE2E6A5B2CD77CB10061E62A /* OrdersClientList.swift in Sources */,
 				DEE693452C3BED9B00A74C76 /* PolicyVehiclesView.swift in Sources */,
@@ -2914,6 +2925,7 @@
 				DED86C312C0DE3230027A7CB /* BirthYInputView.swift in Sources */,
 				DE775E602C05D9E3002FC79E /* TextInputView.swift in Sources */,
 				DECF69AD2CB7C0CF00E313CF /* BookingDetailsVM.swift in Sources */,
+				DE23B99B2DD1D43100393605 /* HomeProgressCell.swift in Sources */,
 				DE9B43182D6DC4B400885279 /* RiyalView.swift in Sources */,
 				DE47948F2DD0C59400D635BB /* NafazView.swift in Sources */,
 				DE74065B2C3D3ECE009BF7A6 /* VehiclePicker.swift in Sources */,

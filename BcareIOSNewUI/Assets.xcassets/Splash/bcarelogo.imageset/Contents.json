@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bcarelogo.png",
+      "filename" : "Layer_1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bcarelogo@2x.png",
+      "filename" : "Layer_1 (1).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bcarelogo@3x.png",
+      "filename" : "Layer_1 (2).png",
       "idiom" : "universal",
       "scale" : "3x"
     }
