@@ -49,7 +49,6 @@ struct HomeStatusCell: View {
                     }
                     .frame(maxHeight: .infinity)
                     .frame(width: screenWidth * wid)
-                    .padding(.horizontal,20)
                     .background(Color(hex:"#9295A338"))
                     .cornerRadius(20)
                     .padding(.trailing,10)

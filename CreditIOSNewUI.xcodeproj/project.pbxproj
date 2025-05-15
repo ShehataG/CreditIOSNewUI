@@ -298,6 +298,8 @@
 		DE62C0C92CAD41CF001CD1E0 /* PaymentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62C0C82CAD41CF001CD1E0 /* PaymentItem.swift */; };
 		DE62C0CB2CAD42E3001CD1E0 /* PaymentStatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62C0CA2CAD42E3001CD1E0 /* PaymentStatusItem.swift */; };
 		DE6882DD2D78420E00E7C74C /* VinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6882DC2D78420E00E7C74C /* VinDetailsView.swift */; };
+		DE6E2FE82DD5DC84009DEBF9 /* NafazConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E2FE62DD5DC84009DEBF9 /* NafazConfirmView.swift */; };
+		DE6E2FEA2DD5F008009DEBF9 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E2FE92DD5F008009DEBF9 /* CheckView.swift */; };
 		DE72A08F2C0C846E00744ECE /* LocationAllowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE72A08E2C0C846E00744ECE /* LocationAllowView.swift */; };
 		DE72A0922C0C9A0D00744ECE /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE72A0912C0C9A0D00744ECE /* LottieView.swift */; };
 		DE72A0952C0C9A9F00744ECE /* Bell.json in Resources */ = {isa = PBXBuildFile; fileRef = DE72A0942C0C9A9E00744ECE /* Bell.json */; };
@@ -506,6 +508,8 @@
 		DEFFBCC32BFCBA3800832573 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFBCC22BFCBA3800832573 /* LoginView.swift */; };
 		DEFFBCC52BFCBAC700832573 /* AdsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFBCC42BFCBAC700832573 /* AdsItem.swift */; };
 		DEFFBCC72BFCC0CA00832573 /* RoundedBu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFBCC62BFCC0CA00832573 /* RoundedBu.swift */; };
+		DEFFDFCB2DD5B09500EAB18A /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFDFCA2DD5B09500EAB18A /* BirthInputView.swift */; };
+		DEFFDFCD2DD5B1F700EAB18A /* BirthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFDFCC2DD5B1F700EAB18A /* BirthDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -834,6 +838,8 @@
 		DE62C0C82CAD41CF001CD1E0 /* PaymentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentItem.swift; sourceTree = "<group>"; };
 		DE62C0CA2CAD42E3001CD1E0 /* PaymentStatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusItem.swift; sourceTree = "<group>"; };
 		DE6882DC2D78420E00E7C74C /* VinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinDetailsView.swift; sourceTree = "<group>"; };
+		DE6E2FE62DD5DC84009DEBF9 /* NafazConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NafazConfirmView.swift; sourceTree = "<group>"; };
+		DE6E2FE92DD5F008009DEBF9 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		DE72A08E2C0C846E00744ECE /* LocationAllowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAllowView.swift; sourceTree = "<group>"; };
 		DE72A0912C0C9A0D00744ECE /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		DE72A0942C0C9A9E00744ECE /* Bell.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bell.json; sourceTree = "<group>"; };
@@ -1026,6 +1032,8 @@
 		DEFFBCC22BFCBA3800832573 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DEFFBCC42BFCBAC700832573 /* AdsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsItem.swift; sourceTree = "<group>"; };
 		DEFFBCC62BFCC0CA00832573 /* RoundedBu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBu.swift; sourceTree = "<group>"; };
+		DEFFDFCA2DD5B09500EAB18A /* BirthInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInputView.swift; sourceTree = "<group>"; };
+		DEFFDFCC2DD5B1F700EAB18A /* BirthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1763,6 +1771,14 @@
 			path = ImageExtensions;
 			sourceTree = "<group>";
 		};
+		DE6E2FE72DD5DC84009DEBF9 /* Nafaz */ = {
+			isa = PBXGroup;
+			children = (
+				DE6E2FE62DD5DC84009DEBF9 /* NafazConfirmView.swift */,
+			);
+			path = Nafaz;
+			sourceTree = "<group>";
+		};
 		DE72A0902C0C99FE00744ECE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
@@ -1796,6 +1812,7 @@
 				DE10C7392C16CC870071E618 /* HeaderView.swift */,
 				DE08ABCB2C06FB4C0044004D /* PlaceholderView.swift */,
 				DE12D9922BFDBD8800CB79FC /* YearPicker.swift */,
+				DEFFDFCC2DD5B1F700EAB18A /* BirthDatePicker.swift */,
 				DE08ABD72C0733750044004D /* BirthMonthPicker.swift */,
 				DE08ABD32C0705550044004D /* TempUserItem.swift */,
 				DE08ABD52C07112B0044004D /* BeginLoginItem.swift */,
@@ -1811,6 +1828,8 @@
 				DE775E5B2C05CE36002FC79E /* RegisterView.swift */,
 				DE775E5D2C05D0AD002FC79E /* RegisterVM.swift */,
 				DE775E5F2C05D9E3002FC79E /* TextInputView.swift */,
+				DE6E2FE92DD5F008009DEBF9 /* CheckView.swift */,
+				DEFFDFCA2DD5B09500EAB18A /* BirthInputView.swift */,
 				DED86C302C0DE3230027A7CB /* BirthYInputView.swift */,
 				DE1D443E2C5A5D5E000E5A2D /* BirthMInputView.swift */,
 				DE775E612C05DB7E002FC79E /* SecureInputView.swift */,
@@ -2286,6 +2305,7 @@
 		DEFFBCC12BFCBA2900832573 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				DE6E2FE72DD5DC84009DEBF9 /* Nafaz */,
 				DE9B79562C90534C001B12AB /* Captcha */,
 				DE775E592C05CE17002FC79E /* Login */,
 				DE775E5A2C05CE1E002FC79E /* Register */,
@@ -2823,6 +2843,7 @@
 				DEB2C1CD2C43CF0C00AEF890 /* CarModelnputView.swift in Sources */,
 				DE2663B72C0C3DCF00C9817D /* LocationGeo.swift in Sources */,
 				DE617B652D083D5700D58B3D /* PlateView.swift in Sources */,
+				DEFFDFCD2DD5B1F700EAB18A /* BirthDatePicker.swift in Sources */,
 				DE8B919B2C40063E00429A85 /* BackgroundModifer.swift in Sources */,
 				DE9D27042C43A326000F5111 /* ManualVinBu.swift in Sources */,
 				DE3EF3C22CA020D400ACEBF4 /* RoundedLoaderHBu.swift in Sources */,
@@ -2850,6 +2871,7 @@
 				DE31E8CA2CD3698200FD066E /* CreditCardScannerView.swift in Sources */,
 				DE497E372C3A921900CC75A6 /* RequestProgressView.swift in Sources */,
 				DE8C87262C561D7800C1D4D9 /* Field.swift in Sources */,
+				DEFFDFCB2DD5B09500EAB18A /* BirthInputView.swift in Sources */,
 				DEAA717C2BFC811200F26910 /* MainTypeView.swift in Sources */,
 				DE05AA092BFB23B800EDE60D /* BcareIOSNewUIApp.swift in Sources */,
 				DE775E622C05DB7E002FC79E /* SecureInputView.swift in Sources */,
@@ -2917,6 +2939,7 @@
 				DEC044E02CA562C2007EC989 /* BookingDetailsView.swift in Sources */,
 				DEB669FA2DA3A141008F16E3 /* ForwardView.swift in Sources */,
 				DE4CC0992D099F7B0006EB1B /* AmountItem.swift in Sources */,
+				DE6E2FE82DD5DC84009DEBF9 /* NafazConfirmView.swift in Sources */,
 				DEC044E12CA562C2007EC989 /* CreateBookingItem.swift in Sources */,
 				DEC044E22CA562C2007EC989 /* AvailableDaysItem.swift in Sources */,
 				DE2663BB2C0C592700C9817D /* VehicleByNinItem.swift in Sources */,
@@ -2954,6 +2977,7 @@
 				DEE638C92BFF2766005845FD /* ProfileVM.swift in Sources */,
 				DE05AA1D2BFB3D6F00EDE60D /* ColorExtensions.swift in Sources */,
 				DE775E642C05F7BA002FC79E /* TermsPrivacyText.swift in Sources */,
+				DE6E2FEA2DD5F008009DEBF9 /* CheckView.swift in Sources */,
 				DE8A711E2C3562C200D639BE /* WareefCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

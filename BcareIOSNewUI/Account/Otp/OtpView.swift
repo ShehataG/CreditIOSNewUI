@@ -33,8 +33,9 @@ struct OtpView : View {
             BackPlaceholderView(factor: 0.3)
             ScrollView(showsIndicators: false) {
                 BackButton()
-                HeaderView(text: "Verification")
                 VStack(spacing:0) {
+                    CreditMainLogo("coloredlogo")
+                    HeaderView(text: "Verification")
                     Text(verbatim:"MessageSent".localized + " " + oTPManager.phone.addAsterisks)
                         .font(Fonts.mediumRegular())
                         .foregroundColor(appBlueColor)
@@ -159,6 +160,8 @@ struct OtpView : View {
                 }
                 .padding(.vertical,10)
                 .modifier(RoundedBackgroundModifer(color: Color.lightGrayMore))
+                .padding(.top,20)
+
             }
             //.scrollIndicators(.never)
         }

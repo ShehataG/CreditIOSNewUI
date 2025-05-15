@@ -11,7 +11,8 @@ import SwiftUI
 
 struct TermsPrivacyText: View {
   @EnvironmentObject var coordinator: Coordinator
-  let string = "ByClicking".localized + " " + "TermsAndConditions".localized + " " + "WhichWe".localized + " " + "PrivacyPolicy".localized + " " + "IAcknowledgeThat".localized
+  let string = "ByClicking".localized + " " + "TermsAndConditions".localized + " " + "WhichWe".localized + " " +
+    "PrivacyPolicy".localized
   enum TermsOrPrivacySheet: Identifiable {
     case terms, privacy
     var id: Int {

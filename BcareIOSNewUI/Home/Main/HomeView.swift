@@ -55,6 +55,7 @@ struct HomeView: View {
                     .padding(.horizontal,10)
                 }
                 .padding(.top,10)
+                .padding(.bottom,50)
                 .modifier(RoundedBackgroundModifer(color: Color.lightGrayCommon))
             }
             //.scrollIndicators(.never)

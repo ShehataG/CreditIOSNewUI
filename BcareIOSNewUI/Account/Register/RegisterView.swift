@@ -15,6 +15,7 @@ struct RegisterView: View {
     @FocusState private var captchaIsFocused: Bool
     @State var showMonthPicker = false
     @State var showYearPicker = false
+    @State var showDatePicker = false
     @State var isOn = false
 
     var body: some View {
@@ -26,14 +27,15 @@ struct RegisterView: View {
                 VStack(spacing:0) {
                     HeaderView(text: "Register")
                     NafazView()
-                    TextInputView(placeholder: "EmailAddress", value: $registerVM.email, errorMessage: registerVM.emailErrorText, type: .email, keyboardType: .emailAddress, topPadding: 0)
                         .disabled(registerVM.disableAll)
-                    TextInputView(placeholder: "NationalIqama", value: $registerVM.nationalId, errorMessage: registerVM.ninErrorText, type: .nationalId, keyboardType: .numberPad, topPadding: 20)
+                    TextInputView(placeholder: "NationalIqama", value: $registerVM.nationalId, errorMessage: registerVM.ninErrorText, type: .nationalId, keyboardType: .numberPad, topPadding: 0)
                         .modifier(LimitModifer(pin: $registerVM.nationalId, limit: 10))
                         .disabled(registerVM.disableAll)
                     TextInputView(placeholder: "PhoneNumberX", value: $registerVM.phone, errorMessage: registerVM.phoneErrorText, type: .phone, keyboardType: .numberPad, topPadding: 20)
                         .modifier(LimitModifer(pin: $registerVM.phone, limit: 10))
                         .disabled(registerVM.disableAll)
+                    BirthInputView(placeholder: "BirthYear", isOn: $isOn, value: $registerVM.birthDate, showDatePicker: $showDatePicker, errorMessage: registerVM.birthDateErrorText, type: .birthDate,topPadding: 20)
+                    TextInputView(placeholder: "EmailAddress", value: $registerVM.email, errorMessage: registerVM.emailErrorText, type: .email, keyboardType: .emailAddress, topPadding: 20)
                     SecureInputView(placeholder: "Password", value: $registerVM.password, errorMessage: registerVM.passErrorText, type: .password, keyboardType: .default, topPadding: 20)
                         .disabled(registerVM.disableAll)
                     SecureInputView(placeholder: "ConfirmPassword", value: $registerVM.confirmPassword, errorMessage: registerVM.confirmPassErrorText, type: .password, keyboardType: .default, topPadding: 20)
@@ -46,7 +48,19 @@ struct RegisterView: View {
                     }
                     CaptchaInputView(placeholder: "CaptchaCode", value: $registerVM.captcha, token: $registerVM.captchaToken,captchaExpired: $registerVM.captchaExpired, errorMessage: registerVM.captchaErrorText, type: .captcha, keyboardType: UIKeyboardType.numberPad,topPadding: 20)
                         .focused($captchaIsFocused)
-                    TermsPrivacyText(width: screenWidth - 40)
+                    HStack {
+                        CheckView(isChecked: $registerVM.cond1,isError: $registerVM.cond1Error)
+                        TermsPrivacyText(width: screenWidth - 80)
+                        Spacer()
+                    }
+                    .padding(.top,15)
+                    HStack {
+                        CheckView(isChecked: $registerVM.cond2,isError: $registerVM.cond2Error)
+                        Text(verbatim: "IAcknowledgeThat".localized)
+                            .font(Fonts.tooSmallLight())
+                            .foregroundStyle(appBlueColor.opacity(0.5))
+                        Spacer()
+                    }
                     .padding(.vertical,15)
                     RoundedLoaderBu(item: "AddAccountOnly", textColor: .white, backEnableColor: appBlueColor,backDisableColor:appOrangeDarkColor , width: 0.8,vPadding: 15,showLoader:registerVM.submitLoading)
                         .onTapGesture {
@@ -68,6 +82,12 @@ struct RegisterView: View {
         .toast(isPresenting: $registerVM.toastShownInfo) {
             AlertToast(displayMode: .hud, type: .complete(Color.green), title: registerVM.toastContentInfo)
         }
+        .fullScreenCover(isPresented: $showDatePicker,onDismiss: {
+            showDatePicker = false
+         }) {
+             BirthDatePicker(isHigri: true, sentDate: $registerVM.birthDate)
+                 .modifier(PresentationBackgroundModifier())
+        }
         .fullScreenCover(isPresented: $showYearPicker,onDismiss: {
             showYearPicker = false
          }) {
@@ -80,6 +100,11 @@ struct RegisterView: View {
              BirthMonthPicker(isHigri: isOn, birthMonth:$registerVM.birthMonth, birthMonthIdex: $registerVM.birthMonthIndex)
                  .modifier(PresentationBackgroundModifier())
         }
+         .fullScreenCover(isPresented: $registerVM.showNafaz,onDismiss: {
+          }) {
+              NafazConfirmView(oTPManager: registerVM)
+                  .modifier(PresentationBackgroundModifier())
+         }
         .fullScreenCover(isPresented: $registerVM.showOTP,onDismiss: {
          }) {
              OtpView(oTPManager: registerVM)
@@ -88,6 +113,16 @@ struct RegisterView: View {
         .onChange(of: registerVM.captcha, perform: { newValue in
              if newValue.count == 4 {
                  captchaIsFocused = false
+             }
+        })
+        .onChange(of: registerVM.cond1, perform: { newValue in
+             if newValue {
+                 registerVM.cond1Error = false
+             }
+        })
+        .onChange(of: registerVM.cond2, perform: { newValue in
+             if newValue {
+                 registerVM.cond2Error = false
              }
         })
         .onChange(of: registerVM.nationalId, perform: { newValue in

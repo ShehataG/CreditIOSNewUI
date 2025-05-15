@@ -22,7 +22,7 @@ struct ProgressCircleView: View {
                                     center: .center),
                     style: StrokeStyle(lineWidth: 5, lineCap: .round)
                 )
-                .rotationEffect(.degrees(90))
+                .rotationEffect(.degrees(isAr ? 90 : -90))
                 .animation(.easeInOut, value: progress)
             ColoredGreenText(text:"\(Int(progress * 100))%")
                 .font(Fonts.verySmallBold())

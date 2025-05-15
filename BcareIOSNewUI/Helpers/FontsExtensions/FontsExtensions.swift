@@ -157,6 +157,11 @@ struct Fonts {
         return Font.custom("ReadexPro-Bold", size: size)
     }
     
+    static func tooLargeBold() -> Font{
+        let size:CGFloat = isIpad ? 28 : 24
+        return Font.custom("ReadexPro-Bold", size: size)
+    }
+    
     static func fontAwesome() -> Font{
         let size:CGFloat = isIpad ? 35 : 25
         return Font.custom("FontAwesome", size: size)

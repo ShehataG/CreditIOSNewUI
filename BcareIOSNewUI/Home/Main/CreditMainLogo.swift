@@ -12,10 +12,14 @@ import SwiftUIPager
 
 struct CreditMainLogo: View {
     let imgWid:CGFloat = isIpad ? 80 : 60
+    let icon:String
+    init(_ icon: String = "crelogo") {
+        self.icon = icon
+    }
     var body: some View {
         HStack {
             Spacer()
-            Image("crelogo")
+            Image(icon)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: imgWid,height: imgWid)

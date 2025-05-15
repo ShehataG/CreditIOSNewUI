@@ -21,7 +21,8 @@ final class RegisterVM : MainObservable {
     @Published var confirmPassword = ""
     @Published var birthYear = ""
     @Published var birthMonth = ""
-    
+    @Published var birthDate = ""
+
     @Published var emailErrorText:String?
     @Published var phoneErrorText:String?
     @Published var ninErrorText:String?
@@ -34,6 +35,7 @@ final class RegisterVM : MainObservable {
     @Published var registerHashed = ""
     @Published var isYakeenChecked = false
     
+    @Published var birthDateErrorText:String?
     @Published var birthYearErrorText:String?
     @Published var birthMonthErrorText:String?
     @Published var birthMonthIndex = 1
@@ -53,11 +55,17 @@ final class RegisterVM : MainObservable {
     @Published var showErrorMessage = false
     @Published var showInfoMessage = false
     @Published var showOTP = false
-
+    @Published var showNafaz = true
+    
     @Published var captcha = ""
     @Published var captchaErrorText:String?
     @Published var captchaToken = ""
     @Published var captchaExpired = false
+    
+    @Published var cond1 = false
+    @Published var cond2 = false
+    @Published var cond1Error = false
+    @Published var cond2Error = false
     
     override init() {
         super.init()
@@ -173,9 +181,12 @@ final class RegisterVM : MainObservable {
         else {
             captchaErrorText = nil
         }
+         
+        cond1Error = !cond1
+
+        cond2Error = !cond2
         
-        
-        if emailErrorText != nil || phoneErrorText != nil || ninErrorText != nil || passErrorText != nil || (showBirthYearMonth && (birthYearErrorText != nil || birthMonthErrorText != nil)) || (captchaErrorText != nil || captchaExpired) {
+        if emailErrorText != nil || phoneErrorText != nil || ninErrorText != nil || passErrorText != nil || (showBirthYearMonth && (birthYearErrorText != nil || birthMonthErrorText != nil)) || (captchaErrorText != nil || captchaExpired || cond1Error || cond2Error) {
             return
         }
         
