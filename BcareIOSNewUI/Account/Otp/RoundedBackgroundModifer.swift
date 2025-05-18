@@ -22,3 +22,13 @@ struct RoundedBackgroundModifer: ViewModifier {
        
     }
 }
+
+struct RoundedFullBackgroundModifer: ViewModifier {
+    let color:Color
+    func body(content: Content) -> some View {
+         content
+            .background(color)
+            .cornerRadius(30)
+       
+    }
+}

@@ -21,4 +21,7 @@ enum Destination {
     case allPoliciesPage
     case sweaterBookingsPage
     case ezhelhaBookingsPage
+    case personalPage
+    case personallnfoPage
+    case personalComparePage
 }

@@ -39,6 +39,12 @@ class ViewFactory {
                 BookingListView(items: nil)
             case .ezhelhaBookingsPage:
                 OrdersListView(item: nil)
+            case .personalPage:
+                PersonalView()
+            case .personallnfoPage:
+                PersonalInfoView()
+            case .personalComparePage:
+                PersonalCompareView()
         }
     }
 }

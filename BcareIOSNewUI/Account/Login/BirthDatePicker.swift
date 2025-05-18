@@ -70,7 +70,7 @@ struct BirthDatePicker: View {
                         .onTapGesture {
                             let formatter = DateFormatter()
                             formatter.locale = Locale(identifier: "en_US")
-                            formatter.dateFormat = "dd/MM/yyyy"
+                            formatter.dateFormat = "dd-MM-yyyy"
                             sentDate.wrappedValue = formatter.string(from: selectedDate)
                             presentationMode.wrappedValue.dismiss()
                         }

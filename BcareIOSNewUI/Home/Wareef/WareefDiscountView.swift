@@ -46,7 +46,7 @@ struct WareefDiscountView: View {
                         .foregroundColor(Color.white)
                         .padding(.vertical,15)
                         .frame(width: screenWidth * 0.6)
-                        .background(appBlueColor)
+                        .background(appGreenColor)
                         .cornerRadius(10)
                         .padding(.top,10)
                         .padding(.bottom,details.count == 0 && !discounts.isValidCode ? 20 : 0)

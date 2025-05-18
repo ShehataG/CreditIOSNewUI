@@ -27,7 +27,8 @@ struct HomeView: View {
                             InsuraceTypeView(text: "Vehicle", icon: "vehicle")
                                 .frame(maxWidth: .infinity)
                                 .onTapGesture {
-                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.vehicle)))
+                                    coordinator.push(Destination.personalPage)
+//                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.vehicle)))
                                 }
                             InsuraceTypeView(text: "Medical", icon: "medical")
                                 .frame(maxWidth: .infinity)

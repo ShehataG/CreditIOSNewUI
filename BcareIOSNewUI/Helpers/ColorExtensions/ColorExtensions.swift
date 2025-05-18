@@ -19,6 +19,10 @@ extension Color {
     static let lightGrayMore = Color(hex:"#F2F2F2")!
     static let lightGrayCommon = Color(hex:"#F9F9F9")!
     static let sevenLightGray = Color(hex:"#707070")!
+    
+    static let lightGray3 = Color(hex:"#F3F3F3")!
+    static let lightGray9 = Color(hex:"#F9F9F9")!
+    
        /**
      Color from  hex string
      

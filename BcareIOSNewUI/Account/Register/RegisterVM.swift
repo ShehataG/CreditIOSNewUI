@@ -77,13 +77,11 @@ final class RegisterVM : MainObservable {
     
     func initDev() async {
         #if DEBUG
-//            email = "shehata.g@neomtech.com"
-//            phone = "0553837475"
-//            nationalId = "2558397770"
-//            password = "@BcareAsd2514345"
-//            birthYear = "1991"
-//            birthMonth = "GMonthList1".localized
-//            birthMonthIndex = 1
+            email = "shehata.g@neomtech.com"
+            phone = "0553837475"
+            nationalId = "2558397770"
+            password = "@CreditAsd2514345"
+            birthDate = "5-1-1991"
         #endif
     }
     func beginRegister() {
@@ -197,14 +195,12 @@ final class RegisterVM : MainObservable {
         
         let parameters:[String:Any] =  [
             "email": trimmedEmail,
-            "mobile": trimmedPhone,
-            "nationalId": trimmedNationalId,
+            "phoneNumber": "966" + trimmedPhone.dropFirst(),
+            "clientId": trimmedNationalId,
+            "clientDateOfBirth": birthDate,
             "password": trimmedPassword,
-            "birthYear": birthYear,
-            "birthMonth": birthMonthIndex.toString(),
-            "hashed": registerHashed,
-            "CaptchaInput": trimmedCaptcha,
-            "CaptchaToken": captchaToken
+            "productType": "0",
+            "disclaimer": true
         ]
         Task {
             submitLoading = true
