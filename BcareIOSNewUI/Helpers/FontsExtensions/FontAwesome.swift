@@ -83,6 +83,7 @@ struct FontAwesome {
     static let keyboardIcon = String(format: "%C", 0xf11c)
     static let faceDownIcon = String(format: "%C", 0xf119)
     static let updateIcon = String(format: "%C", 0xf021)
+    static let arrowUpIcon = String(format:"%C",0xf077)
 }
 
 struct FontAwesome6 {

@@ -55,7 +55,7 @@ final class RegisterVM : MainObservable {
     @Published var showErrorMessage = false
     @Published var showInfoMessage = false
     @Published var showOTP = false
-    @Published var showNafaz = true
+    @Published var showNafaz = false
     
     @Published var captcha = ""
     @Published var captchaErrorText:String?
@@ -81,7 +81,8 @@ final class RegisterVM : MainObservable {
             phone = "0553837475"
             nationalId = "2558397770"
             password = "@CreditAsd2514345"
-            birthDate = "5-1-1991"
+            confirmPassword = "@CreditAsd2514345"
+            birthDate = "05-01-1991"
         #endif
     }
     func beginRegister() {

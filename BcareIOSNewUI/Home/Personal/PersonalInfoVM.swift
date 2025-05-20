@@ -1,5 +1,5 @@
 //
-//  LoginVM.swift
+//  PersonalInfoVM.swift
 //  BcareIOSNewUI
 //
 //  Created by Ahmed Mahmoud on 5/22/24.
@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 import Combine
-import LocalAuthentication
-import KeychainSwift
-import AdjustSdk
 
 @MainActor
 final class PersonalInfoVM : MainObservable {
@@ -27,7 +24,6 @@ final class PersonalInfoVM : MainObservable {
     @Published var amountErrorText:String?
     @Published var cond1 = false
     @Published var cond1Error = false
-    
     
     @Published var housing = ""
     @Published var housingErrorText:String?

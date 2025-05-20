@@ -45,6 +45,13 @@ class ViewFactory {
                 PersonalInfoView()
             case .personalComparePage:
                 PersonalCompareView()
+            case .personalDetailsPage:
+                PersonalDetailsView()
+            case .personalRingPage:
+                PersonalRingView()
         }
     }
 }
+
+
+

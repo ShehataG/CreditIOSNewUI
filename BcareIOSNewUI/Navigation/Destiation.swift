@@ -24,4 +24,8 @@ enum Destination {
     case personalPage
     case personallnfoPage
     case personalComparePage
+    case personalDetailsPage
+    case personalRingPage
 }
+
+

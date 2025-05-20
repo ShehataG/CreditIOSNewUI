@@ -12,45 +12,27 @@ import SVGKit
 
 struct PersonalCompareView: View {
     @EnvironmentObject var coordinator: Coordinator
- 
+    @StateObject var personalCompareVM = PersonalCompareVM()
+
     var body: some View {
         VStack {
-            VStack(spacing:0) {
-                ZStack(alignment: .top) {
-                    Image("personalmain")
-                        .resizable()
-                        .frame(height: screenHeight * 0.5)
-                        .aspectRatio(contentMode: .fill)
-                    VStack {
-                        HStack {
-                            BackButton(color: Color.black)
-                            Spacer()
-                        }
-                        .padding(.top,50)
-                    }
-                }
-                .frame(height: screenHeight * 0.5)
-                VStack(spacing:20) {
-                    ColoredText(text:"Vehicle".localized.linesToSpaces)
-                        .font(Fonts.largeBold())
-                    ColoredText(text:"PersonalDesc".localized)
-                        .font(Fonts.mediumRegular())
-                        .multilineTextAlignment(.center)
-                    Text(verbatim:"ApplyNow".localized)
-                        .font(Fonts.smallRegular())
-                        .foregroundStyle(Color.white)
-                        .padding(.vertical,5)
-                        .padding(.horizontal,10)
-                        .background(appBlueColor)
-                        .clipShape(Capsule())
-                }
-                .padding(.horizontal,20)
-                .padding(.top,20)
+            HStack {
+                BackButton(color: Color.black)
                 Spacer()
             }
+            VStack(spacing:0) {
+                let arr = personalCompareVM.dataDef
+                List(arr.indices,id:\.self) { row in
+                    CompareMainCell(item: arr[row],isLast: row == arr.count - 1)
+                        .modifier(ListItemMode())
+                }
+                .modifier(ListMode())
+            }
+            .padding(.horizontal,20)
+            Spacer()
         }
         .background(Color.lightGray3)
         .navigationBarBackButtonHidden()
-        .edgesIgnoringSafeArea(.top)
+//        .edgesIgnoringSafeArea(.top)
     }
 }

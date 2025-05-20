@@ -30,7 +30,7 @@ struct PersonalInfoView: View {
                         HStack {
                             CheckView(isChecked: $personalInfoVM.cond1,isError: $personalInfoVM.cond1Error)
                             Text(verbatim: "SupportedByState".localized)
-                                .font(Fonts.tooSmallLight())
+                                .font(Fonts.verySmallLight())
                                 .foregroundStyle(Color(hex:"#666666")!)
                             Spacer()
                         }

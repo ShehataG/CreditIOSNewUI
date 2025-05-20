@@ -43,6 +43,7 @@ struct PersonalView: View {
                 }
                 .padding(.horizontal,20)
                 .padding(.top,20)
+                Spacer()
             }
         }
         .background(Color.lightGray3)

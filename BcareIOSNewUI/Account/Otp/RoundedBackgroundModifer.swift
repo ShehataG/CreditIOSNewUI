@@ -11,10 +11,15 @@ import Combine
 
 struct RoundedBackgroundModifer: ViewModifier {
     let color:Color
+    let radius:CGFloat
+    init(color: Color, radius: CGFloat = 30) {
+        self.color = color
+        self.radius = radius
+    }
     func body(content: Content) -> some View {
          content
             .background(color)
-            .cornerRadius(30, corners: [.topLeft, .topRight])
+            .cornerRadius(radius, corners: [.topLeft, .topRight])
 //            .background {
 //                UnevenRoundedRectangle(cornerRadii:.init(topLeading: 30.0,topTrailing: 30.0),style: .continuous)
 //                    .foregroundColor(color)
@@ -25,10 +30,15 @@ struct RoundedBackgroundModifer: ViewModifier {
 
 struct RoundedFullBackgroundModifer: ViewModifier {
     let color:Color
+    let radius:CGFloat
+    init(color: Color, radius: CGFloat = 30) {
+        self.color = color
+        self.radius = radius
+    }
     func body(content: Content) -> some View {
          content
             .background(color)
-            .cornerRadius(30)
+            .cornerRadius(radius)
        
     }
 }

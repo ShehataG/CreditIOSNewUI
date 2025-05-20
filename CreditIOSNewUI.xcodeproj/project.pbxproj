@@ -435,6 +435,17 @@
 		DEBB98B52C5B7FB400566B15 /* JailbreakVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB98B42C5B7FB400566B15 /* JailbreakVM.swift */; };
 		DEBD425A2C086DDF00538909 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD42592C086DDF00538909 /* DictionaryExtensions.swift */; };
 		DEBDC61A2C463EA0006A9056 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBDC6192C463EA0006A9056 /* WebViewContainer.swift */; };
+		DEBE504B2DDB010100253C62 /* TitleSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE504A2DDB010100253C62 /* TitleSubView.swift */; };
+		DEBE504D2DDB054800253C62 /* PersonalCompareVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE504C2DDB054800253C62 /* PersonalCompareVM.swift */; };
+		DEBE504F2DDB092C00253C62 /* PersonalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE504E2DDB092C00253C62 /* PersonalModels.swift */; };
+		DEBE50512DDB09C300253C62 /* SpreadItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE50502DDB09C300253C62 /* SpreadItemsView.swift */; };
+		DEBE50532DDB0AFB00253C62 /* CompareMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE50522DDB0AFB00253C62 /* CompareMainCell.swift */; };
+		DEBE50552DDB189600253C62 /* ArrowDirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE50542DDB189600253C62 /* ArrowDirView.swift */; };
+		DEBE50572DDB2BCA00253C62 /* PersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE50562DDB2BCA00253C62 /* PersonalDetailsView.swift */; };
+		DEBE50592DDB2C0700253C62 /* PersonalDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE50582DDB2C0700253C62 /* PersonalDetailsVM.swift */; };
+		DEBE505B2DDB2F4E00253C62 /* CompareMainDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE505A2DDB2F4E00253C62 /* CompareMainDetail.swift */; };
+		DEBE505D2DDB3DA600253C62 /* PersonalRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE505C2DDB3DA600253C62 /* PersonalRingView.swift */; };
+		DEBE505F2DDB3DBF00253C62 /* PersonalRingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE505E2DDB3DBF00253C62 /* PersonalRingVM.swift */; };
 		DEBEB32D2C3FED5D006B4387 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEB32C2C3FED5D006B4387 /* PageView.swift */; };
 		DEBFB8FC2C43C67A00F4AE39 /* VinSeachList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFB8FB2C43C67A00F4AE39 /* VinSeachList.swift */; };
 		DEC044D72CA562C2007EC989 /* BookingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC044D42CA562C2007EC989 /* BookingVM.swift */; };
@@ -966,6 +977,17 @@
 		DEBB98B42C5B7FB400566B15 /* JailbreakVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JailbreakVM.swift; sourceTree = "<group>"; };
 		DEBD42592C086DDF00538909 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		DEBDC6192C463EA0006A9056 /* WebViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		DEBE504A2DDB010100253C62 /* TitleSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubView.swift; sourceTree = "<group>"; };
+		DEBE504C2DDB054800253C62 /* PersonalCompareVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCompareVM.swift; sourceTree = "<group>"; };
+		DEBE504E2DDB092C00253C62 /* PersonalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalModels.swift; sourceTree = "<group>"; };
+		DEBE50502DDB09C300253C62 /* SpreadItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadItemsView.swift; sourceTree = "<group>"; };
+		DEBE50522DDB0AFB00253C62 /* CompareMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareMainCell.swift; sourceTree = "<group>"; };
+		DEBE50542DDB189600253C62 /* ArrowDirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowDirView.swift; sourceTree = "<group>"; };
+		DEBE50562DDB2BCA00253C62 /* PersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsView.swift; sourceTree = "<group>"; };
+		DEBE50582DDB2C0700253C62 /* PersonalDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsVM.swift; sourceTree = "<group>"; };
+		DEBE505A2DDB2F4E00253C62 /* CompareMainDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareMainDetail.swift; sourceTree = "<group>"; };
+		DEBE505C2DDB3DA600253C62 /* PersonalRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRingView.swift; sourceTree = "<group>"; };
+		DEBE505E2DDB3DBF00253C62 /* PersonalRingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRingVM.swift; sourceTree = "<group>"; };
 		DEBEB32C2C3FED5D006B4387 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		DEBFB8FB2C43C67A00F4AE39 /* VinSeachList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VinSeachList.swift; sourceTree = "<group>"; };
 		DEC044CA2CA562C2007EC989 /* AvailableDaysItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDaysItem.swift; sourceTree = "<group>"; };
@@ -1714,11 +1736,22 @@
 			children = (
 				DE208AD72DD9E8C70007C6EF /* PersonalView.swift */,
 				DE208ADC2DD9FAEE0007C6EF /* PersonalInfoView.swift */,
-				DE208AE42DDA0AB70007C6EF /* TextDropView.swift */,
 				DE208AE22DDA01DA0007C6EF /* PersonalInfoVM.swift */,
 				DE208ADE2DD9FB060007C6EF /* PersonalCompareView.swift */,
+				DEBE504C2DDB054800253C62 /* PersonalCompareVM.swift */,
+				DEBE50562DDB2BCA00253C62 /* PersonalDetailsView.swift */,
+				DEBE50582DDB2C0700253C62 /* PersonalDetailsVM.swift */,
+				DEBE505C2DDB3DA600253C62 /* PersonalRingView.swift */,
+				DEBE505E2DDB3DBF00253C62 /* PersonalRingVM.swift */,
+				DEBE50522DDB0AFB00253C62 /* CompareMainCell.swift */,
+				DEBE505A2DDB2F4E00253C62 /* CompareMainDetail.swift */,
+				DEBE50502DDB09C300253C62 /* SpreadItemsView.swift */,
+				DEBE504A2DDB010100253C62 /* TitleSubView.swift */,
 				DE208AE02DD9FD900007C6EF /* TopRoundedText.swift */,
+				DEBE50542DDB189600253C62 /* ArrowDirView.swift */,
 				DE208AE62DDA10560007C6EF /* RoundedColoredText.swift */,
+				DE208AE42DDA0AB70007C6EF /* TextDropView.swift */,
+				DEBE504E2DDB092C00253C62 /* PersonalModels.swift */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -2720,6 +2753,7 @@
 			files = (
 				DE05AA302BFB59E600EDE60D /* WareefView.swift in Sources */,
 				DE8B4F422CBE8D7600FD4BF1 /* BatteryTireItem.swift in Sources */,
+				DEBE50572DDB2BCA00253C62 /* PersonalDetailsView.swift in Sources */,
 				522D7D2E2C08D61D0047D1F8 /* ListView.swift in Sources */,
 				DE4EE2242DB76EF000669F57 /* SceneDelegate.swift in Sources */,
 				DE1822672CDB3DEC004E7F1C /* MedicalGeneralView.swift in Sources */,
@@ -2739,6 +2773,7 @@
 				DE811D0D2CA96B2D00DDC5F5 /* AllBookigsVM.swift in Sources */,
 				DE05AA3A2BFB5E8700EDE60D /* SplashView.swift in Sources */,
 				DE08ABCC2C06FB4C0044004D /* PlaceholderView.swift in Sources */,
+				DEBE504D2DDB054800253C62 /* PersonalCompareVM.swift in Sources */,
 				DE7ECAAA2CD1FF4500667E3F /* MojazDetailsVM.swift in Sources */,
 				5205732F2BFBA56B00634A60 /* SplashItem.swift in Sources */,
 				DEAB21852D196BBC006C85D9 /* HelpListView.swift in Sources */,
@@ -2767,6 +2802,7 @@
 				DE05AA2A2BFB597300EDE60D /* HomeView.swift in Sources */,
 				DE05AA1A2BFB33B500EDE60D /* FontAwesomeExtensions.swift in Sources */,
 				DE8F211E2CC1277A007F7685 /* EzhelhaOrderItem.swift in Sources */,
+				DEBE505F2DDB3DBF00253C62 /* PersonalRingVM.swift in Sources */,
 				DE8CE0E52BFB75200092E3C0 /* SplashPagesView.swift in Sources */,
 				DEB87AFB2C43F6AA000897D3 /* RoundedBackgroundModifer.swift in Sources */,
 				DE4C15792D5DE5DA00F52DCD /* FaceDetector.swift in Sources */,
@@ -2785,6 +2821,7 @@
 				DE7406552C3D042C009BF7A6 /* MedicalMenuList.swift in Sources */,
 				DE208ADD2DD9FAEE0007C6EF /* PersonalInfoView.swift in Sources */,
 				52DBFA262C05289600CB524E /* ErrorItem.swift in Sources */,
+				DEBE504F2DDB092C00253C62 /* PersonalModels.swift in Sources */,
 				DE811D012CA92B0600DDC5F5 /* CancelBookingView.swift in Sources */,
 				520573372BFBB53C00634A60 /* DimensionsExtensions.swift in Sources */,
 				DECEA3B12D129D4F0077EAF0 /* DownloadPolicyItem.swift in Sources */,
@@ -2805,11 +2842,14 @@
 				DE2373C82C074F5900F24B5A /* LoginResendOTPItem.swift in Sources */,
 				DE7AF4122D0178B900F81C90 /* UserSanarItem.swift in Sources */,
 				DE9B79552C904FDC001B12AB /* CaptchaItem.swift in Sources */,
+				DEBE505B2DDB2F4E00253C62 /* CompareMainDetail.swift in Sources */,
 				DE2E6A592CD77C0A0061E62A /* OrdersListVM.swift in Sources */,
 				52C341562C34571A0079A0C8 /* WareefSelelctedGridView.swift in Sources */,
+				DEBE50592DDB2C0700253C62 /* PersonalDetailsVM.swift in Sources */,
 				DEC148722C36CBBD006FA838 /* HelpOnRoadVM.swift in Sources */,
 				DE775E5C2C05CE36002FC79E /* RegisterView.swift in Sources */,
 				DEDFA45A2CCE353800C228B7 /* VehicleScanView.swift in Sources */,
+				DEBE504B2DDB010100253C62 /* TitleSubView.swift in Sources */,
 				DEDC170B2C11C9CB003FA90C /* ResetPasswordVM.swift in Sources */,
 				DE72A08F2C0C846E00744ECE /* LocationAllowView.swift in Sources */,
 				DE62C0C92CAD41CF001CD1E0 /* PaymentItem.swift in Sources */,
@@ -2855,6 +2895,7 @@
 				DE08ABCE2C06FE640044004D /* RoundedLoaderBu.swift in Sources */,
 				DE791E8A2D466EA200D45DF9 /* NotificationKeys.swift in Sources */,
 				DEB17F6B2CFC957500F6344D /* WebView.swift in Sources */,
+				DEBE505D2DDB3DA600253C62 /* PersonalRingView.swift in Sources */,
 				DE7406532C3D0208009BF7A6 /* MedicalMenuView.swift in Sources */,
 				52E77E1C2C13292F0012BED0 /* ResetPasswordSentItem.swift in Sources */,
 				DE8C87282C562AD100C1D4D9 /* LoginOptionBu.swift in Sources */,
@@ -2873,6 +2914,7 @@
 				DE8F211C2CC126AE007F7685 /* CheckoutList.swift in Sources */,
 				DEDF4BDF2D82BB2400159FF2 /* CreateGl.swift in Sources */,
 				DE23B99D2DD1D93B00393605 /* ProgressCircleView.swift in Sources */,
+				DEBE50512DDB09C300253C62 /* SpreadItemsView.swift in Sources */,
 				DE8098452D05C380006BC896 /* MoyasarCCView.swift in Sources */,
 				DE2E6A5B2CD77CB10061E62A /* OrdersClientList.swift in Sources */,
 				DEE693452C3BED9B00A74C76 /* PolicyVehiclesView.swift in Sources */,
@@ -2898,6 +2940,7 @@
 				DE550F3B2C340A92006CCAC1 /* WareefCategoryItem.swift in Sources */,
 				DEAB21832D196B32006C85D9 /* HelpView.swift in Sources */,
 				DE39AA292C9C42A700A8C558 /* ServiceHelpView.swift in Sources */,
+				DEBE50532DDB0AFB00253C62 /* CompareMainCell.swift in Sources */,
 				DEDC17092C11C884003FA90C /* ResetPasswordView.swift in Sources */,
 				DE75F0142BFF529C00C6842B /* ProfileContactsView.swift in Sources */,
 				DEB2C1CF2C43D2E500AEF890 /* CarSearchlnputView.swift in Sources */,
@@ -2931,6 +2974,7 @@
 				DE9B795A2C90539A001B12AB /* CaptchaInputView.swift in Sources */,
 				DEC489702C03037900762F65 /* PolicyMedicalView.swift in Sources */,
 				DE550F2C2C33DED3006CCAC1 /* PolicyDetailsView.swift in Sources */,
+				DEBE50552DDB189600253C62 /* ArrowDirView.swift in Sources */,
 				DE4EE2282DB7935B00669F57 /* VehiclePrintPicker.swift in Sources */,
 				DE08ABD42C0705550044004D /* TempUserItem.swift in Sources */,
 				DE7406592C3D2651009BF7A6 /* TitleSubItem.swift in Sources */,

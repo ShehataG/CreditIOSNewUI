@@ -906,8 +906,44 @@
 
 "CheckOffers"="اكتشف العروض";
 
-"Calculator"="Calculator";
 
-"Calculator"="Calculator";
 
-"Calculator"="Calculator";
+"MonthlyInstallment"="القسط الشهري";
+
+"OfferType"="نوع العرض";
+
+"InitialOffer"="عرض مبدئي";
+
+"AnnualPercentageRate"="معدل النسبة المئوية السنوي";
+
+"MaximumFinancingLimit"="الحد الأعلى للتمويل";
+
+"FinancingStartDate"="تاريخ بداية التمويل";
+
+"FinancingEndDate"="تاريخ نهاية التمويل";
+
+"AdministrativeFees"="الرسوم الإدارية";
+
+"TypeOfInterestRate"="نوع معدل الفائدة";
+
+"ProfitMargin"="هامش الربح";
+
+"TotalFinancingAmountIncluding"="المبلغ الإجمالي للتمويل شامل الرسوم الإدارية وهامش الربح";
+
+"ChooseOne"="اختر";
+
+"FirstInstallment"="القسط الاول";
+
+"AnnualProfitMargin"="هامش الربح السنوي";
+
+"IncludingAnnualProfit"="شامل هامش الربح السنوي و الرسوم الإدارية";
+
+"TermsConditionsCredit"="أقر بالاطلاع والموافقة على الشروط والأحكام واتفاقية العميل مع منصة العناية الائتمانية.";
+
+"TermsConditionsFinancing"="أقر بالاطلاع والموافقة على الشروط والأحكام لمقدم التمويل.";
+
+"AnyDeclaration"="*سيتم إضافة أي إقرار بناءً على مقدم التمويل.";
+
+"YourPersonaApplication"="تم رفع طلبك للتمويل الشخصي، وراح يوصلك تأكيد من بنك (%@) برسالة نصية قريبًا.";
+
+"WelcomeB"="هلا بـ";

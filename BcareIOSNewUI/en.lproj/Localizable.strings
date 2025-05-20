@@ -906,6 +906,64 @@
 
 "CheckOffers"="Check offers";
 
+"MonthlyInstallment"="Monthly installment";
+
+"OfferType"="Offer type";
+
+"InitialOffer"="Initial offer";
+
+"AnnualPercentageRate"="Annual percentage rate";
+
+"MaximumFinancingLimit"="Maximum financing limit";
+
+"FinancingStartDate"="Financing start date";
+
+"FinancingEndDate"="Financing end date";
+
+"AdministrativeFees"="Administrative fees";
+
+"TypeOfInterestRate"="Type of interest rate";
+
+"ProfitMargin"="Profit margin";
+
+"TotalFinancingAmountIncluding"="Total financing amount including administrative fees and profit margin";
+
+"ChooseOne"="Choose";
+
+"FirstInstallment"="First installment";
+
+"AnnualProfitMargin"="Annual profit margin";
+
+"IncludingAnnualProfit"="Including annual profit margin and administrative fees";
+
+"TermsConditionsCredit"="I acknowledge that I have read and agree to the Terms and Conditions and Customer Agreement with the Credit Care Platform.";
+
+"TermsConditionsFinancing"="I acknowledge that I have read and agreed to the terms and conditions of the financing provider.";
+
+"AnyDeclaration"="*Any declaration will be added based on the financing provider.";
+
+"YourPersonaApplication"="Your personal financing application has been submitted, and you will receive a confirmation from (%@) Bank via text message soon.";
+
+"WelcomeB"="Welcome";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
+"Calculator"="Calculator";
+
 "Calculator"="Calculator";
 
 "Calculator"="Calculator";

@@ -7,14 +7,13 @@
 
 import Foundation
 import SwiftUI
-import SVGKit
 
 struct TopRoundedText: View {
     let text:String
     let wid:CGFloat = isIpad ? 0.2 : 0.3
     var body: some View {
         Text(verbatim:text.localized)
-            .font(Fonts.smallRegular())
+            .font(Fonts.smallBold())
             .foregroundStyle(Color.white)
             .padding(.vertical,7)
             .frame(width: screenWidth * wid)
