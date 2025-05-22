@@ -308,6 +308,7 @@
 		DE6882DD2D78420E00E7C74C /* VinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6882DC2D78420E00E7C74C /* VinDetailsView.swift */; };
 		DE6E2FE82DD5DC84009DEBF9 /* NafazConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E2FE62DD5DC84009DEBF9 /* NafazConfirmView.swift */; };
 		DE6E2FEA2DD5F008009DEBF9 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E2FE92DD5F008009DEBF9 /* CheckView.swift */; };
+		DE71FB972DDDAE3C0042C466 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71FB962DDDAE3C0042C466 /* Device.swift */; };
 		DE72A08F2C0C846E00744ECE /* LocationAllowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE72A08E2C0C846E00744ECE /* LocationAllowView.swift */; };
 		DE72A0922C0C9A0D00744ECE /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE72A0912C0C9A0D00744ECE /* LottieView.swift */; };
 		DE72A0952C0C9A9F00744ECE /* Bell.json in Resources */ = {isa = PBXBuildFile; fileRef = DE72A0942C0C9A9E00744ECE /* Bell.json */; };
@@ -867,6 +868,7 @@
 		DE6882DC2D78420E00E7C74C /* VinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinDetailsView.swift; sourceTree = "<group>"; };
 		DE6E2FE62DD5DC84009DEBF9 /* NafazConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NafazConfirmView.swift; sourceTree = "<group>"; };
 		DE6E2FE92DD5F008009DEBF9 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		DE71FB962DDDAE3C0042C466 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		DE72A08E2C0C846E00744ECE /* LocationAllowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAllowView.swift; sourceTree = "<group>"; };
 		DE72A0912C0C9A0D00744ECE /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		DE72A0942C0C9A9E00744ECE /* Bell.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bell.json; sourceTree = "<group>"; };
@@ -1293,6 +1295,7 @@
 		DE05AA132BFB2BDF00EDE60D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DE71FB952DDDAE1C0042C466 /* Device */,
 				DE4C15772D5DE5D200F52DCD /* FaceDetector */,
 				DEABBC122C91776F00AF0777 /* Animation */,
 				DE922AC12C731297003B2E2F /* Network */,
@@ -1850,6 +1853,14 @@
 				DE6E2FE62DD5DC84009DEBF9 /* NafazConfirmView.swift */,
 			);
 			path = Nafaz;
+			sourceTree = "<group>";
+		};
+		DE71FB952DDDAE1C0042C466 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				DE71FB962DDDAE3C0042C466 /* Device.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		DE72A0902C0C99FE00744ECE /* Lottie */ = {
@@ -2819,6 +2830,7 @@
 				DE05AA412BFB5FFB00EDE60D /* ViewFactory.swift in Sources */,
 				DE8DEEC32CB2B2C80077B26A /* PaymentView.swift in Sources */,
 				DE7406552C3D042C009BF7A6 /* MedicalMenuList.swift in Sources */,
+				DE71FB972DDDAE3C0042C466 /* Device.swift in Sources */,
 				DE208ADD2DD9FAEE0007C6EF /* PersonalInfoView.swift in Sources */,
 				52DBFA262C05289600CB524E /* ErrorItem.swift in Sources */,
 				DEBE504F2DDB092C00253C62 /* PersonalModels.swift in Sources */,

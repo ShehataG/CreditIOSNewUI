@@ -351,41 +351,46 @@ final class LoginVM : MainObservable {
             }
         }
         
-        var trimmedBYear = ""
-        var trimmedBMonth = ""
-        
-        if showBirthYearMonthNational {
-            trimmedBYear = birthYear
-            if trimmedBYear == "" {
-                birthYearErrorText = "BirthYearRequired".localized
-            }
-            else {
-                birthYearErrorText = nil
-            }
-            trimmedBMonth = birthMonth
-            if trimmedBMonth == "" {
-                birthMonthErrorText = "BirthMonthRequired".localized
-            }
-            else {
-                birthMonthErrorText = nil
-            }
+        let trimmedPassword = password.trimmed().replacedArabicDigitsWithEnglish
+        if trimmedPassword == "" {
+            passErrorText = "PasswordRequired".localized
         }
         
-        var trimmedPhone = ""
-        if showPhone {
-            trimmedPhone = phone.replacedArabicDigitsWithEnglish
-            if trimmedPhone == "" {
-                phoneErrorText = "PhoneRequired".localized
-            }
-            else {
-                if trimmedPhone.isValidPhone() {
-                    phoneErrorText = nil
-                }
-                else {
-                    phoneErrorText = "PhoneIncorrect".localized
-                }
-            }
-        }
+//        var trimmedBYear = ""
+//        var trimmedBMonth = ""
+//        
+//        if showBirthYearMonthNational {
+//            trimmedBYear = birthYear
+//            if trimmedBYear == "" {
+//                birthYearErrorText = "BirthYearRequired".localized
+//            }
+//            else {
+//                birthYearErrorText = nil
+//            }
+//            trimmedBMonth = birthMonth
+//            if trimmedBMonth == "" {
+//                birthMonthErrorText = "BirthMonthRequired".localized
+//            }
+//            else {
+//                birthMonthErrorText = nil
+//            }
+//        }
+//        
+//        var trimmedPhone = ""
+//        if showPhone {
+//            trimmedPhone = phone.replacedArabicDigitsWithEnglish
+//            if trimmedPhone == "" {
+//                phoneErrorText = "PhoneRequired".localized
+//            }
+//            else {
+//                if trimmedPhone.isValidPhone() {
+//                    phoneErrorText = nil
+//                }
+//                else {
+//                    phoneErrorText = "PhoneIncorrect".localized
+//                }
+//            }
+//        }
        
         let trimmedCaptcha = captcha
         if trimmedCaptcha == "" {
@@ -402,7 +407,7 @@ final class LoginVM : MainObservable {
             termsRed = true
         }
         
-        if ninErrorText != nil || (showBirthYearMonthNational && (birthYearErrorText != nil || birthMonthErrorText != nil)) || (showPhone && phoneErrorText != nil) || (captchaErrorText != nil || captchaExpired) || termsRed {
+        if ninErrorText != nil || passErrorText != nil || (captchaErrorText != nil || captchaExpired) || termsRed {
             return
         }
          
@@ -411,18 +416,24 @@ final class LoginVM : MainObservable {
             return
         }
         
+        let deviceModel = appUUIDValue()
+        let deviceType = UIDevice.modelName
+        let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+        
         let parameters:[String:Any] = [
-            "nationalId": trimmedNationalId,
-            "birthYear": trimmedBYear,
-            "birthMonth": birthMonthIndex.toString(),
-            "phone": trimmedPhone,
-            "IsloginByNationalId": true,
-            "hashed": hashed,
-            "isYakeenChecked": isYakeenChecked,
+            "clientId": trimmedNationalId,
+            "password": trimmedPassword,
+            "productType": "0",
+            "channel": "ios",
+            "firebasetoken": FIREBASE_TOKEN ?? "",
+            "version": version,
+            "deviceModel": deviceModel,
+            "deviceType": deviceType,
+            "deviceId": "deviceId",
             "CaptchaInput": trimmedCaptcha,
             "CaptchaToken": captchaToken
         ]
-      
+     
         userNationalId = trimmedNationalId
         submitLoading = true
         Task {
@@ -455,10 +466,10 @@ final class LoginVM : MainObservable {
                         self.submitLoading = true
                         userEmail = self.email
                         userPassword = self.password
-//                        userNationalId = trimmedNationalId
-                        userBirthYear = trimmedBYear
-                        userBirthMonth = trimmedBMonth
-                        userBirthMonthIndex = self.birthMonthIndex
+                        userNationalId = trimmedNationalId
+//                        userBirthYear = trimmedBYear
+//                        userBirthMonth = trimmedBMonth
+//                        userBirthMonthIndex = self.birthMonthIndex
                         userId = res.result.userId
                         userPhone = res.result.phone ?? res.result.phoneNumber ?? ""
                         displayNameAr = res.result.displayNameAr
@@ -576,6 +587,18 @@ final class LoginVM : MainObservable {
     func showTerms() {
         termsRed = false
         showInfo("AgreeToQueryLong".localized)
+    }
+    func appUUIDValue() -> String {
+        let key = "AppUUIDKey"
+        let keychain = KeychainSwift()
+        if let value = keychain.get(key) {
+            return value
+        }
+        else {
+            let deviceId = UIDevice.current.identifierForVendor!.uuidString
+            keychain.set(deviceId, forKey: key)
+            return deviceId
+        }
     }
 }
 

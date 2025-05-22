@@ -10,7 +10,6 @@ import AppTrackingTransparency
 import AdSupport
 import AdjustSdk
 
-
 struct ContentView: View {
     @EnvironmentObject var coordinator: Coordinator
     @StateObject var homeVM = HomeVM()

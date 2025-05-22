@@ -94,7 +94,7 @@ final class WareefVM : MainObservable {
             return
         }
         let parameters:[String:Any] = [
-            "Nin": nin,//"1051859500",
+            "Nin": "1051859500",//"1051859500",
             "lang": langText,
             "language": langText,
             "channel": "ios",

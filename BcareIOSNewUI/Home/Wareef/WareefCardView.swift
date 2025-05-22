@@ -26,7 +26,7 @@ struct WareefCardView: View {
                         .font(Fonts.smallBold())
                         .foregroundColor(Color.white)
                     Spacer()
-                    Image("logowh")
+                    Image("crelogo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: imgSmallWid ,height: imgSmallWid * 29 / 71)
