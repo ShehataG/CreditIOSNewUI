@@ -76,55 +76,56 @@ struct LoginView: View {
                     CaptchaInputView(placeholder: "CaptchaCode", value: $loginVM.captcha, token: $loginVM.captchaToken,captchaExpired: $loginVM.captchaExpired, errorMessage: loginVM.captchaErrorText, type: .captcha, keyboardType: UIKeyboardType.numberPad,topPadding: 20)
                           .focused($captchaIsFocused)
                     
-                    HStack(alignment:.center,spacing:10) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .fill(loginVM.termsDone ? appOrangeColor : Color.white)
-                                .border(loginVM.termsRed ? Color.red : appBlueColor,width: loginVM.termsDone ? 0 : 1)
-                                .frame(width:imgWid, height:imgWid)
-                            if loginVM.termsDone {
-                                FAText(text: FontAwesome.correctIcon,color: Color.white,font: Fonts.fontAwesome20_30())
-                            }
-                        }
-                        .padding(.leading,5)
-                        .onTapGesture {
-                            loginVM.termsDone.toggle()
-                            if loginVM.termsDone {
-                                loginVM.showTerms()
-                            }
-                        }
-                        Text(verbatim:"AgreeToQuery".localized)
-                            .font(Fonts.tooSmallLight())
-                            .foregroundColor(appBlueColor.opacity(0.5))
-                        Spacer()
-                        //                        Text(verbatim:"TermsConditions".localized)
-                        //                            .font(Fonts.tooSmallMedium())
-                        //                            .foregroundColor(appBlueColor)
-                        //                            .onTapGesture {
-                        //                                coordinator.push(TermsPrivacyItem(url: termsConditionsLink))
-                        //                            }
-                        //                        Text(verbatim:"And".localized)
-                        //                            .font(Fonts.tooSmallMedium())
-                        //                            .foregroundColor(appBlueColor.opacity(0.5))
-                        //                            .padding(.horizontal,2)
-                        //                            .onTapGesture {
-                        //                            }
-                        //                        Text(verbatim:"PrivacyPolicy".localized)
-                        //                            .font(Fonts.tooSmallMedium())
-                        //                            .foregroundColor(appBlueColor)
-                        //                            .onTapGesture {
-                        //                                coordinator.push(TermsPrivacyItem(url: privacyPolicyLink))
-                        //                            }
-                    }
-                    .padding(.vertical,20)
+//                    HStack(alignment:.center,spacing:10) {
+//                        ZStack {
+//                            RoundedRectangle(cornerRadius: 5)
+//                                .fill(loginVM.termsDone ? appOrangeColor : Color.white)
+//                                .border(loginVM.termsRed ? Color.red : appBlueColor,width: loginVM.termsDone ? 0 : 1)
+//                                .frame(width:imgWid, height:imgWid)
+//                            if loginVM.termsDone {
+//                                FAText(text: FontAwesome.correctIcon,color: Color.white,font: Fonts.fontAwesome20_30())
+//                            }
+//                        }
+//                        .padding(.leading,5)
+//                        .onTapGesture {
+//                            loginVM.termsDone.toggle()
+//                            if loginVM.termsDone {
+//                                loginVM.showTerms()
+//                            }
+//                        }
+//                        Text(verbatim:"AgreeToQuery".localized)
+//                            .font(Fonts.tooSmallLight())
+//                            .foregroundColor(appBlueColor.opacity(0.5))
+//                        Spacer()
+//                        //                        Text(verbatim:"TermsConditions".localized)
+//                        //                            .font(Fonts.tooSmallMedium())
+//                        //                            .foregroundColor(appBlueColor)
+//                        //                            .onTapGesture {
+//                        //                                coordinator.push(TermsPrivacyItem(url: termsConditionsLink))
+//                        //                            }
+//                        //                        Text(verbatim:"And".localized)
+//                        //                            .font(Fonts.tooSmallMedium())
+//                        //                            .foregroundColor(appBlueColor.opacity(0.5))
+//                        //                            .padding(.horizontal,2)
+//                        //                            .onTapGesture {
+//                        //                            }
+//                        //                        Text(verbatim:"PrivacyPolicy".localized)
+//                        //                            .font(Fonts.tooSmallMedium())
+//                        //                            .foregroundColor(appBlueColor)
+//                        //                            .onTapGesture {
+//                        //                                coordinator.push(TermsPrivacyItem(url: privacyPolicyLink))
+//                        //                            }
+//                    }
+//                    .padding(.vertical,20)
                     RoundedLoaderBu(item: "Continue", textColor: .white, backEnableColor: appBlueColor,backDisableColor:appOrangeDarkColor , width: 0.8,vPadding: 15,showLoader:loginVM.submitLoading)
+                        .padding(.top,20)
                         .onTapGesture {
-                            if loginVM.nationalIdSelected {
+//                            if loginVM.nationalIdSelected {
                                 loginVM.beginLoginNationalId()
-                            }
-                            else {
-                                loginVM.beginLoginEmail()
-                            }
+//                            }
+//                            else {
+//                                loginVM.beginLoginEmail()
+//                            }
                         }
                     //                    GrayText(text:"ForgotPassword".localized)
                     //                        .font(Fonts.smallLight())

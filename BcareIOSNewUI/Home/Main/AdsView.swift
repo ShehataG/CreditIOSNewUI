@@ -12,7 +12,7 @@ import SwiftUIPager
 import Combine
 
 struct AdsView: View {
-    let ads = isAr ? (1...5).map { AdsItem(name: "ads\($0)ar") } : (1...5).map { AdsItem(name: "ads\($0)en") }
+    let ads = isAr ? (1...3).map { _ in AdsItem(name: "ads1ar") } : (1...3).map { _ in AdsItem(name: "ads1en") }
     @State var currentPage = 0
     @State var page: Page = .first()
     @State var resetNow = false

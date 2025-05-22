@@ -73,10 +73,10 @@ final class LoginVM : MainObservable {
     }
     func initDev() async {
         #if DEBUG
-            nationalId = "2558397770"
-            birthYear = "1991"
-            birthMonth = "GMonthList1".localized
-            birthMonthIndex = 1
+//            nationalId = "2558397770"
+//            birthYear = "1991"
+//            birthMonth = "GMonthList1".localized
+//            birthMonthIndex = 1
         #endif
     }
     func startFace() async {
@@ -95,246 +95,246 @@ final class LoginVM : MainObservable {
             }
         }
         else {
-            if let mail = userEmail , let pass = userPassword {
-                let success = await FaceDetector.checkFacePass()
-                facePassSuccess = success
-                if success {
-                    self.email = mail
-                    self.password = pass
-                    self.beginLoginEmail()
-                }
-            }
+//            if let mail = userEmail , let pass = userPassword {
+//                let success = await FaceDetector.checkFacePass()
+//                facePassSuccess = success
+//                if success {
+//                    self.email = mail
+//                    self.password = pass
+//                    self.beginLoginEmail()
+//                }
+//            }
         }
     }
-    func beginLoginEmail() {
-        
-        let trimmedEmail = email.trimmed()
-        if trimmedEmail == "" {
-            emailErrorText = "EmailRequired".localized
-        }
-        else {
-            if trimmedEmail.isValidEmail() {
-                emailErrorText = nil
-            }
-            else {
-                emailErrorText = "EmailIncorrect".localized
-            }
-        }
-        
-        let trimmedPassword = password.trimmed().replacedArabicDigitsWithEnglish
-        if trimmedPassword == "" {
-            passErrorText = "PasswordRequired".localized
-        }
-        else {
-            passErrorText = nil
-        }
-        
-        var trimmedPhone = ""
-        var trimmedNationalId = ""
-        
-        if showNationalAndPhone {
-            trimmedPhone = phone.replacedArabicDigitsWithEnglish
-            if trimmedPhone == "" {
-                phoneErrorText = "PhoneRequired".localized
-            }
-            else {
-                if trimmedPhone.isValidPhone() {
-                    phoneErrorText = nil
-                }
-                else {
-                    phoneErrorText = "PhoneIncorrect".localized
-                }
-            }
-            trimmedNationalId = nationalId.trimmed().replacedArabicDigitsWithEnglish
-            if trimmedNationalId == "" {
-                ninErrorText = "NinRequired".localized
-            }
-            else {
-                if trimmedNationalId.isValidNational() {
-                    ninErrorText = nil
-                }
-                else {
-                    ninErrorText = "NinIncorrect".localized
-                }
-            }
-        }
-        
-        var trimmedBYear = ""
-        var trimmedBMonth = ""
-        
-        if showBirthYearMonth {
-            trimmedBYear = birthYear
-            if trimmedBYear == "" {
-                birthYearErrorText = "BirthYearRequired".localized
-            }
-            else {
-                birthYearErrorText = nil
-            }
-            trimmedBMonth = birthMonth
-            if trimmedBMonth == "" {
-                birthMonthErrorText = "BirthMonthRequired".localized
-            }
-            else {
-                birthMonthErrorText = nil
-            }
-        }
-        
-        let trimmedCaptcha = captcha
-        if trimmedCaptcha == "" {
-            captchaErrorText = "CaptchaRequired".localized
-        }
-        else if trimmedCaptcha.count != 4 {
-            captchaErrorText = "CaptchaIncorrect".localized
-        }
-        else {
-            captchaErrorText = nil
-        }
-        
-        if !termsDone {
-            termsRed = true
-        }
-        
-        if emailErrorText != nil || passErrorText != nil || (showNationalAndPhone && (ninErrorText != nil || phoneErrorText != nil)) || (showBirthYearMonth && (birthYearErrorText != nil || birthMonthErrorText != nil)) || (captchaErrorText != nil || captchaExpired) || termsRed {
-            return
-        }
-        
-        if noNetwork() {
-            showNoNetwork()
-            return
-        }
-        
-        let parameters:[String:Any] = [
-            "UserName": trimmedEmail.encrypted,
-            "PWD": trimmedPassword.encrypted,
-            "phone": trimmedPhone,
-            "nationalId": trimmedNationalId,
-            "birthYear": trimmedBYear,
-            "birthMonth": birthMonthIndex.toString(),
-            "fnen": nameEn,
-            "fnar": nameAr,
-            "hashed": hashed,
-            "isYakeenChecked": isYakeenChecked,
-            "CaptchaInput": trimmedCaptcha,
-            "CaptchaToken": captchaToken
-        ]
-        Task {
-            submitLoading = true
-            if !isYakeenChecked {
-                 let (result,error) = await JSONPlaceholderService.beginLogin.request(type: BeginLoginItem.self,parameters: parameters)
-                 self.submitLoading = false
-                 switch result {
-                case .success(let res):
-                    print(res)
-                    self.processName(res)
-                    if res.errorCode != 1 {
-                        if res.result.phoneNumberConfirmed == false {
-                            self.showNationalAndPhone = true
-                            self.isYakeenChecked = true;
-                        }
-                        if res.result.phoneVerification == true {
-                            self.phone = res.result.phone ?? res.result.phoneNumber ?? ""
-                            userPhone = self.phone
-                            userNationalId = res.result.nationalId
-                            self.showInfo(res.errorDescription)
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                self.showOTP = true
-                            }
-                        }
-                        self.handleCases(res)
-                    }
-                    else {
-                        tokenExpirationDate = res.result.tokenExpirationDate
-                        expiryDate = Date()
-                        self.submitLoading = true
-                        userEmail = self.email
-                        userPassword = self.password
-                        userId = res.result.userId
-                        userPhone = res.result.phone ?? res.result.phoneNumber ?? ""
-                        displayNameAr = res.result.displayNameAr
-                        displayNameEn = res.result.displayNameEn
-                        userAccessToken = res.result.accessToken
-                        isRenewel = nil
-                        isCorporate = res.result.isCorporateUser ?? false
-                    }
-                    break
-                case .failure(_):
-                    if let error = error {
-                        print(error)
-                        self.showError(error.description)
-                    }
-                    break
-                }
-            }
-            else {
-                if !getBirthDate {
-                    let (result,error) = await JSONPlaceholderService.verifyYakeenMobile.request(type: BeginLoginItem.self,parameters: parameters)
-                     self.submitLoading = false
-                     switch result {
-                    case .success(let res):
-                         print(res)
-                         self.processName(res)
-                         self.isYakeenChecked = res.result.isYakeenChecked ?? false
-                         if res.errorCode != 1 {
-                             self.hashed = res.result.hashed ?? ""
-                             self.submitLoading = false
-                             self.showError(res.errorDescription)
-                             if res.result.getBirthDate == true {
-                                 self.showNationalAndPhone = false
-                                 self.showBirthYearMonth = true
-                                 userNationalId = res.result.nationalId
-//                                 self.nameEn = res.result.fnen ?? ""
-//                                 self.nameAr = res.result.fnar ?? ""
-                                 self.getBirthDate = true
-                             }
-                             self.handleCases(res)
-                         }
-                         if res.result.phoneVerification == true {
-                             self.phone = res.result.phone ?? res.result.phoneNumber ?? ""
-                             userPhone = self.phone
-                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                 self.showOTP = true
-                             }
-//                             self.nameEn = res.result.fnen ?? ""
-//                             self.nameAr = res.result.fnar ?? ""
-                         }
-                        break
-                    case .failure(_):
-                        if let error = error {
-                            print(error)
-                            self.showError(error.description)
-                        }
-                        break
-                    }
-                }
-                else {
-                    let (result,error) = await JSONPlaceholderService.endLogin.request(type: BeginLoginItem.self,parameters: parameters)
-                    self.submitLoading = false
-                    switch result {
-                    case .success(let res):
-                        print(res)
-                        self.processName(res)
-                        if res.errorCode != 1 {
-                            self.showError(res.errorDescription)
-                        }
-                        if res.result.phoneVerification == true {
-                            self.phone = res.result.phone ?? res.result.phoneNumber ?? ""
-                            userPhone = self.phone
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                self.showOTP = true
-                            }
-                        }
-                         break
-                    case .failure(_):
-                        if let error = error {
-                            print(error)
-                            self.showError(error.description)
-                        }
-                        break
-                    }
-                }
-            }
-        }
-    }
+//    func beginLoginEmail() {
+//        
+//        let trimmedEmail = email.trimmed()
+//        if trimmedEmail == "" {
+//            emailErrorText = "EmailRequired".localized
+//        }
+//        else {
+//            if trimmedEmail.isValidEmail() {
+//                emailErrorText = nil
+//            }
+//            else {
+//                emailErrorText = "EmailIncorrect".localized
+//            }
+//        }
+//        
+//        let trimmedPassword = password.trimmed().replacedArabicDigitsWithEnglish
+//        if trimmedPassword == "" {
+//            passErrorText = "PasswordRequired".localized
+//        }
+//        else {
+//            passErrorText = nil
+//        }
+//        
+//        var trimmedPhone = ""
+//        var trimmedNationalId = ""
+//        
+//        if showNationalAndPhone {
+//            trimmedPhone = phone.replacedArabicDigitsWithEnglish
+//            if trimmedPhone == "" {
+//                phoneErrorText = "PhoneRequired".localized
+//            }
+//            else {
+//                if trimmedPhone.isValidPhone() {
+//                    phoneErrorText = nil
+//                }
+//                else {
+//                    phoneErrorText = "PhoneIncorrect".localized
+//                }
+//            }
+//            trimmedNationalId = nationalId.trimmed().replacedArabicDigitsWithEnglish
+//            if trimmedNationalId == "" {
+//                ninErrorText = "NinRequired".localized
+//            }
+//            else {
+//                if trimmedNationalId.isValidNational() {
+//                    ninErrorText = nil
+//                }
+//                else {
+//                    ninErrorText = "NinIncorrect".localized
+//                }
+//            }
+//        }
+//        
+//        var trimmedBYear = ""
+//        var trimmedBMonth = ""
+//        
+//        if showBirthYearMonth {
+//            trimmedBYear = birthYear
+//            if trimmedBYear == "" {
+//                birthYearErrorText = "BirthYearRequired".localized
+//            }
+//            else {
+//                birthYearErrorText = nil
+//            }
+//            trimmedBMonth = birthMonth
+//            if trimmedBMonth == "" {
+//                birthMonthErrorText = "BirthMonthRequired".localized
+//            }
+//            else {
+//                birthMonthErrorText = nil
+//            }
+//        }
+//        
+//        let trimmedCaptcha = captcha
+//        if trimmedCaptcha == "" {
+//            captchaErrorText = "CaptchaRequired".localized
+//        }
+//        else if trimmedCaptcha.count != 4 {
+//            captchaErrorText = "CaptchaIncorrect".localized
+//        }
+//        else {
+//            captchaErrorText = nil
+//        }
+//        
+//        if !termsDone {
+//            termsRed = true
+//        }
+//        
+//        if emailErrorText != nil || passErrorText != nil || (showNationalAndPhone && (ninErrorText != nil || phoneErrorText != nil)) || (showBirthYearMonth && (birthYearErrorText != nil || birthMonthErrorText != nil)) || (captchaErrorText != nil || captchaExpired) || termsRed {
+//            return
+//        }
+//        
+//        if noNetwork() {
+//            showNoNetwork()
+//            return
+//        }
+//        
+//        let parameters:[String:Any] = [
+//            "UserName": trimmedEmail.encrypted,
+//            "PWD": trimmedPassword.encrypted,
+//            "phone": trimmedPhone,
+//            "nationalId": trimmedNationalId,
+//            "birthYear": trimmedBYear,
+//            "birthMonth": birthMonthIndex.toString(),
+//            "fnen": nameEn,
+//            "fnar": nameAr,
+//            "hashed": hashed,
+//            "isYakeenChecked": isYakeenChecked,
+//            "CaptchaInput": trimmedCaptcha,
+//            "CaptchaToken": captchaToken
+//        ]
+//        Task {
+//            submitLoading = true
+//            if !isYakeenChecked {
+//                 let (result,error) = await JSONPlaceholderService.beginLogin.request(type: BeginLoginItem.self,parameters: parameters)
+//                 self.submitLoading = false
+//                 switch result {
+//                case .success(let res):
+//                    print(res)
+//                    self.processName(res)
+//                    if res.errorCode != 1 {
+//                        if res.result.phoneNumberConfirmed == false {
+//                            self.showNationalAndPhone = true
+//                            self.isYakeenChecked = true;
+//                        }
+//                        if res.result.phoneVerification == true {
+//                            self.phone = res.result.phone ?? res.result.phoneNumber ?? ""
+//                            userPhone = self.phone
+//                            userNationalId = res.result.nationalId
+//                            self.showInfo(res.errorDescription)
+//                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                                self.showOTP = true
+//                            }
+//                        }
+//                        self.handleCases(res)
+//                    }
+//                    else {
+//                        tokenExpirationDate = res.result.tokenExpirationDate
+//                        expiryDate = Date()
+//                        self.submitLoading = true
+//                        userEmail = self.email
+//                        userPassword = self.password
+//                        userId = res.result.userId
+//                        userPhone = res.result.phone ?? res.result.phoneNumber ?? ""
+//                        displayNameAr = res.result.displayNameAr
+//                        displayNameEn = res.result.displayNameEn
+//                        userAccessToken = res.result.accessToken
+//                        isRenewel = nil
+//                        isCorporate = res.result.isCorporateUser ?? false
+//                    }
+//                    break
+//                case .failure(_):
+//                    if let error = error {
+//                        print(error)
+//                        self.showError(error.description)
+//                    }
+//                    break
+//                }
+//            }
+//            else {
+//                if !getBirthDate {
+//                    let (result,error) = await JSONPlaceholderService.verifyYakeenMobile.request(type: BeginLoginItem.self,parameters: parameters)
+//                     self.submitLoading = false
+//                     switch result {
+//                    case .success(let res):
+//                         print(res)
+//                         self.processName(res)
+//                         self.isYakeenChecked = res.result.isYakeenChecked ?? false
+//                         if res.errorCode != 1 {
+//                             self.hashed = res.result.hashed ?? ""
+//                             self.submitLoading = false
+//                             self.showError(res.errorDescription)
+//                             if res.result.getBirthDate == true {
+//                                 self.showNationalAndPhone = false
+//                                 self.showBirthYearMonth = true
+//                                 userNationalId = res.result.nationalId
+////                                 self.nameEn = res.result.fnen ?? ""
+////                                 self.nameAr = res.result.fnar ?? ""
+//                                 self.getBirthDate = true
+//                             }
+//                             self.handleCases(res)
+//                         }
+//                         if res.result.phoneVerification == true {
+//                             self.phone = res.result.phone ?? res.result.phoneNumber ?? ""
+//                             userPhone = self.phone
+//                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                                 self.showOTP = true
+//                             }
+////                             self.nameEn = res.result.fnen ?? ""
+////                             self.nameAr = res.result.fnar ?? ""
+//                         }
+//                        break
+//                    case .failure(_):
+//                        if let error = error {
+//                            print(error)
+//                            self.showError(error.description)
+//                        }
+//                        break
+//                    }
+//                }
+//                else {
+//                    let (result,error) = await JSONPlaceholderService.endLogin.request(type: BeginLoginItem.self,parameters: parameters)
+//                    self.submitLoading = false
+//                    switch result {
+//                    case .success(let res):
+//                        print(res)
+//                        self.processName(res)
+//                        if res.errorCode != 1 {
+//                            self.showError(res.errorDescription)
+//                        }
+//                        if res.result.phoneVerification == true {
+//                            self.phone = res.result.phone ?? res.result.phoneNumber ?? ""
+//                            userPhone = self.phone
+//                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                                self.showOTP = true
+//                            }
+//                        }
+//                         break
+//                    case .failure(_):
+//                        if let error = error {
+//                            print(error)
+//                            self.showError(error.description)
+//                        }
+//                        break
+//                    }
+//                }
+//            }
+//        }
+//    }
     func beginLoginNationalId() {
 
         var trimmedNationalId = ""
@@ -391,6 +391,7 @@ final class LoginVM : MainObservable {
 //                }
 //            }
 //        }
+        
        
         let trimmedCaptcha = captcha
         if trimmedCaptcha == "" {
@@ -403,11 +404,11 @@ final class LoginVM : MainObservable {
             captchaErrorText = nil
         }
         
-        if !termsDone {
-            termsRed = true
-        }
+//        if !termsDone {
+//            termsRed = true
+//        }
         
-        if ninErrorText != nil || passErrorText != nil || (captchaErrorText != nil || captchaExpired) || termsRed {
+        if ninErrorText != nil || passErrorText != nil || (captchaErrorText != nil || captchaExpired)  {
             return
         }
          

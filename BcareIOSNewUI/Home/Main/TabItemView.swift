@@ -20,13 +20,27 @@ struct TabItemView: View {
     var body: some View {
         VStack(alignment: .center,spacing: 0) {
             if systemName == "plus.circle.fill" {
-                Text(verbatim: "ApplyNow".localized)
-                    .font(Fonts.tooSmallBold())
+                if selection == tag {
+                    ZStack {
+                        Image("closetab")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: imgWidth, height: imgWidth)
+                    }
                     .frame(width: 65, height: 65)
-                    .foregroundStyle(Color.white)
                     .background(appGreenColor)
                     .clipShape(Circle())
                     .background(Circle().stroke(Color.white,lineWidth:4))
+                }
+                else {
+                    Text(verbatim: "ApplyNow".localized)
+                        .font(Fonts.tooSmallBold())
+                        .frame(width: 65, height: 65)
+                        .foregroundStyle(Color.white)
+                        .background(appGreenColor)
+                        .clipShape(Circle())
+                        .background(Circle().stroke(Color.white,lineWidth:4))
+                }
             }
             else {
                 if selection == tag {

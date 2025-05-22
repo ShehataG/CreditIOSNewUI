@@ -11,7 +11,7 @@ import SwiftUI
 let appBlueColor = Color(hex:"#4F3366")!
 let appGreenColor = Color(hex:"#00B46D")!
 let appOrangeColor = Color(hex:"#FAA62D")!
-let appOrangeDarkColor = Color(hex:"#A4753A")!
+let appOrangeDarkColor = Color(hex:"#00B46D")! //Color(hex:"#A4753A")!
 
 extension Color {
     static let lightGray = Color(hex:"#9295A3")!

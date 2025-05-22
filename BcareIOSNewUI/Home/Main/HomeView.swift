@@ -33,17 +33,17 @@ struct HomeView: View {
                             InsuraceTypeView(text: "Medical", icon: "medical")
                                 .frame(maxWidth: .infinity)
                                 .onTapGesture {
-                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.medical)))
+//                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.medical)))
                                 }
                             InsuraceTypeView(text: "Travel", icon: "travel")
                                 .frame(maxWidth: .infinity)
                                 .onTapGesture {
-                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.travel)))
+//                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.travel)))
                                 }
                             InsuraceTypeView(text: "Malpractices", icon: "malpractices")
                                 .frame(maxWidth: .infinity)
                                 .onTapGesture {
-                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.malpractices)))
+//                                    coordinator.push(TermsPrivacyItem(url: createGl(InsuranceType.malpractices)))
                                 }
                         }
                         .frame(width: screenWidth * 0.9)

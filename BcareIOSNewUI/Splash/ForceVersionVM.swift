@@ -13,7 +13,7 @@ final class ForceVersionVM: ObservableObject {
     @Published var showUpdateAlert = false
     var version:VersionItem?
     init() {
-        checkVersion()
+        //checkVersion()
     }
     func checkVersion() {
         Task {

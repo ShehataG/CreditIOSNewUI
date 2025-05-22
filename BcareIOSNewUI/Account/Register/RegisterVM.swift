@@ -77,12 +77,12 @@ final class RegisterVM : MainObservable {
     
     func initDev() async {
         #if DEBUG
-            email = "shehata.g@neomtech.com"
-            phone = "0553837475"
-            nationalId = "2558397770"
-            password = "@CreditAsd2514345"
-            confirmPassword = "@CreditAsd2514345"
-            birthDate = "05-01-1991"
+//            email = "shehata.g@neomtech.com"
+//            phone = "0553837475"
+//            nationalId = "2558397770"
+//            password = "@CreditAsd2514345"
+//            confirmPassword = "@CreditAsd2514345"
+//            birthDate = "05-01-1991"
         #endif
     }
     func beginRegister() {
@@ -149,26 +149,33 @@ final class RegisterVM : MainObservable {
             }
         }
           
-        
-        var trimmedBYear = ""
-        var trimmedBMonth = ""
-        
-        if showBirthYearMonth {
-            trimmedBYear = birthYear
-            if trimmedBYear == "" {
-                birthYearErrorText = "BirthYearRequired".localized
-            }
-            else {
-                birthYearErrorText = nil
-            }
-            trimmedBMonth = birthMonth
-            if trimmedBMonth == "" {
-                birthMonthErrorText = "BirthMonthRequired".localized
-            }
-            else {
-                birthMonthErrorText = nil
-            }
+        let trimmedBDate = birthDate
+        if trimmedBDate == "" {
+           birthDateErrorText = "BirthDateRequired".localized
         }
+        else {
+            birthDateErrorText = nil
+        }
+        
+//        var trimmedBYear = ""
+//        var trimmedBMonth = ""
+//        
+//        if showBirthYearMonth {
+//            trimmedBYear = birthYear
+//            if trimmedBYear == "" {
+//                birthYearErrorText = "BirthYearRequired".localized
+//            }
+//            else {
+//                birthYearErrorText = nil
+//            }
+//            trimmedBMonth = birthMonth
+//            if trimmedBMonth == "" {
+//                birthMonthErrorText = "BirthMonthRequired".localized
+//            }
+//            else {
+//                birthMonthErrorText = nil
+//            }
+//        }
         
         let trimmedCaptcha = captcha
         if trimmedCaptcha == "" {
@@ -185,7 +192,7 @@ final class RegisterVM : MainObservable {
 
         cond2Error = !cond2
         
-        if emailErrorText != nil || phoneErrorText != nil || ninErrorText != nil || passErrorText != nil || (showBirthYearMonth && (birthYearErrorText != nil || birthMonthErrorText != nil)) || (captchaErrorText != nil || captchaExpired || cond1Error || cond2Error) {
+        if emailErrorText != nil || phoneErrorText != nil || ninErrorText != nil || passErrorText != nil || confirmPassErrorText != nil || birthDateErrorText != nil || (captchaErrorText != nil || captchaExpired || cond1Error || cond2Error) {
             return
         }
         
